@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+"""Measure actual GL context gates without overrides; version is not conformance."""
+from datetime import datetime,timezone
+from pathlib import Path
+import hashlib,json,os,subprocess
+root=Path(__file__).resolve().parent.parent
+out=root/'build'/('gl-gates-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'));out.mkdir(parents=True)
+program=root/'build/gl-baseline';manifest=json.loads((root/'build/gl-baseline.build.json').read_text())
+assert hashlib.sha256(program.read_bytes()).hexdigest()==manifest['binary_sha256'],'Rebuild probe'
+for name,digest in manifest['inputs'].items():
+    assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, f'Rebuild: {name}'
+base={k:v for k,v in os.environ.items() if not k.startswith(('MESA_','VK_','ZINK_','DYLD_'))}
+base['MESA_SHADER_CACHE_DISABLE']='true'
+scenarios=[('baseline-33','mesa-x86_64',None,33,False),
+           ('disabled-33','kk-xfb-x86_64',None,33,False),
+           ('capture-33','kk-xfb-x86_64','xfb_gs_probe,custom_border',33,True),
+           ('capture-40','kk-xfb-x86_64','xfb_gs_probe,custom_border',40,False)]
+scenarios += [(f'combined-{v}','kk-xfb-x86_64','xfb_gs_probe,custom_border,rgb32_texel',v,True) for v in (33,40,43,46)]
+runs=[];failed=False
+for name,build,options,version,success in scenarios:
+    env=base|{'VK_DRIVER_FILES':str(root/'build'/build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')}
+    if options:env['MESA_KK_EXPERIMENTAL']=options
+    command=[str(program),str(version)]
+    proc=subprocess.run(command,env=env,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=60)
+    (out/(name+'.txt')).write_text(proc.stdout)
+    passed=(proc.returncode==0 and 'GL error: 0x0' in proc.stdout) if success else (proc.returncode==1 and 'Context creation failed:' in proc.stdout)
+    if name.startswith('combined'):passed &= 'Reported versions: core=46 compat=46' in proc.stdout and 'Missing desktop version-gate extension:' not in proc.stdout
+    runs.append(dict(name=name,command=command,environment={k:v for k,v in env.items() if k.startswith(('MESA_','VK_'))},exit_status=proc.returncode,expected_outcome_observed=passed))
+    print(f'{name}: exit={proc.returncode}, expected outcome={passed}',flush=True)
+    failed |= not passed
+    if not passed:print(proc.stdout[-2000:])
+files=[program,*sorted((root/'patches/mesa').glob('*.patch')),root/'build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib']
+(out/'runs.json').write_text(json.dumps(dict(probe_build=manifest,sha256={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},runs=runs),indent=2)+'\n')
+print(out);raise SystemExit(1 if failed else 0)

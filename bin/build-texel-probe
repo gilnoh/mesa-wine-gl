@@ -1,0 +1,16 @@
+#!/bin/bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
+export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+mkdir -p "$ROOT/build/texel-shaders"
+for kind in 0 1 2; do
+ /usr/local/bin/glslangValidator -V --target-env vulkan1.3 -DKIND="$kind" "$ROOT/probes/texel/read.comp" -o "$ROOT/build/texel-shaders/read-$kind.comp.spv"
+done
+/usr/local/opt/llvm/bin/clang --no-default-config -arch x86_64 -std=c11 -O0 -g -Wall -Wextra -I"$ROOT/src/mesa/include" "$ROOT/probes/vk-texel.c" -L/usr/local/opt/vulkan-loader/lib -lvulkan -o "$ROOT/build/vk-texel"
+python3 - "$ROOT" <<'PY'
+from pathlib import Path
+import hashlib,json,sys
+r=Path(sys.argv[1]);program=r/'build/vk-texel'
+files=[r/'probes/vk-texel.c',r/'probes/texel/read.comp',*sorted((r/'build/texel-shaders').glob('*.spv'))]
+(r/'build/vk-texel.build.json').write_text(json.dumps(dict(binary_sha256=hashlib.sha256(program.read_bytes()).hexdigest(),inputs={str(p.relative_to(r)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files}),indent=2)+'\n')
+PY

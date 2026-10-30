@@ -1,0 +1,59 @@
+{
+  "probe_build": {
+    "binary_sha256": "477d1ced12dcafdbe905d6f306f7701131fcab452c2d184a6eb8084f182a2bb0",
+    "inputs": {
+      "probes/gl-baseline.c": "6694033a7b463b45c297d59228157f53c83da945d0f4a67ebad9b22d9935ae6f",
+      "probes/gl-render.c": "10f82bed959302fed3ff52b1c4807feb7399d64cfe3b6b0a8940e48305cc272c",
+      "probes/gl-xfb.c": "64c0dcb0154c17156a58271298723c4b0332553f32a04ccae549f4e388db1adc",
+      "probes/gl-texel.c": "4389091e18454797c65b10d1de57730b96340c41962c845fcbe623ebf183ae9e",
+      "sources.lock.json": "a955651f9a49314e086d82b27d207055facd523382c03b5bbcdc410f24b7911d"
+    }
+  },
+  "driver_sha256": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3",
+  "binary_sha256": "477d1ced12dcafdbe905d6f306f7701131fcab452c2d184a6eb8084f182a2bb0",
+  "runs": [
+    {
+      "mode": "default",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,rgb32_texel"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "mode": "custom-border",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,rgb32_texel,custom_border"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "mode": "wrong-expected",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render",
+        "--wrong-expected"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,rgb32_texel,custom_border"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+Device: Apple M1 Max
+Pipeline cache hit: PASS
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex capture/base vertex+instance: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query 2: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex pause/resume: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex nonzero resume offset: PASS bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=4 available=1 (expected 2/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=8 needed=8 available=1 (expected 8/8/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex instanced capture: PASS bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex indexed capture: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=0 available=1 (expected 0/0/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex two draws/query accumulation: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+static capture/base vertex+instance: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query 2: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+pause/resume: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+nonzero resume offset: PASS bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=4 available=1 (expected 2/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+buffer overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=8 needed=8 available=1 (expected 8/8/1)
+  Query host/copy/availability/guards: PASS errors=0
+static instanced capture: PASS bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=4 needed=4 available=1 (expected 4/4/1)
+  Query host/copy/availability/guards: PASS errors=0
+static indexed capture: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=0 available=1 (expected 0/0/1)
+  Query host/copy/availability/guards: PASS errors=0
+capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=6 needed=6 available=1 (expected 6/6/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic GS counts/prefix sum: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=6 available=1 (expected 2/6/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic GS overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=12 needed=12 available=1 (expected 12/12/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic instanced capture: PASS bytes=192 expected=192 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=6 needed=6 available=1 (expected 6/6/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic indexed capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line list: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line list indexed: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=1 needed=2 available=1 (expected 1/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line list whole-primitive overflow: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=3 needed=3 available=1 (expected 3/3/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line strip: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=3 needed=3 available=1 (expected 3/3/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line strip indexed: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=1 needed=3 available=1 (expected 1/3/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex line strip whole-primitive overflow: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=1 needed=1 available=1 (expected 1/1/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle list: PASS bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=1 needed=1 available=1 (expected 1/1/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle list indexed: PASS bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=1 available=1 (expected 0/1/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle list whole-primitive overflow: PASS bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle strip: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle strip indexed: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=2 available=1 (expected 0/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle strip whole-primitive overflow: PASS bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle fan: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle fan indexed: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=2 available=1 (expected 0/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+vertex triangle fan whole-primitive overflow: PASS bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=3 needed=3 available=1 (expected 3/3/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic line list-to-strip capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic triangle list-to-strip capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=2 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: PASS errors=0
+dynamic triangle strip-to-fan indexed capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+Pipeline cache hit: PASS
+  Query 1: written=1 needed=1 available=1 (expected 1/1/1)
+  Query host/copy/availability/guards: PASS errors=0
+  Render readback: PASS, mismatched bytes=0
+triangle capture while rendering: PASS bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  Query 1: written=0 needed=0 available=1 (expected 0/0/1)
+  Query host/copy/availability/guards: PASS errors=0
+  Render readback: PASS, mismatched bytes=0
+triangle rendering with capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+XFB checks: 39/39 passed

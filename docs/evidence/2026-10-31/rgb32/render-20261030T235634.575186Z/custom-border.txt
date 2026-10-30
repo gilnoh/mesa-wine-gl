@@ -1,0 +1,37 @@
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=46 compat=46 ES1=11 ES2=32
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Requesting 1.0 compat context
+GL_VERSION: 4.6 (Compatibility Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+GL_RENDERER: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL_VERSION: 4.60
+GL error: 0x0
+FBO clear/readback: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 0: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 1: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 2: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 0: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 1: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 2: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 3: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 4: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 5: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 6: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 7: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 8: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 9: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 10: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 0: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 1: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 2: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 3: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 4: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 5: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 6: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 7: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 8: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 9: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 10: PASS mismatch_bytes=0 GL_error=0x0
+Rendering checks: 26/26 passed

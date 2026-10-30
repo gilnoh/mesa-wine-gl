@@ -1,0 +1,42 @@
+Device: Apple M1 Max
+format=100 components=1 kind=0 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=100 components=1 kind=0 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=100 components=1 kind=0 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=100 components=1 kind=0 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+format=103 components=2 kind=0 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=103 components=2 kind=0 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=103 components=2 kind=0 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=103 components=2 kind=0 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+RGB32 kind=0 uniform support=0
+format=109 components=4 kind=0 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=109 components=4 kind=0 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=109 components=4 kind=0 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=109 components=4 kind=0 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+format=99 components=1 kind=1 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=99 components=1 kind=1 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=99 components=1 kind=1 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=99 components=1 kind=1 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+format=102 components=2 kind=1 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=102 components=2 kind=1 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=102 components=2 kind=1 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=102 components=2 kind=1 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+RGB32 kind=1 uniform support=0
+format=108 components=4 kind=1 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=108 components=4 kind=1 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=108 components=4 kind=1 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=108 components=4 kind=1 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+format=98 components=1 kind=2 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=98 components=1 kind=2 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=98 components=1 kind=2 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=98 components=1 kind=2 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+format=101 components=2 kind=2 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=101 components=2 kind=2 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=101 components=2 kind=2 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=101 components=2 kind=2 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+RGB32 kind=2 uniform support=0
+format=107 components=4 kind=2 offset=0 elements=4 update=0: PASS mismatch_bytes=0 input_changed=0
+format=107 components=4 kind=2 offset=0 elements=4 update=1: PASS mismatch_bytes=0 input_changed=0
+format=107 components=4 kind=2 offset=48 elements=7 update=0: PASS mismatch_bytes=0 input_changed=0
+format=107 components=4 kind=2 offset=48 elements=7 update=1: PASS mismatch_bytes=0 input_changed=0
+Pipeline cache saved: 16382 bytes
+Texel checks: 36/36 passed

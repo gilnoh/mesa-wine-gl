@@ -4,6 +4,99 @@ Current state and investigation record. Distinguish measured results, user repor
 and hypotheses. Historical reference results are not measurements of this project.
 
 
+
+## 2026-10-31 — RGB32 texel buffers and combined-stack recheck
+
+**Measured:** the RGB32 uniform-texel-buffer experiment passes 48/48 Vulkan
+compute checks and 48/48 GL-to-Zink fragment/readback checks. With capture,
+custom-border and RGB32 experiments enabled together, Mesa reports GL 4.6 core
+and compatibility / ES 3.2. Actual GL 4.0, 4.3 and 4.6 core context requests
+succeed with no version/extension overrides and no missing extension in Mesa's
+desktop version-gate list. This is not full GL conformance or a TFA result.
+
+### Implementation and controlled format tests
+
+`0004-kk-rgb32-texel-experiment.patch`, enabled by
+`MESA_KK_EXPERIMENTAL=rgb32_texel`, implements **uniform** RGB32 float, signed
+integer and unsigned integer buffer reads. It does not advertise RGB32 storage
+texel-buffer or image-format support. Buffer descriptors retain the native Metal
+texture ID and add the emulated view's GPU base address and element count. NIR
+selects native texture access or three scalar 32-bit global loads, supplies the
+missing alpha component, and handles buffer-size queries. The compiler option
+is included in shader cache keys.
+
+The test matrix covers R32, RG32, RGB32 and RGBA32 for all three scalar types;
+zero/nonzero aligned view offsets; four/seven-element ranges; first, middle and
+last texel reads; shader size queries; and two updates using the same view.
+Exact integer values above float's exact-integer range are checked as raw bits.
+Readback guards remain unchanged; the Vulkan probe also verifies its input
+buffer was not modified. The GL probe reads an integer framebuffer, independently
+of the Vulkan compute/SSBO path.
+
+- Baseline and experiment-disabled Vulkan drivers pass all 36 native-format
+  cases and report RGB32 unavailable. The native wrong-output control fails
+  36/36, confirming it reaches the tested path.
+- RGB32-enabled Vulkan and GL runs pass 48/48, including native-format controls;
+  wrong-output runs fail 48/48. GL native-only runs pass 36/36 and their control
+  fails 36/36.
+- A native-only cache saved by this same experimental driver is rejected for
+  all three shader types when RGB32 is enabled and compilation is forbidden.
+  Recompilation succeeds. A fresh process reloads the resulting RGB32 cache
+  with compilation forbidden and passes all 48 checks. Thus the cache-isolation
+  control does not merely compare unrelated driver build UUIDs.
+- The first driver build caught an incorrect NIR builder signature; it was
+  corrected before GPU measurements. Assertions remain enabled.
+
+### Step 2: measured capability and regression recheck
+
+`bin/measure-gl-gates` provides a repeatable context matrix:
+
+- Unmodified baseline and experiment-disabled driver: GL 3.3 request fails.
+- Capture plus custom borders, without RGB32: GL 3.3 succeeds, GL 4.0 fails.
+- Capture plus custom borders plus RGB32: GL 3.3, 4.0, 4.3 and 4.6 requests
+  succeed; reported maximum is 4.6 core/compatibility with GLSL 4.60.
+
+The combined stack also passes the 26 rendering checks, two GL capture/overflow
+checks, and 39 Vulkan capture/query checks, including saved-cache reloads and
+independent wrong-data/wrong-query controls. These are focused correctness
+measurements, not a claim about all operations exposed by the reported version.
+
+**Still measured unsupported:** upstream `zink_check_requirements` continues to
+reject every desktop GL Vulkan profile even though it exits zero. Its combined
+report still lists incremental presentation, non-solid fill, image-derived
+border swizzles and rectangular-line features. RGB32 and transform-feedback
+capability failures are removed. Actual Mesa version gates and Vulkan profile
+requirements are different checks; preserve both results.
+
+Remaining limits from the capture milestone still apply (including TES-only
+capture, adjacency, primitive restart, multiple buffers/streams and full
+pipeline-switching coverage). RGB32 bounds checks are implemented, but the
+current matrix does not validate out-of-range/robustness behavior, descriptor
+indexing, storage writes, 16-bit shader results, or large-buffer stress.
+Wine integration, presentation, the actual TFA shaders/LUT and museum/missions
+remain untested on the new stack. The baseline source and workbench runtime/game
+were not changed.
+
+**Next:** assess the remaining profile gaps against the actual TFA workload and
+begin an isolated Wine bridge/presentation experiment. A successful 4.6 context
+is a prerequisite now measured, not sufficient evidence to package this as
+complete modern GL support. Preserve the unmodified baseline for comparisons.
+
+Final evidence under `docs/evidence/2026-10-31/rgb32/`:
+
+- `texel-20261030T235623.518560Z`: native/RGB32 Vulkan, cache and negative controls.
+- `gl-texel-20261030T235625.741744Z`: native/RGB32 GL and negative controls.
+- `gl-gates-20261030T235631.094026Z`: context/version matrix.
+- `render-20261030T235634.575186Z`: combined rendering regression.
+- `gl-xfb-20261030T235636.388341Z`: combined GL capture regression.
+- `xfb-20261030T235504.316138Z`: combined Vulkan capture/query regression.
+- `vulkan-20261030T235638.416287Z`: full Vulkan reports and upstream profiles.
+
+Each runner records selected environment, exit status and provenance; probe
+runners reject stale source/binary manifests. Generated binaries and pipeline
+cache blobs remain in `build/`. UTC directory names still fall on October 30;
+the local Europe/Berlin date is October 31.
+
 ## 2026-10-31 — Vertex capture, queries, and GL-to-Zink validation
 
 **Measured:** the opt-in driver now passes 39/39 Vulkan capture checks and two

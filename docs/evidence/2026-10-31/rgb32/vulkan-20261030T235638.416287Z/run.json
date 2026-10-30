@@ -1,0 +1,113 @@
+{
+  "started_utc": "20261030T235638.416287Z",
+  "cleared_environment": [],
+  "icd": {
+    "ICD": {
+      "api_version": "1.4.366",
+      "library_path": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib"
+    },
+    "file_format_version": "1.0.1"
+  },
+  "source_commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+  "sha256": {
+    "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3",
+    "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/gallium/drivers/zink/check_requirements/zink_check_requirements": "1c610639d09330ca1ff2f08bc6c7607c57e14ea64561662293faf4ab775da151",
+    "/usr/local/bin/vulkaninfo": "04b200e94d6757f3fbda8dc41a5783d7da061decd08b27dec738bbf93312df25"
+  },
+  "runs": [
+    {
+      "mode": "default",
+      "command": [
+        "/usr/local/bin/vulkaninfo"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 0,
+      "log": "vulkaninfo-default.txt"
+    },
+    {
+      "mode": "default",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/gallium/drivers/zink/check_requirements/zink_check_requirements"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 0,
+      "log": "zink-requirements-default.txt",
+      "profiles": {
+        "VP_ZINK_cl12_embedded": "supported",
+        "VP_ZINK_cl30_embedded": "supported",
+        "VP_ZINK_cl30_full": "supported",
+        "VP_ZINK_cl31_embedded": "unsupported",
+        "VP_ZINK_cl31_full": "unsupported",
+        "VP_ZINK_gl21_baseline": "unsupported",
+        "VP_ZINK_gl30_baseline": "unsupported",
+        "VP_ZINK_gl31_baseline": "unsupported",
+        "VP_ZINK_gl32_baseline": "unsupported",
+        "VP_ZINK_gl33_baseline": "unsupported",
+        "VP_ZINK_gl40_baseline": "unsupported",
+        "VP_ZINK_gl41_baseline": "unsupported",
+        "VP_ZINK_gl42_baseline": "unsupported",
+        "VP_ZINK_gl43_baseline": "unsupported",
+        "VP_ZINK_gl44_baseline": "unsupported",
+        "VP_ZINK_gl45_baseline": "unsupported",
+        "VP_ZINK_gl46_baseline": "unsupported",
+        "VP_ZINK_gl46_optimal": "unsupported",
+        "VP_ZINK_gles20_baseline": "unsupported",
+        "VP_ZINK_gles30_baseline": "unsupported",
+        "VP_ZINK_gles31_baseline": "unsupported",
+        "VP_ZINK_gles32_baseline": "unsupported"
+      }
+    },
+    {
+      "mode": "combined",
+      "command": [
+        "/usr/local/bin/vulkaninfo"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel"
+      },
+      "exit_status": 0,
+      "log": "vulkaninfo-combined.txt"
+    },
+    {
+      "mode": "combined",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/gallium/drivers/zink/check_requirements/zink_check_requirements"
+      ],
+      "environment": {
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel"
+      },
+      "exit_status": 0,
+      "log": "zink-requirements-combined.txt",
+      "profiles": {
+        "VP_ZINK_cl12_embedded": "supported",
+        "VP_ZINK_cl30_embedded": "supported",
+        "VP_ZINK_cl30_full": "supported",
+        "VP_ZINK_cl31_embedded": "unsupported",
+        "VP_ZINK_cl31_full": "unsupported",
+        "VP_ZINK_gl21_baseline": "unsupported",
+        "VP_ZINK_gl30_baseline": "unsupported",
+        "VP_ZINK_gl31_baseline": "unsupported",
+        "VP_ZINK_gl32_baseline": "unsupported",
+        "VP_ZINK_gl33_baseline": "unsupported",
+        "VP_ZINK_gl40_baseline": "unsupported",
+        "VP_ZINK_gl41_baseline": "unsupported",
+        "VP_ZINK_gl42_baseline": "unsupported",
+        "VP_ZINK_gl43_baseline": "unsupported",
+        "VP_ZINK_gl44_baseline": "unsupported",
+        "VP_ZINK_gl45_baseline": "unsupported",
+        "VP_ZINK_gl46_baseline": "unsupported",
+        "VP_ZINK_gl46_optimal": "unsupported",
+        "VP_ZINK_gles20_baseline": "unsupported",
+        "VP_ZINK_gles30_baseline": "unsupported",
+        "VP_ZINK_gles31_baseline": "unsupported",
+        "VP_ZINK_gles32_baseline": "unsupported"
+      }
+    }
+  ]
+}

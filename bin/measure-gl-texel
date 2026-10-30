@@ -1,0 +1,55 @@
+#!/usr/bin/env python3
+"""Validate the GL-to-Zink texel-buffer formats and baseline/negative controls."""
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+
+root=Path(__file__).resolve().parent.parent
+out=root/'build'/('gl-texel-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'))
+out.mkdir(parents=True)
+base_env=os.environ.copy()
+for key in list(base_env):
+    if key.startswith(('MESA_','ZINK_','VK_','DYLD_')):base_env.pop(key)
+base_env['MESA_SHADER_CACHE_DISABLE']='true'
+program=root/'build/gl-baseline'
+manifest=json.loads((root/'build/gl-baseline.build.json').read_text())
+if hashlib.sha256(program.read_bytes()).hexdigest()!=manifest['binary_sha256']:
+    raise SystemExit('Probe binary differs from its build manifest; rebuild it')
+for name,digest in manifest['inputs'].items():
+    if hashlib.sha256((root/name).read_bytes()).hexdigest()!=digest:
+        raise SystemExit(f'Probe input changed since build: {name}; rebuild it')
+results=[]
+failed=False
+scenarios=[('native','kk-xfb-x86_64','xfb_gs_probe,custom_border',0,'GL texel checks: 36/36 passed'),
+           ('native-wrong','kk-xfb-x86_64','xfb_gs_probe,custom_border',1,'GL texel checks: 0/36 passed'),
+           ('rgb32','kk-xfb-x86_64','xfb_gs_probe,custom_border,rgb32_texel',0,'GL texel checks: 48/48 passed'),
+           ('wrong-expected','kk-xfb-x86_64','xfb_gs_probe,custom_border,rgb32_texel',1,'GL texel checks: 0/48 passed')]
+for name,build,options,status,summary in scenarios:
+    env=base_env.copy()
+    env['VK_DRIVER_FILES']=str(root/'build'/build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')
+    if options:env['MESA_KK_EXPERIMENTAL']=options
+    command=[str(program),'33','--texel']
+    if name.startswith('native'):command.append('--native-only')
+    if name in ('wrong-expected','native-wrong'):command.append('--wrong-expected')
+    with (out/(name+'.txt')).open('w') as log:
+        try:
+            proc=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=60)
+            code=proc.returncode
+        except subprocess.TimeoutExpired:
+            code=None
+    content=(out/(name+'.txt')).read_text()
+    passed=code==status and summary in content
+    results.append(dict(name=name,command=command,environment={k:v for k,v in env.items() if k.startswith(('MESA_','VK_'))},exit_status=code,expected_outcome_observed=passed))
+    print(f'{name}: exit={code}, expected outcome={passed}',flush=True)
+    if not passed:
+        failed=True
+        print(content[-3000:],flush=True)
+        break
+files=[program,*sorted((root/'patches/mesa').glob('*.patch')),root/'probes/gl-texel.c',
+       root/'build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib']
+(out/'runs.json').write_text(json.dumps(dict(probe_build=manifest,sha256={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},runs=results),indent=2)+'\n')
+print(out)
+raise SystemExit(1 if failed else 0)

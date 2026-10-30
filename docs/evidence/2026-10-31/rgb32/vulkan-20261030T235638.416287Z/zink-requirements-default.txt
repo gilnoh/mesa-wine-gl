@@ -1,0 +1,316 @@
+Checking profile VP_ZINK_cl12_embedded
+Checking device Apple M1 Max
+Supported
+
+Checking profile VP_ZINK_cl30_embedded
+Checking device Apple M1 Max
+Supported
+
+Checking profile VP_ZINK_cl30_full
+Checking device Apple M1 Max
+Supported
+
+Checking profile VP_ZINK_cl31_embedded
+Checking device Apple M1 Max
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.shaderFloat64 == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_cl31_full
+Checking device Apple M1 Max
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.shaderFloat64 == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl21_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl30_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl31_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl32_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl33_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl40_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl41_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl42_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl43_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl44_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl45_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl46_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gl46_optimal
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+Unsupported extension: VK_EXT_graphics_pipeline_library
+Unsupported extension: VK_EXT_legacy_vertex_attributes
+Unsupported extension: VK_EXT_non_seamless_cube_map
+Unsupported extension: VK_KHR_device_address_commands
+Unsupported extension: VK_KHR_pipeline_library
+Unsupported feature condition: VkPhysicalDeviceLegacyVertexAttributesFeaturesEXT::legacyVertexAttributes == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceDeviceAddressCommandsFeaturesKHR::deviceAddressCommands == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceNonSeamlessCubeMapFeaturesEXT::nonSeamlessCubeMap == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceGraphicsPipelineLibraryFeaturesEXT::graphicsPipelineLibrary == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceExtendedDynamicState3FeaturesEXT::extendedDynamicState3LineStippleEnable == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceExtendedDynamicState3FeaturesEXT::extendedDynamicState3PolygonMode == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceExtendedDynamicState2FeaturesEXT::extendedDynamicState2LogicOp == VK_TRUE
+Unsupported properties condition: VkPhysicalDeviceMaintenance5PropertiesKHR::polygonModePointSize == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::stippledBresenhamLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::stippledBresenhamLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::stippledBresenhamLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::stippledBresenhamLines == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gles20_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gles30_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gles31_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+UNSUPPORTED physical device
+
+Checking profile VP_ZINK_gles32_baseline
+Checking device Apple M1 Max
+Unsupported extension: VK_EXT_border_color_swizzle
+Unsupported extension: VK_EXT_custom_border_color
+Unsupported extension: VK_KHR_incremental_present
+Unsupported feature condition: VkPhysicalDeviceFeatures2KHR::features.fillModeNonSolid == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceBorderColorSwizzleFeaturesEXT::borderColorSwizzleFromImage == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceCustomBorderColorFeaturesEXT::customBorderColorWithoutFormat == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesEXT::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported feature condition: VkPhysicalDeviceLineRasterizationFeaturesKHR::rectangularLines == VK_TRUE
+Unsupported extension: VK_EXT_transform_feedback
+Unsupported feature condition: VkPhysicalDeviceTransformFeedbackFeaturesEXT::transformFeedback == VK_TRUE
+Unsupported format condition for VK_FORMAT_R32G32B32_SFLOAT: VkFormatProperties2KHR::formatProperties.bufferFeatures contains (VK_FORMAT_FEATURE_UNIFORM_TEXEL_BUFFER_BIT)
+UNSUPPORTED physical device
+

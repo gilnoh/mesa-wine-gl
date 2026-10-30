@@ -1,0 +1,122 @@
+{
+  "probe_build": {
+    "binary_sha256": "3484dfcae818da82a1257871cf3db1516f15e6111282b88ba7c0b45de1419b51",
+    "inputs": {
+      "probes/vk-texel.c": "7f5a5aef41b996de396926232d8871b7bc1046fb00bda80b8b81876d90713329",
+      "probes/texel/read.comp": "9ca6fba1696704ee9f22e9b17a6955a6c1758afb0dd1cddafbe232a9fb7902a1",
+      "build/texel-shaders/read-0.comp.spv": "94978a0229730084fc44f61cf6be5f0f98015e6279dd5dc41bf0f62b00797b96",
+      "build/texel-shaders/read-1.comp.spv": "9234725933baefffadf5e0d10352b0d2852f14641cacc0c6f904b0d1db2d39f1",
+      "build/texel-shaders/read-2.comp.spv": "047fcc6f30022d540ae9b5406e3360c345a5e1df4446e6c4bb290445c27ff6c7"
+    }
+  },
+  "sha256": {
+    "build/vk-texel": "3484dfcae818da82a1257871cf3db1516f15e6111282b88ba7c0b45de1419b51",
+    "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+    "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "21501fdbc445de74a5c89192b608999eede93e93984bc5504120f0eda8ab29d1",
+    "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+    "patches/mesa/0004-kk-rgb32-texel-experiment.patch": "8f0b60516e99d35f6af7298c5a701c43ed69b70798369aed2b8452338608ff1e",
+    "probes/vk-texel.c": "7f5a5aef41b996de396926232d8871b7bc1046fb00bda80b8b81876d90713329",
+    "probes/texel/read.comp": "9ca6fba1696704ee9f22e9b17a6955a6c1758afb0dd1cddafbe232a9fb7902a1",
+    "build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3"
+  },
+  "runs": [
+    {
+      "name": "baseline",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--cache-write",
+        "/Users/tailblues/mesa-wine-gl/build/texel-20261030T235623.518560Z/native-cache.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "baseline-wrong",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--wrong-expected"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "experiment-disabled",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--cache-write",
+        "/Users/tailblues/mesa-wine-gl/build/texel-20261030T235623.518560Z/native-cache.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "rgb32",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--rgb32",
+        "--cache-read",
+        "/Users/tailblues/mesa-wine-gl/build/texel-20261030T235623.518560Z/native-cache.bin",
+        "--expect-cache-miss",
+        "--cache-write",
+        "/Users/tailblues/mesa-wine-gl/build/texel-20261030T235623.518560Z/rgb-cache.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "rgb32_texel"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "cache-reload",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--rgb32",
+        "--cache-read",
+        "/Users/tailblues/mesa-wine-gl/build/texel-20261030T235623.518560Z/rgb-cache.bin",
+        "--expect-cache-hit"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "rgb32_texel"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "wrong-expected",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-texel",
+        "/Users/tailblues/mesa-wine-gl/build/texel-shaders",
+        "--rgb32",
+        "--wrong-expected"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "rgb32_texel"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    }
+  ]
+}

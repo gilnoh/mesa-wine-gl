@@ -1,0 +1,10 @@
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=46 compat=46 ES1=11 ES2=32
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Requesting 3.3 core context
+GL_VERSION: 4.6 (Core Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+GL_RENDERER: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL_VERSION: 4.60
+GL error: 0x0

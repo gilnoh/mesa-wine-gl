@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the explicit-GS XFB experiment and baseline/negative controls."""
 from datetime import datetime, timezone
+import sys
 import hashlib
 import json
 import os
@@ -33,6 +34,7 @@ scenarios=[('baseline','mesa-x86_64',None,77,'UNSUPPORTED: transformFeedback'),
 for name,build,options,status,summary in scenarios:
     env=base_env.copy()
     env['VK_DRIVER_FILES']=str(root/'build'/build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')
+    if options and '--with-rgb32' in sys.argv:options+=',rgb32_texel'
     if options:env['MESA_KK_EXPERIMENTAL']=options
     command=[str(program),str(root/'build/xfb-shaders')]
     if name=='cache-miss':command.append('--cache-miss-control')

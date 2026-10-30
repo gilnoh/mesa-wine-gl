@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """Record fresh KK capabilities and upstream Zink profile checks; no GL overrides."""
 from datetime import datetime, timezone
+import argparse
 import hashlib
 import json
 import os
 from pathlib import Path
 import subprocess
 
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--full-experiment',action='store_true')
+args=parser.parse_args()
 root = Path(__file__).resolve().parent.parent
-build = root/'build/mesa-x86_64'
+build = root/'build'/('kk-xfb-x86_64' if args.full_experiment else 'mesa-x86_64')
 icd = build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json'
 driver = build/'src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib'
-checker = build/'src/gallium/drivers/zink/check_requirements/zink_check_requirements'
+checker = root/'build/mesa-x86_64/src/gallium/drivers/zink/check_requirements/zink_check_requirements'
 vulkaninfo = Path('/usr/local/bin/vulkaninfo')
 for path in (icd, driver, checker, vulkaninfo):
     if not path.is_file():
@@ -30,9 +34,11 @@ metadata = dict(started_utc=stamp, cleared_environment=cleared, icd=json.loads(i
                 source_commit=subprocess.check_output(['git','-C',str(root/'src/mesa'),'rev-parse','HEAD'],text=True).strip(),
                 sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in (driver,checker,vulkaninfo)},
                 runs=[])
-for mode in ('default','custom-border'):
+for mode in (('default','combined') if args.full_experiment else ('default','custom-border')):
     if mode == 'custom-border':
         env['MESA_KK_EXPERIMENTAL'] = 'custom_border'
+    if mode == 'combined':
+        env['MESA_KK_EXPERIMENTAL'] = 'xfb_gs_probe,custom_border,rgb32_texel'
     selected = {k:v for k,v in env.items() if k.startswith(('VK_','MESA_','ZINK_','DYLD_'))}
     for name, executable in (('vulkaninfo',vulkaninfo), ('zink-requirements',checker)):
         log = out/f'{name}-{mode}.txt'

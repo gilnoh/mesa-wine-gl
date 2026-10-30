@@ -1,0 +1,48 @@
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=33 compat=33 ES1=11 ES2=31
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Missing desktop version-gate extension: ARB_texture_buffer_object_rgb32
+Requesting 3.3 core context
+GL_VERSION: 3.3 (Core Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+GL_RENDERER: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL_VERSION: 3.30
+GL error: 0x0
+GL texel components=1 kind=0 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=0 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=0 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=0 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=0 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=0 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=0 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=0 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=0 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=0 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=0 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=0 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=1 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=1 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=1 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=1 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=1 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=1 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=1 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=1 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=1 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=1 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=1 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=1 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=2 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=2 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=2 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=1 kind=2 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=2 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=2 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=2 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=2 kind=2 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=2 offset=0 elements=4 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=2 offset=0 elements=4 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=2 offset=48 elements=7 update=0: FAIL mismatch_bytes=1 error=0x0
+GL texel components=4 kind=2 offset=48 elements=7 update=1: FAIL mismatch_bytes=1 error=0x0
+GL texel checks: 0/36 passed

@@ -62,6 +62,17 @@ experiments start from clean sources; old changes require individual justificati
   probe binaries. See [patch scope](patches/mesa/README.md).
 - `bin/measure-gl-xfb`: exercise capture and overflow through native GL/Zink,
   with disabled-feature and wrong-output controls. Build with `bin/build-gl-probe`.
+- `bin/build-texel-probe` and `bin/measure-texel`: build and measure native/RGB32
+  uniform texel buffers through Vulkan, including type/range/update checks and
+  compiler-option cache controls. `--baseline-only` runs the unmodified controls.
+- `bin/measure-gl-texel`: run the independent GL/Zink integer-framebuffer checks;
+  build with `bin/build-gl-probe` first.
+- `bin/measure-gl-gates`: compare actual context/version gates with experiments
+  disabled and enabled. These results do not establish conformance.
+- `bin/measure-gl --full-experiment`, `bin/measure-gl-xfb --with-rgb32`, and
+  `bin/measure-xfb --with-rgb32`: regress the combined experiments.
+- `bin/measure-vulkan --full-experiment`: record both Vulkan capabilities and
+  upstream profile requirements with the isolated driver and combined flags.
 - `bin/trace-tfa [--forward-compatible]`: trace a direct launch through the existing
   workbench prefix, with Steam already online. Saves runtime provenance and logs;
   a game still running at the observation timeout is left running.
@@ -91,6 +102,7 @@ git -C src/mesa worktree add --detach ../mesa-xfb <mesa.commit-from-sources.lock
 git -C src/mesa-xfb apply ../../patches/mesa/0001-kk-gs-xfb-experiment.patch
 git -C src/mesa-xfb apply ../../patches/mesa/0002-kk-vertex-xfb-experiment.patch
 git -C src/mesa-xfb apply ../../patches/mesa/0003-kk-xfb-query-experiment.patch
+git -C src/mesa-xfb apply ../../patches/mesa/0004-kk-rgb32-texel-experiment.patch
 bin/build-kk-experiment
 bin/build-xfb-probe
 bin/measure-xfb
@@ -98,6 +110,14 @@ bin/build-gl-probe
 bin/measure-gl
 bin/measure-gl --experimental-driver
 bin/measure-gl-xfb
+bin/build-texel-probe
+bin/measure-texel
+bin/measure-gl-texel
+bin/measure-gl-gates
+bin/measure-gl --full-experiment
+bin/measure-gl-xfb --with-rgb32
+bin/measure-xfb --with-rgb32
+bin/measure-vulkan --full-experiment
 ```
 
 The baseline builder refuses modified sources; the experimental builder accepts

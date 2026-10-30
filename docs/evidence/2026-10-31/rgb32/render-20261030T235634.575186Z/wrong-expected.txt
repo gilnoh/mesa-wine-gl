@@ -1,0 +1,63 @@
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=46 compat=46 ES1=11 ES2=32
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Requesting 1.0 compat context
+GL_VERSION: 4.6 (Compatibility Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+GL_RENDERER: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL_VERSION: 4.60
+GL error: 0x0
+FBO clear/readback: first mismatch byte=0 actual=255 expected=126
+FBO clear/readback: FAIL mismatch_bytes=1 GL_error=0x0
+Texture draw/subimage/fence round 0: first mismatch byte=0 actual=0 expected=127
+Texture draw/subimage/fence round 0: FAIL mismatch_bytes=1 GL_error=0x0
+Texture draw/subimage/fence round 1: first mismatch byte=0 actual=31 expected=158
+Texture draw/subimage/fence round 1: FAIL mismatch_bytes=1 GL_error=0x0
+Texture draw/subimage/fence round 2: first mismatch byte=0 actual=62 expected=189
+Texture draw/subimage/fence round 2: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 0: first mismatch byte=0 actual=74 expected=201
+1024x32 mip chain RGBA8 level 0: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 1: first mismatch byte=0 actual=196 expected=67
+1024x32 mip chain RGBA8 level 1: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 2: first mismatch byte=0 actual=14 expected=141
+1024x32 mip chain RGBA8 level 2: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 3: first mismatch byte=0 actual=197 expected=68
+1024x32 mip chain RGBA8 level 3: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 4: first mismatch byte=0 actual=176 expected=47
+1024x32 mip chain RGBA8 level 4: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 5: first mismatch byte=0 actual=181 expected=52
+1024x32 mip chain RGBA8 level 5: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 6: first mismatch byte=0 actual=199 expected=70
+1024x32 mip chain RGBA8 level 6: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 7: first mismatch byte=0 actual=217 expected=88
+1024x32 mip chain RGBA8 level 7: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 8: first mismatch byte=0 actual=248 expected=119
+1024x32 mip chain RGBA8 level 8: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 9: first mismatch byte=0 actual=23 expected=150
+1024x32 mip chain RGBA8 level 9: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA8 level 10: first mismatch byte=0 actual=54 expected=181
+1024x32 mip chain RGBA8 level 10: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 0: first mismatch byte=0 actual=74 expected=201
+1024x32 mip chain RGBA16F level 0: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 1: first mismatch byte=0 actual=196 expected=67
+1024x32 mip chain RGBA16F level 1: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 2: first mismatch byte=0 actual=14 expected=141
+1024x32 mip chain RGBA16F level 2: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 3: first mismatch byte=0 actual=197 expected=68
+1024x32 mip chain RGBA16F level 3: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 4: first mismatch byte=0 actual=176 expected=47
+1024x32 mip chain RGBA16F level 4: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 5: first mismatch byte=0 actual=181 expected=52
+1024x32 mip chain RGBA16F level 5: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 6: first mismatch byte=0 actual=199 expected=70
+1024x32 mip chain RGBA16F level 6: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 7: first mismatch byte=0 actual=217 expected=88
+1024x32 mip chain RGBA16F level 7: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 8: first mismatch byte=0 actual=248 expected=119
+1024x32 mip chain RGBA16F level 8: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 9: first mismatch byte=0 actual=23 expected=150
+1024x32 mip chain RGBA16F level 9: FAIL mismatch_bytes=1 GL_error=0x0
+1024x32 mip chain RGBA16F level 10: first mismatch byte=0 actual=54 expected=181
+1024x32 mip chain RGBA16F level 10: FAIL mismatch_bytes=1 GL_error=0x0
+Rendering checks: 0/26 passed (deliberately wrong expectations)

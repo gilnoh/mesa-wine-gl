@@ -10,6 +10,7 @@ import subprocess
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('--experimental-driver',action='store_true',help='Use the separate KK build with XFB still disabled')
+parser.add_argument('--full-experiment',action='store_true',help='Enable capture and RGB32 together in the isolated driver')
 args=parser.parse_args()
 root=Path(__file__).resolve().parent.parent
 out=root/'build'/('render-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'))
@@ -17,7 +18,7 @@ out.mkdir(parents=True)
 env=os.environ.copy()
 for key in list(env):
     if key.startswith(('MESA_','ZINK_','VK_','DYLD_')):env.pop(key)
-tree='kk-xfb-x86_64' if args.experimental_driver else 'mesa-x86_64'
+tree='kk-xfb-x86_64' if (args.experimental_driver or args.full_experiment) else 'mesa-x86_64'
 env['VK_DRIVER_FILES']=str(root/'build'/tree/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')
 program=root/'build/gl-baseline'
 manifest=json.loads((root/'build/gl-baseline.build.json').read_text())
@@ -29,7 +30,10 @@ for name,digest in manifest['inputs'].items():
 results=[]
 failed=False
 for mode in ('default','custom-border','wrong-expected'):
-    if mode!='default':env['MESA_KK_EXPERIMENTAL']='custom_border'
+    options=['xfb_gs_probe','rgb32_texel'] if args.full_experiment else []
+    if mode!='default':options.append('custom_border')
+    if options:env['MESA_KK_EXPERIMENTAL']=','.join(options)
+    else:env.pop('MESA_KK_EXPERIMENTAL',None)
     command=[str(program),'10','--render']
     if mode=='wrong-expected':command.append('--wrong-expected')
     with (out/(mode+'.txt')).open('w') as log:

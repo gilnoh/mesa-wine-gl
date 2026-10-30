@@ -1,0 +1,210 @@
+--- a/src/kosmickrisp/vulkan/kk_debug.h
++++ b/src/kosmickrisp/vulkan/kk_debug.h
+@@ -23,6 +23,7 @@
+    KK_EXPERIMENTAL_CUSTOM_BORDER = 1ull << 0,
+    /* Development probe: explicit GS capture only, not general GL support. */
+    KK_EXPERIMENTAL_XFB_GS_PROBE = 1ull << 3,
++   KK_EXPERIMENTAL_RGB32_TEXEL = 1ull << 4,
+    /* Advertise image view min LOD feature */
+    KK_EXPERIMENTAL_IMAGE_VIEW_MIN_LOD = 1ull << 1,
+    /* Using allowGPUOptimizedContents for this format causes
+--- a/src/kosmickrisp/vulkan/kk_debug.c
++++ b/src/kosmickrisp/vulkan/kk_debug.c
+@@ -22,6 +22,7 @@
+    {"all", UINT64_MAX},
+    {"custom_border", KK_EXPERIMENTAL_CUSTOM_BORDER},
+    {"xfb_gs_probe", KK_EXPERIMENTAL_XFB_GS_PROBE},
++   {"rgb32_texel", KK_EXPERIMENTAL_RGB32_TEXEL},
+    {"image_view_min_lod", KK_EXPERIMENTAL_IMAGE_VIEW_MIN_LOD},
+    {"optimize_e5b9g9r9", KK_EXPERIMENTAL_OPTIMIZE_E5B9G9R9},
+    {NULL, 0},
+--- a/src/kosmickrisp/vulkan/kk_buffer_view.h
++++ b/src/kosmickrisp/vulkan/kk_buffer_view.h
+@@ -23,6 +23,7 @@
+    struct vk_buffer_view vk;
+    mtl_texture *mtl_texel_buffer_handle;
+    uint64_t texel_buffer_gpu_id;
++   uint64_t rgb32_address;
+ };
+ 
+ VK_DEFINE_NONDISP_HANDLE_CASTS(kk_buffer_view, vk.base, VkBufferView,
+--- a/src/kosmickrisp/vulkan/kk_buffer_view.c
++++ b/src/kosmickrisp/vulkan/kk_buffer_view.c
+@@ -9,6 +9,7 @@
+ 
+ #include "kk_buffer.h"
+ #include "kk_device.h"
++#include "kk_debug.h"
+ #include "kk_entrypoints.h"
+ #include "kk_format.h"
+ #include "kk_image_layout.h"
+@@ -19,6 +20,15 @@
+ #include "kosmickrisp/bridge/mtl_format.h"
+ 
+ #include "vk_format.h"
++
++static bool
++kk_rgb32_texel_format(VkFormat format)
++{
++   return KK_EXPERIMENTAL(RGB32_TEXEL) &&
++          (format == VK_FORMAT_R32G32B32_SFLOAT ||
++           format == VK_FORMAT_R32G32B32_SINT ||
++           format == VK_FORMAT_R32G32B32_UINT);
++}
+ 
+ VkFormatFeatureFlags2
+ kk_get_buffer_format_features(struct kk_physical_device *pdev,
+@@ -46,6 +56,10 @@
+          features |= VK_FORMAT_FEATURE_2_STORAGE_TEXEL_BUFFER_ATOMIC_BIT;
+    }
+ 
++   /* Uniform reads only: no storage or image-format capability is implied. */
++   if (kk_rgb32_texel_format(vk_format))
++      features |= VK_FORMAT_FEATURE_2_UNIFORM_TEXEL_BUFFER_BIT;
++
+    if (kk_vbo_supports_format(p_format))
+       features |= VK_FORMAT_FEATURE_2_VERTEX_BUFFER_BIT;
+ 
+@@ -62,6 +76,12 @@
+       vk_buffer_view_create(&dev->vk, pCreateInfo, pAllocator, sizeof(*view));
+    if (!view)
+       return vk_error(dev, VK_ERROR_OUT_OF_HOST_MEMORY);
++
++   if (kk_rgb32_texel_format(view->vk.format)) {
++      view->rgb32_address = vk_buffer_address(view->vk.buffer, view->vk.offset);
++      *pBufferView = kk_buffer_view_to_handle(view);
++      return VK_SUCCESS;
++   }
+ 
+    enum pipe_format p_format = vk_format_to_pipe_format(view->vk.format);
+    const struct kk_va_format *supported_format = kk_get_va_format(p_format);
+--- a/src/kosmickrisp/vulkan/kk_descriptor_types.h
++++ b/src/kosmickrisp/vulkan/kk_descriptor_types.h
+@@ -41,6 +41,17 @@
+ static_assert(sizeof(struct kk_storage_image_descriptor) == 8,
+               "kk_storage_image_descriptor has no holes");
+ 
++/* Texel buffers retain the native Metal texture ID at offset zero. A nonzero
++ * RGB32 address selects tightly packed three-component uniform reads. */
++struct kk_texel_buffer_descriptor {
++   uint64_t image_gpu_resource_id;
++   uint64_t rgb32_address;
++   uint32_t elements;
++   uint32_t padding[3];
++};
++static_assert(sizeof(struct kk_texel_buffer_descriptor) == 32,
++              "kk_texel_buffer_descriptor has no holes");
++
+ /* This has to match nir_address_format_64bit_bounded_global */
+ struct kk_buffer_address {
+    uint64_t base_addr;
+--- a/src/kosmickrisp/vulkan/kk_descriptor_set_layout.c
++++ b/src/kosmickrisp/vulkan/kk_descriptor_set_layout.c
+@@ -44,6 +44,9 @@
+ 
+    case VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER:
+    case VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER:
++      *stride = *alignment = sizeof(struct kk_texel_buffer_descriptor);
++      break;
++
+    case VK_DESCRIPTOR_TYPE_STORAGE_IMAGE:
+       *stride = *alignment = sizeof(struct kk_storage_image_descriptor);
+       break;
+--- a/src/kosmickrisp/vulkan/kk_descriptor_set.c
++++ b/src/kosmickrisp/vulkan/kk_descriptor_set.c
+@@ -229,14 +229,16 @@
+                        const VkBufferView bufferView, uint32_t binding,
+                        uint32_t elem)
+ {
+-   struct kk_storage_image_descriptor desc = {};
++   struct kk_texel_buffer_descriptor desc = {};
+    if (bufferView != VK_NULL_HANDLE) {
+       VK_FROM_HANDLE(kk_buffer_view, view, bufferView);
+ 
+-      assert(view->mtl_texel_buffer_handle);
+-      assert(view->texel_buffer_gpu_id);
++      assert(view->mtl_texel_buffer_handle || view->rgb32_address);
++      assert(view->texel_buffer_gpu_id || view->rgb32_address);
+ 
+       desc.image_gpu_resource_id = view->texel_buffer_gpu_id;
++      desc.rgb32_address = view->rgb32_address;
++      desc.elements = view->vk.elements;
+    }
+    write_desc(set, binding, elem, &desc, sizeof(desc));
+ }
+--- a/src/kosmickrisp/vulkan/kk_nir_lower_descriptors.c
++++ b/src/kosmickrisp/vulkan/kk_nir_lower_descriptors.c
+@@ -7,6 +7,7 @@
+  * SPDX-License-Identifier: MIT
+  */
+ #include "kk_cmd_buffer.h"
++#include "kk_debug.h"
+ #include "kk_descriptor_set.h"
+ #include "kk_descriptor_set_layout.h"
+ #include "kk_shader.h"
+@@ -601,6 +602,46 @@
+ 
+       nir_tex_instr_add_src(tex, nir_tex_src_min_lod, lod_min);
+       nir_tex_instr_add_src(tex, nir_tex_src_max_lod_kk, lod_max);
++   }
++
++   if (KK_EXPERIMENTAL(RGB32_TEXEL) &&
++       tex->sampler_dim == GLSL_SAMPLER_DIM_BUF &&
++       (tex->op == nir_texop_txf || tex->op == nir_texop_txs)) {
++      nir_deref_instr *deref = nir_src_as_deref(nir_src_for_ssa(texture));
++      nir_def *base = load_resource_deref_desc(b, 1, 64, deref,
++         offsetof(struct kk_texel_buffer_descriptor, rgb32_address), ctx);
++      nir_def *elements = load_resource_deref_desc(b, 1, 32, deref,
++         offsetof(struct kk_texel_buffer_descriptor, elements), ctx);
++      nir_push_if(b, nir_ine_imm(b, base, 0));
++      nir_def *rgb;
++      if (tex->op == nir_texop_txs) {
++         rgb = elements;
++      } else {
++         nir_def *index = nir_steal_tex_src(tex, nir_tex_src_coord);
++         /* Keep the native clone's coordinate source too. */
++         nir_tex_instr_add_src(tex, nir_tex_src_coord, index);
++         nir_push_if(b, nir_ult(b, index, elements));
++         nir_def *address = nir_iadd(b, base,
++            nir_u2u64(b, nir_imul_imm(b, index, 12)));
++         nir_def *r = nir_load_global(b, 1, 32, address, .align_mul = 4);
++         nir_def *g = nir_load_global(b, 1, 32, nir_iadd_imm(b, address, 4), .align_mul = 4);
++         nir_def *bl = nir_load_global(b, 1, 32, nir_iadd_imm(b, address, 8), .align_mul = 4);
++         nir_def *alpha = nir_alu_type_get_base_type(tex->dest_type) == nir_type_float
++                            ? nir_imm_float(b, 1.0f) : nir_imm_int(b, 1);
++         nir_def *value = nir_vec4(b, r, g, bl, alpha);
++         value = nir_convert_to_bit_size(b, value,
++            nir_alu_type_get_base_type(tex->dest_type), tex->def.bit_size);
++         nir_push_else(b, NULL);
++         nir_def *zero = nir_imm_zero(b, 4, tex->def.bit_size);
++         nir_pop_if(b, NULL);
++         rgb = nir_if_phi(b, value, zero);
++      }
++      nir_push_else(b, NULL);
++      nir_tex_instr *native = nir_instr_as_tex(nir_instr_clone(b->shader, &tex->instr));
++      nir_builder_instr_insert(b, &native->instr);
++      nir_pop_if(b, NULL);
++      nir_def *result = nir_if_phi(b, rgb, &native->def);
++      nir_def_replace(&tex->def, result);
+    }
+ 
+    return true;
+--- a/src/kosmickrisp/vulkan/kk_shader.c
++++ b/src/kosmickrisp/vulkan/kk_shader.c
+@@ -181,6 +181,7 @@
+    KK_FEAT_CUSTOM_BORDER = BITFIELD_BIT(0),
+    KK_FEAT_NULL_DESCRIPTOR = BITFIELD_BIT(1),
+    KK_FEAT_IMAGE_VIEW_MIN_LOD = BITFIELD_BIT(2),
++   KK_FEAT_RGB32_TEXEL = BITFIELD_BIT(3),
+ };
+ 
+ static enum kk_feature_key
+@@ -193,6 +194,8 @@
+       key |= KK_FEAT_NULL_DESCRIPTOR;
+    if (feats->minLod)
+       key |= KK_FEAT_IMAGE_VIEW_MIN_LOD;
++   if (KK_EXPERIMENTAL(RGB32_TEXEL))
++      key |= KK_FEAT_RGB32_TEXEL;
+    return key;
+ }
+ 

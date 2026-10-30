@@ -13,6 +13,7 @@
 
 int run_render_tests(int wrong);
 int run_gl_xfb_tests(int wrong);
+int run_gl_texel_tests(int rgb, int wrong);
 
 int main(int argc, char **argv)
 {
@@ -83,6 +84,14 @@ int main(int argc, char **argv)
       render_failed = run_render_tests(argc > 3 && !strcmp(argv[3], "--wrong-expected"));
    if (argc > 2 && !strcmp(argv[2], "--xfb"))
       render_failed = run_gl_xfb_tests(argc > 3 && !strcmp(argv[3], "--wrong-expected"));
+   if (argc > 2 && !strcmp(argv[2], "--texel")) {
+      int rgb = 1, wrong = 0;
+      for (int i = 3; i < argc; i++) {
+         if (!strcmp(argv[i], "--native-only")) rgb = 0;
+         if (!strcmp(argv[i], "--wrong-expected")) wrong = 1;
+      }
+      render_failed = run_gl_texel_tests(rgb, wrong);
+   }
    st_api_make_current(NULL, NULL, NULL);
    st_destroy_context(context);
    st_screen_destroy(&frontend);

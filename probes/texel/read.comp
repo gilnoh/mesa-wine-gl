@@ -1,0 +1,21 @@
+#version 450
+layout(local_size_x=1) in;
+#if KIND == 0
+layout(set=0,binding=0) uniform samplerBuffer values;
+#elif KIND == 1
+layout(set=0,binding=0) uniform isamplerBuffer values;
+#else
+layout(set=0,binding=0) uniform usamplerBuffer values;
+#endif
+layout(std430,set=0,binding=1) buffer Output { uvec4 result[]; };
+void main() {
+    int n = textureSize(values);
+    int index = int(gl_GlobalInvocationID.x);
+    if (index == 4) { result[index] = uvec4(n, 123, 456, 789); return; }
+    int coords[4] = int[4](n-1, 0, n/2, 1);
+#if KIND == 0
+    result[index] = floatBitsToUint(texelFetch(values, coords[index]));
+#else
+    result[index] = uvec4(texelFetch(values, coords[index]));
+#endif
+}
