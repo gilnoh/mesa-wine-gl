@@ -1,0 +1,435 @@
+Device: Apple M1 Max
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex capture/base vertex+instance: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query 2: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=8
+vertex pause/resume: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 10.000 20.000 30.000 1.000
+  output[1] = 11.000 20.000 30.000 1.000
+  output[2] = 12.000 20.000 30.000 1.000
+  output[3] = 13.000 20.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex nonzero resume offset: FAIL bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = 10.000 20.000 30.000 1.000
+  output[2] = 11.000 20.000 30.000 1.000
+  output[3] = 12.000 20.000 30.000 1.000
+  output[4] = 13.000 20.000 30.000 1.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=4 available=1 (expected 3/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex overflow guard: FAIL bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=8 needed=8 available=1 (expected 9/8/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex instanced capture: FAIL bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = 12.000 24.000 30.000 1.000
+  output[5] = 13.000 24.000 30.000 1.000
+  output[6] = 14.000 24.000 30.000 1.000
+  output[7] = 15.000 24.000 30.000 1.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex indexed capture: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 12.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=0 available=1 (expected 1/0/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex capture disabled: FAIL bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex two draws/query accumulation: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+static capture/base vertex+instance: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query 2: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=8
+pause/resume: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 10.000 20.000 30.000 1.000
+  output[1] = 11.000 20.000 30.000 1.000
+  output[2] = 12.000 20.000 30.000 1.000
+  output[3] = 13.000 20.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+nonzero resume offset: FAIL bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = 10.000 20.000 30.000 1.000
+  output[2] = 11.000 20.000 30.000 1.000
+  output[3] = 12.000 20.000 30.000 1.000
+  output[4] = 13.000 20.000 30.000 1.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=4 available=1 (expected 3/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+buffer overflow guard: FAIL bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=8 needed=8 available=1 (expected 9/8/1)
+  Query host/copy/availability/guards: FAIL errors=4
+static instanced capture: FAIL bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = 12.000 24.000 30.000 1.000
+  output[5] = 13.000 24.000 30.000 1.000
+  output[6] = 14.000 24.000 30.000 1.000
+  output[7] = 15.000 24.000 30.000 1.000
+  Query 1: written=4 needed=4 available=1 (expected 5/4/1)
+  Query host/copy/availability/guards: FAIL errors=4
+static indexed capture: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 12.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=0 available=1 (expected 1/0/1)
+  Query host/copy/availability/guards: FAIL errors=4
+capture disabled: FAIL bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=6 needed=6 available=1 (expected 7/6/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic GS counts/prefix sum: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 113.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 15.000 23.000 30.000 1.000
+  output[5] = 115.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=6 available=1 (expected 3/6/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic GS overflow guard: FAIL bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=12 needed=12 available=1 (expected 13/12/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic instanced capture: FAIL bytes=192 expected=192 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 113.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 15.000 23.000 30.000 1.000
+  output[5] = 115.000 23.000 30.000 1.000
+  output[6] = 12.000 24.000 30.000 1.000
+  output[7] = 13.000 24.000 30.000 1.000
+  Query 1: written=6 needed=6 available=1 (expected 7/6/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic indexed capture: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 113.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 12.000 23.000 30.000 1.000
+  output[5] = 112.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line list: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 15.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line list indexed: FAIL bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 12.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=1 needed=2 available=1 (expected 2/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line list whole-primitive overflow: FAIL bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=3 needed=3 available=1 (expected 4/3/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line strip: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 14.000 23.000 30.000 1.000
+  output[5] = 15.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=3 needed=3 available=1 (expected 4/3/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line strip indexed: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 14.000 23.000 30.000 1.000
+  output[5] = 12.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=1 needed=3 available=1 (expected 2/3/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex line strip whole-primitive overflow: FAIL bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=1 needed=1 available=1 (expected 2/1/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle list: FAIL bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=1 needed=1 available=1 (expected 2/1/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle list indexed: FAIL bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=1 available=1 (expected 1/1/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle list whole-primitive overflow: FAIL bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle strip: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 13.000 23.000 30.000 1.000
+  output[4] = 15.000 23.000 30.000 1.000
+  output[5] = 14.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle strip indexed: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 13.000 23.000 30.000 1.000
+  output[4] = 12.000 23.000 30.000 1.000
+  output[5] = 14.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=2 available=1 (expected 1/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle strip whole-primitive overflow: FAIL bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle fan: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 13.000 23.000 30.000 1.000
+  output[1] = 14.000 23.000 30.000 1.000
+  output[2] = 12.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 15.000 23.000 30.000 1.000
+  output[5] = 12.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle fan indexed: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 13.000 23.000 30.000 1.000
+  output[1] = 14.000 23.000 30.000 1.000
+  output[2] = 15.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 12.000 23.000 30.000 1.000
+  output[5] = 15.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=2 available=1 (expected 1/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+vertex triangle fan whole-primitive overflow: FAIL bytes=0 expected=0 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=3 needed=3 available=1 (expected 4/3/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic line list-to-strip capture: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 14.000 23.000 30.000 1.000
+  output[5] = 15.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic triangle list-to-strip capture: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = 13.000 23.000 30.000 1.000
+  output[4] = 15.000 23.000 30.000 1.000
+  output[5] = 14.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=2 needed=2 available=1 (expected 3/2/1)
+  Query host/copy/availability/guards: FAIL errors=4
+dynamic triangle strip-to-fan indexed capture: FAIL bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 13.000 23.000 30.000 1.000
+  output[1] = 14.000 23.000 30.000 1.000
+  output[2] = 15.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = 12.000 23.000 30.000 1.000
+  output[5] = 15.000 23.000 30.000 1.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=1 needed=1 available=1 (expected 2/1/1)
+  Query host/copy/availability/guards: FAIL errors=4
+  Render readback: PASS, mismatched bytes=0
+triangle capture while rendering: FAIL bytes=48 expected=48 mismatched_output_bytes=0 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 14.000 23.000 30.000 1.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  Query 1: written=0 needed=0 available=1 (expected 1/0/1)
+  Query host/copy/availability/guards: FAIL errors=4
+  Render readback: PASS, mismatched bytes=0
+triangle rendering with capture disabled: FAIL bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+  output[0] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[1] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+XFB checks: 0/39 passed

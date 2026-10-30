@@ -1,0 +1,139 @@
+{
+  "probe_build": {
+    "binary_sha256": "3bb6dbec75115e11316ab993bea5afeada737be5318def95a991f295ce30ca18",
+    "inputs": {
+      "probes/vk-xfb.c": "93cbdb18d76013a29e23a74b2df7d22c8416d38112de42754c57a267f39e13e8",
+      "probes/xfb/capture.vert": "0f53be9061ff96ff106a5108b0695e3bd81146e63dbe45cbb9ec7c67b358426f",
+      "probes/xfb/dynamic.geom": "ba114617166259d4ac6cc73aa20c85bf90106f0ee224cc92aacf1b31d54970c5",
+      "probes/xfb/render.frag": "7c3de28ad3c50e3f3e5d8d8cc795688ddae8508e1ba08092030c962cc13b6123",
+      "probes/xfb/render.vert": "2f50f44043cde48bf87c7fc7c700144b7529ff3b26ba86077123cebcf70c48fb",
+      "probes/xfb/static.geom": "79742b153fd72bb16176fc63aedc6139991e7f5bbac1e77c963cf88ed13c1d59",
+      "probes/xfb/vertex-only.vert": "4ca1c67b56ee85cf0da34932b2eada0fdc2c0d71f778223aeea7c2c8abf18abb",
+      "build/xfb-shaders/capture.vert.spv": "6bbf4645efa55c3b1783d0d4bf98ae37bf8a054489ec95979637fe13149030f4",
+      "build/xfb-shaders/dynamic.geom.spv": "213898ca743b1d7ba143a9b07f4831abe7f6ed1f32e83e1ad9bd354ebbc7c183",
+      "build/xfb-shaders/render.frag.spv": "767069b8923c91c8bcd753d12c0302bad55b0f68300b67c3db61de7d49eda93f",
+      "build/xfb-shaders/render.vert.spv": "79c8aaaa72213261b268527d1cff5a971db59ff0f12e092469a02b194200eb50",
+      "build/xfb-shaders/static.geom.spv": "c3ab8fbe4586c3c20e81c10cdc256d07fbb550b2374f79f0f62a9e5bbbc8ef15",
+      "build/xfb-shaders/vertex-only.vert.spv": "5c1445aa299c1ed43118c2ef8cba0df726328a8d72e67466a95f661e17ed0524"
+    }
+  },
+  "sha256": {
+    "build/vk-xfb": "3bb6dbec75115e11316ab993bea5afeada737be5318def95a991f295ce30ca18",
+    "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+    "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "21501fdbc445de74a5c89192b608999eede93e93984bc5504120f0eda8ab29d1",
+    "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+    "probes/vk-xfb.c": "93cbdb18d76013a29e23a74b2df7d22c8416d38112de42754c57a267f39e13e8",
+    "build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": "f13e9abb740c73e5d737caf19194b9b1192a2bd8beceffa0aa0d0e7f29e78447",
+    "probes/xfb/capture.vert": "0f53be9061ff96ff106a5108b0695e3bd81146e63dbe45cbb9ec7c67b358426f",
+    "probes/xfb/dynamic.geom": "ba114617166259d4ac6cc73aa20c85bf90106f0ee224cc92aacf1b31d54970c5",
+    "probes/xfb/render.frag": "7c3de28ad3c50e3f3e5d8d8cc795688ddae8508e1ba08092030c962cc13b6123",
+    "probes/xfb/render.vert": "2f50f44043cde48bf87c7fc7c700144b7529ff3b26ba86077123cebcf70c48fb",
+    "probes/xfb/static.geom": "79742b153fd72bb16176fc63aedc6139991e7f5bbac1e77c963cf88ed13c1d59",
+    "probes/xfb/vertex-only.vert": "4ca1c67b56ee85cf0da34932b2eada0fdc2c0d71f778223aeea7c2c8abf18abb"
+  },
+  "runs": [
+    {
+      "name": "baseline",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 77,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "experiment-disabled",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 77,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "cache-miss",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--cache-miss-control"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "capture",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--cache-write",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-20261030T233807.978016Z/pipelines.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "cache-reload",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--cache-read",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-20261030T233807.978016Z/pipelines.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "wrong-query",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--wrong-query"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "wrong-expected",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--wrong-expected"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    }
+  ]
+}

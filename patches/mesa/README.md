@@ -1,21 +1,26 @@
-# KosmicKrisp transform-feedback development patch
+# KosmicKrisp transform-feedback development patches
 
-`0001-kk-gs-xfb-experiment.patch` connects existing Mesa `poly` geometry capture
-machinery to KosmicKrisp. It is isolated from the unmodified baseline in
-`src/mesa-xfb` and selected only with `MESA_KK_EXPERIMENTAL=xfb_gs_probe`.
-The upstream `all` experimental option also includes this flag.
+The declared series is isolated from the unmodified baseline in `src/mesa-xfb`
+and enabled only with `MESA_KK_EXPERIMENTAL=xfb_gs_probe`. The upstream `all`
+experimental option also includes this flag. The flag name is retained as the
+experiment expands beyond explicit geometry shaders.
 
-This patch advertises an incomplete extension for development probes. Do not
-use it to claim Vulkan extension conformance or modern OpenGL support. It rejects
-vertex-only and tessellation capture and leaves queries, stream selection and
-indirect-byte-count drawing unavailable. Measured scope and results live only
-in `docs/NOTEBOOK.md`.
+- `0001`: retains and dispatches poly's GS count/pre/capture stages, connects
+  buffer bounds and byte counters, and suppresses padded restart writes.
+- `0002`: generates a pass-through GS for vertex-only capture; owns and caches
+  that stage with the vertex pipeline and keys it by topology. Poly assembles
+  per-draw topologies within KK's advertised topology-class restrictions.
+- `0003`: adds stream-zero transform-feedback queries, accumulating per-draw
+  written/needed counts into 64-bit reports and using existing result-copy paths.
 
-The patch preserves captured varyings, retains/counts/prefix-sums geometry
-outputs, dispatches pre-GS work, wires buffer bounds and GPU byte counters, and
-suppresses XFB writes from padded restart invocations. The standalone Vulkan
-probe validates data independently of Zink and checks failure controls.
+These patches advertise an incomplete extension for development probes. Do not
+use them to claim Vulkan extension conformance or complete modern GL support.
+TES-only capture remains rejected. Geometry streams, rasterization-stream
+selection and indirect-byte-count drawing remain unavailable. Measured coverage
+and remaining limits live only in `docs/NOTEBOOK.md`.
 
-Apply only the declared `patches/series` to the pinned source. The experimental
-builder verifies exact source equality before compiling; never edit vendor
-sources without updating and applying an explicit patch. Keep assertions on.
+Apply only `patches/series` to the pinned source. The builder verifies exact
+source equality before compiling; never edit vendor sources without recording
+and applying an explicit patch. Keep assertions enabled. The Vulkan and GL
+probe runners check build manifests and complete expected summaries, so an old
+binary or an early crash cannot satisfy a negative control.

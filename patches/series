@@ -1,2 +1,4 @@
 # Development only; never applied to the baseline.
 experimental mesa/0001-kk-gs-xfb-experiment.patch
+experimental mesa/0002-kk-vertex-xfb-experiment.patch
+experimental mesa/0003-kk-xfb-query-experiment.patch

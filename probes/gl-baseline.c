@@ -12,6 +12,7 @@
 #include "gallium/drivers/zink/zink_public.h"
 
 int run_render_tests(int wrong);
+int run_gl_xfb_tests(int wrong);
 
 int main(int argc, char **argv)
 {
@@ -80,6 +81,8 @@ int main(int argc, char **argv)
    int render_failed = 0;
    if (argc > 2 && !strcmp(argv[2], "--render"))
       render_failed = run_render_tests(argc > 3 && !strcmp(argv[3], "--wrong-expected"));
+   if (argc > 2 && !strcmp(argv[2], "--xfb"))
+      render_failed = run_gl_xfb_tests(argc > 3 && !strcmp(argv[3], "--wrong-expected"));
    st_api_make_current(NULL, NULL, NULL);
    st_destroy_context(context);
    st_screen_destroy(&frontend);

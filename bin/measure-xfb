@@ -25,13 +25,20 @@ results=[]
 failed=False
 scenarios=[('baseline','mesa-x86_64',None,77,'UNSUPPORTED: transformFeedback'),
            ('experiment-disabled','kk-xfb-x86_64',None,77,'UNSUPPORTED: transformFeedback'),
-           ('capture','kk-xfb-x86_64','xfb_gs_probe',0,'XFB checks: 11/11 passed'),
-           ('wrong-expected','kk-xfb-x86_64','xfb_gs_probe',1,'XFB checks: 0/11 passed')]
+           ('cache-miss','kk-xfb-x86_64','xfb_gs_probe',0,'Empty-cache compile-required control: PASS'),
+           ('capture','kk-xfb-x86_64','xfb_gs_probe',0,'XFB checks: 39/39 passed'),
+           ('cache-reload','kk-xfb-x86_64','xfb_gs_probe',0,'XFB checks: 39/39 passed'),
+           ('wrong-query','kk-xfb-x86_64','xfb_gs_probe',1,'XFB checks: 0/39 passed'),
+           ('wrong-expected','kk-xfb-x86_64','xfb_gs_probe',1,'XFB checks: 0/39 passed')]
 for name,build,options,status,summary in scenarios:
     env=base_env.copy()
     env['VK_DRIVER_FILES']=str(root/'build'/build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')
     if options:env['MESA_KK_EXPERIMENTAL']=options
     command=[str(program),str(root/'build/xfb-shaders')]
+    if name=='cache-miss':command.append('--cache-miss-control')
+    if name=='capture':command.extend(['--cache-write',str(out/'pipelines.bin')])
+    if name=='cache-reload':command.extend(['--cache-read',str(out/'pipelines.bin')])
+    if name=='wrong-query':command.append('--wrong-query')
     if name=='wrong-expected':command.append('--wrong-expected')
     with (out/(name+'.txt')).open('w') as log:
         try:
@@ -41,15 +48,14 @@ for name,build,options,status,summary in scenarios:
             code=None
     content=(out/(name+'.txt')).read_text()
     passed=code==status and summary in content
-    if options:
-        passed &= "Vertex-only capture: explicitly unsupported (scope control PASS)" in content
+    if name=='cache-reload':passed &= content.count('Pipeline cache hit: PASS') == 11
     results.append(dict(name=name,command=command,environment={k:v for k,v in env.items() if k.startswith(('MESA_','VK_'))},exit_status=code,expected_outcome_observed=passed))
     print(f'{name}: exit={code}, expected outcome={passed}',flush=True)
     if not passed:
         failed=True
         print(content[-3000:],flush=True)
         break
-files=[program,root/'patches/mesa/0001-kk-gs-xfb-experiment.patch',root/'probes/vk-xfb.c',
+files=[program,*sorted((root/'patches/mesa').glob('*.patch')),root/'probes/vk-xfb.c',
        root/'build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib',*sorted((root/'probes/xfb').iterdir())]
 (out/'runs.json').write_text(json.dumps(dict(probe_build=manifest,sha256={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},runs=results),indent=2)+'\n')
 print(out)

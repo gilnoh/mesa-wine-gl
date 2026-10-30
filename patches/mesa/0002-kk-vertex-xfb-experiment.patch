@@ -1,0 +1,198 @@
+--- a/src/kosmickrisp/vulkan/kk_shader.h
++++ b/src/kosmickrisp/vulkan/kk_shader.h
+@@ -52,6 +52,7 @@
+    bool uses_per_draw_data;
+    bool has_gs_count;
+    bool has_gs_pre;
++   bool has_xfb_passthrough;
+ 
+    /* Required for fragment shader cull distance discards. */
+    uint8_t num_cull_distances;
+@@ -146,6 +147,8 @@
+ 
+    struct kk_pipeline_handles pipeline;
+    struct kk_shader_info info;
++   /* Owned synthetic GS for vertex-only transform feedback. */
++   struct kk_shader *xfb_passthrough;
+    struct msl_compile_data msl_data[MESA_SHADER_STAGES];
+    /* Compute pass of a GS. Its rasterization VS is in
+     * msl_data[MESA_SHADER_GEOMETRY]. */
+--- a/src/kosmickrisp/vulkan/kk_shader.c
++++ b/src/kosmickrisp/vulkan/kk_shader.c
+@@ -103,6 +103,8 @@
+ 
+ struct kk_vs_key {
+    bool is_points;
++   uint8_t xfb_topology;
++   bool xfb_dynamic_topology;
+    struct vk_vertex_input_state vi;
+ };
+ 
+@@ -114,6 +116,13 @@
+    key->is_points =
+       (state->ia->primitive_topology == VK_PRIMITIVE_TOPOLOGY_POINT_LIST);
+    key->vi = *state->vi;
++   if (KK_EXPERIMENTAL(XFB_GS_PROBE)) {
++      /* The generated capture stage depends on the decomposed input primitive.
++       * A point/non-point key aliases line and triangle capture pipelines. */
++      key->xfb_topology = state->ia->primitive_topology;
++      key->xfb_dynamic_topology =
++         BITSET_TEST(state->dynamic, MESA_VK_DYNAMIC_IA_PRIMITIVE_TOPOLOGY);
++   }
+ }
+ 
+ struct kk_fs_key {
+@@ -875,6 +884,9 @@
+    ralloc_free((void *)shader->gs_pre.entrypoint_name);
+    ralloc_free((void *)shader->gs_pre.code);
+ 
++   if (shader->xfb_passthrough)
++      kk_shader_destroy(vk_dev, shader->xfb_passthrough, pAllocator);
++
+    vk_shader_free(&dev->vk, pAllocator, &shader->vk);
+ }
+ 
+@@ -1728,6 +1740,51 @@
+    gs->info.outputs_written |= BITFIELD64_BIT(slot);
+ }
+ 
++/* Reuse poly's primitive-ordered capture path for a pipeline without an
++ * application GS. The experiment accepts fixed point, line and triangle topologies. */
++static nir_shader *
++kk_xfb_passthrough(nir_shader *vs, enum mesa_prim prim)
++{
++   size_t key_size = poly_passthrough_gs_key_size(vs->xfb_info->output_count);
++   struct poly_passthrough_gs_key *key = rzalloc_size(NULL, key_size);
++   key->prim = u_decomposed_prim(prim);
++   key->outputs = vs->info.outputs_written;
++   key->clip_distance_array_size = vs->info.clip_distance_array_size;
++   key->cull_distance_array_size = vs->info.cull_distance_array_size;
++   memcpy(key->xfb_stride, vs->info.xfb_stride, sizeof(key->xfb_stride));
++   memcpy(&key->xfb_info, vs->xfb_info,
++          nir_xfb_info_size(vs->xfb_info->output_count));
++
++   nir_foreach_function_impl(impl, vs) {
++      nir_foreach_block(block, impl) {
++         nir_foreach_instr(instr, block) {
++            if (instr->type != nir_instr_type_intrinsic)
++               continue;
++            nir_intrinsic_instr *intr = nir_instr_as_intrinsic(instr);
++            if (intr->intrinsic != nir_intrinsic_store_output)
++               continue;
++            unsigned loc = nir_intrinsic_io_semantics(intr).location;
++            key->output_types[loc] = nir_intrinsic_src_type(intr);
++            key->output_components[loc] = MAX2(key->output_components[loc],
++               nir_intrinsic_component(intr) + intr->num_components);
++         }
++      }
++   }
++
++   nir_builder b = nir_builder_init_simple_shader(MESA_SHADER_GEOMETRY,
++                                                 &kk_nir_options, "xfb passthrough");
++   poly_nir_passthrough_gs(&b, key);
++   b.shader->info.io_lowered = true;
++   b.shader->info.next_stage = MESA_SHADER_FRAGMENT;
++   nir_shader_gather_info(b.shader, nir_shader_get_entrypoint(b.shader));
++   ralloc_free(key);
++   ralloc_free(vs->xfb_info);
++   vs->xfb_info = NULL;
++   vs->info.has_transform_feedback_varyings = false;
++   memset(vs->info.xfb_stride, 0, sizeof(vs->info.xfb_stride));
++   return b.shader;
++}
++
+ static VkResult
+ kk_compile_shaders(struct vk_device *device, uint32_t shader_count,
+                    struct vk_shader_compile_info *infos,
+@@ -1742,6 +1799,46 @@
+ 
+    enum kk_feature_key features = kk_make_feature_key(enabled_features);
+ 
++   if (state && shader_count && infos[0].stage == MESA_SHADER_VERTEX &&
++       infos[0].nir->xfb_info &&
++       (shader_count == 1 || (shader_count == 2 && infos[1].stage == MESA_SHADER_FRAGMENT)) &&
++       state->ia->primitive_topology <= VK_PRIMITIVE_TOPOLOGY_TRIANGLE_FAN) {
++      /* KK restricts dynamic topology to the pipeline topology class. The
++       * generated stage uses that class; poly assembles each draw topology.
++       * Lower the producer as a software VS, then capture its outputs in a
++       * generated GS. Recursive compilation owns/consumes every input NIR. */
++      nir_shader *vs = infos[0].nir;
++      vs->info.next_stage = MESA_SHADER_GEOMETRY;
++      msl_preprocess_nir_workarounds(vs, pdev->settings.disabled_workarounds);
++      kk_lower_nir(dev, vs, true, infos[0].robustness,
++                   infos[0].set_layout_count, infos[0].set_layouts, state, features);
++      nir_shader *gs = kk_xfb_passthrough(vs,
++         vk_topology_to_mesa(state->ia->primitive_topology));
++      struct vk_shader_compile_info expanded[shader_count + 1];
++      struct vk_shader *compiled[shader_count + 1];
++      expanded[0] = infos[0];
++      expanded[0].next_stage_mask = VK_SHADER_STAGE_GEOMETRY_BIT;
++      expanded[1] = infos[0];
++      expanded[1].stage = MESA_SHADER_GEOMETRY;
++      expanded[1].nir = gs;
++      expanded[1].next_stage_mask = VK_SHADER_STAGE_FRAGMENT_BIT;
++      if (shader_count == 2)
++         expanded[2] = infos[1];
++      result = kk_compile_shaders(device, shader_count + 1, expanded, state,
++                                   enabled_features, pAllocator, compiled);
++      if (result != VK_SUCCESS) {
++         memset(shaders_out, 0, shader_count * sizeof(*shaders_out));
++         return result;
++      }
++      struct kk_shader *owner = container_of(compiled[0], struct kk_shader, vk);
++      owner->info.has_xfb_passthrough = true;
++      owner->xfb_passthrough = container_of(compiled[1], struct kk_shader, vk);
++      shaders_out[0] = compiled[0];
++      if (shader_count == 2)
++         shaders_out[1] = compiled[2];
++      return VK_SUCCESS;
++   }
++
+    /* Vulkan doesn't enforce a fragment shader to build pipelines. We may need
+     * to create one. */
+    nir_shader *nir_shaders[shader_count + 1u];
+@@ -1754,7 +1851,7 @@
+       const struct vk_shader_compile_info *info = &infos[i];
+       nir_shader *nir = info->nir;
+ 
+-      /* This experiment deliberately rejects the not-yet-wired VS/TES path. */
++      /* Reject capture stages/topologies not implemented by this experiment. */
+       if (nir->xfb_info && nir->info.stage != MESA_SHADER_GEOMETRY) {
+          for (uint32_t j = 0; j < shader_count; ++j)
+             ralloc_free(infos[j].nir);
+@@ -1905,6 +2002,10 @@
+    if (shader->info.has_gs_count) kk_msl_serialize(&shader->gs_count, blob);
+    if (shader->info.has_gs_pre) kk_msl_serialize(&shader->gs_pre, blob);
+ 
++   if (shader->info.has_xfb_passthrough &&
++       !kk_shader_serialize(vk_dev, &shader->xfb_passthrough->vk, blob))
++      return false;
++
+    return !blob->out_of_memory;
+ }
+ 
+@@ -1975,6 +2076,14 @@
+    if (info.has_gs_pre) {
+       result = kk_msl_deserialize(blob, &shader->gs_pre);
+       if (result != VK_SUCCESS) goto fail;
++   }
++
++   if (info.has_xfb_passthrough) {
++      struct vk_shader *generated = NULL;
++      result = kk_deserialize_shader(vk_dev, blob, binary_version, pAllocator,
++                                     &generated);
++      if (result != VK_SUCCESS) goto fail;
++      shader->xfb_passthrough = container_of(generated, struct kk_shader, vk);
+    }
+ 
+    if (info.stage == MESA_SHADER_COMPUTE) {
+@@ -2052,6 +2161,9 @@
+       else
+          kk_cmd_bind_graphics_shader(cmd, stages[i], shader);
+    }
++   struct kk_shader *vs = cmd->state.shaders[MESA_SHADER_VERTEX];
++   if (vs && vs->info.has_xfb_passthrough)
++      kk_cmd_bind_graphics_shader(cmd, MESA_SHADER_GEOMETRY, vs->xfb_passthrough);
+ }
+ 
+ static VkResult

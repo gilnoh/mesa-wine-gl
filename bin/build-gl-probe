@@ -58,14 +58,16 @@ with (root/'build/gl-probe-build.log').open('w') as log:
     subprocess.run([*flags,'-o',str(obj),'-c',str(root/'probes/gl-baseline.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     render_obj = root/'build/gl-render.o'
     subprocess.run([*flags,'-o',str(render_obj),'-c',str(root/'probes/gl-render.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-    link = ['/usr/local/opt/llvm/bin/clang++','--no-default-config','-arch','x86_64','-o',str(output),str(obj),str(render_obj)]
+    xfb_obj = root/'build/gl-xfb.o'
+    subprocess.run([*flags,'-o',str(xfb_obj),'-c',str(root/'probes/gl-xfb.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    link = ['/usr/local/opt/llvm/bin/clang++','--no-default-config','-arch','x86_64','-o',str(output),str(obj),str(render_obj),str(xfb_obj)]
     link += [str(build/p) for p in libraries]
     link += ['-L/usr/local/opt/llvm/lib','-lLLVM','-L/usr/local/opt/zstd/lib','-lzstd',
              '-L/usr/local/opt/spirv-tools/lib','-lSPIRV-Tools',
              '-L/usr/local/opt/vulkan-loader/lib','-lvulkan','-Wl,-rpath,/usr/local/opt/vulkan-loader/lib','-lexpat','-lz',
              '-framework','CoreFoundation','-framework','IOKit','-framework','Metal','-framework','QuartzCore']
     subprocess.run(link,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-inputs=[root/'probes/gl-baseline.c',root/'probes/gl-render.c',root/'sources.lock.json']
+inputs=[root/'probes/gl-baseline.c',root/'probes/gl-render.c',root/'probes/gl-xfb.c',root/'sources.lock.json']
 manifest=dict(binary_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
               inputs={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs})
 (root/'build/gl-baseline.build.json').write_text(json.dumps(manifest,indent=2)+'\n')

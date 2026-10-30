@@ -3,6 +3,112 @@
 Current state and investigation record. Distinguish measured results, user reports,
 and hypotheses. Historical reference results are not measurements of this project.
 
+
+## 2026-10-31 — Vertex capture, queries, and GL-to-Zink validation
+
+**Measured:** the opt-in driver now passes 39/39 Vulkan capture checks and two
+native GL-to-Zink capture checks. The original 26/26 rendering suite also passes
+against the changed driver with capture disabled. No GL version override or
+assertion suppression was used. The workbench runtime and game remain unchanged.
+The earlier explicit-GS-only limits below describe the previous checkpoint.
+
+### Capture path and measurements
+
+`0002-kk-vertex-xfb-experiment.patch` reuses Mesa's existing
+`poly_nir_passthrough_gs` generator to capture vertex-only output through the
+geometry path. The generated stage belongs to the vertex shader object and is
+serialized/deserialized with it. Its topology is part of the experimental cache
+key. The opt-in retains the existing name `xfb_gs_probe` for script compatibility.
+
+The Vulkan checks now cover:
+
+- Vertex-only and explicit-GS capture; indexed and instanced draws; byte offsets;
+  pause/resume; bounded overflow and untouched output/counter guards.
+- Point, line-list/strip and triangle-list/strip/fan vertex capture, including
+  incomplete primitives and rejecting partial primitives when the buffer fills.
+- Dynamic topology transitions within a topology class: line list to strip,
+  triangle list to strip, and strip to indexed fan.
+- Triangle capture while rendering, plus rendering with capture disabled:
+  independent 8×8 RGBA8 readback checks the expected colour and copy guards.
+- Stream-zero transform-feedback queries for every case: written versus needed,
+  32/64-bit CPU retrieval and GPU copies, availability, and untouched guards.
+  A reset but unused query must return `VK_NOT_READY` with unavailable status.
+  Two draws within one query validate accumulation.
+
+`0003-kk-xfb-query-experiment.patch` adds stream-zero query reports to the existing
+query pool machinery. It accumulates poly's bounded per-draw counts into 64-bit
+reports and advertises queries only under the experimental flag. The experiment
+reports one stream; geometry streams, rasterization-stream selection and
+indirect-byte-count drawing remain unavailable.
+
+The suite runs again in a fresh process from saved pipeline-cache data. All
+11 pipeline creations must report application-cache hits and succeed with
+`FAIL_ON_PIPELINE_COMPILE_REQUIRED`. An empty-cache control must return
+`VK_PIPELINE_COMPILE_REQUIRED`, proving that check is effective. The wrong-data
+and separate wrong-query runs both fail 39/39 as expected. Baseline and
+experiment-disabled drivers still report transform feedback unsupported.
+
+The expected query semantics follow the [Vulkan transform-feedback query
+specification](https://docs.vulkan.org/spec/latest/chapters/queries.html#queries-transform-feedback).
+Dynamic topology follows KK's false `dynamicPrimitiveTopologyUnrestricted`
+property and Vulkan's [topology-class restriction](https://docs.vulkan.org/guide/latest/primitive_topology.html).
+
+### Corrections exposed by the tests
+
+- The first line/triangle suite passed 24/33: triangles captured line-shaped
+  results. The original key distinguished only point/non-point pipelines, which
+  was insufficient for the generated capture stage. Adding topology to the
+  experimental key made the unchanged 33-case suite pass, including cache reload.
+  This is a correction to the new emulation path, not a claim of a demonstrated
+  standalone upstream triangle-rendering defect.
+- The GL probe initially had no complete framebuffer; draws returned
+  `GL_INVALID_FRAMEBUFFER_OPERATION`. Supplying an 8×8 attachment allowed the
+  test to reach Zink. That setup failure was not a driver capture result.
+- Zink then failed pipeline creation with `VK_ERROR_FEATURE_NOT_PRESENT` because
+  the first patch rejected dynamic topology. KK advertises topology-class
+  restrictions; supporting that dynamic state made GL capture and overflow pass.
+  The new Vulkan transition checks exercise the same class-preserving behavior.
+- An initial GL-probe compile failed on an incorrect header path. An old binary
+  subsequently only created a context and printed no capture summary; that run
+  is not a capture result. `bin/measure-gl-xfb` now verifies the probe build
+  manifest and requires the complete expected summary and exit status.
+
+### Measured GL gates and remaining work
+
+With `MESA_KK_EXPERIMENTAL=xfb_gs_probe,custom_border`, Zink reports GL 3.3 core
+and compatibility, ES 3.1, and a single missing desktop version-gate extension:
+`ARB_texture_buffer_object_rgb32`. A real 3.3 context succeeds; 4.0 and 4.6
+requests still fail. These capability reports do not establish complete GL 3.3
+conformance. Actual GL capture/overflow and primitive-written queries pass
+2/2, and the wrong-byte control fails 2/2.
+
+**Next:** RGB32 texture-buffer support, starting with native-format controls and
+float/signed/unsigned format, range, size-query and update checks. Source inspection
+shows `kk_CreateBufferView` creates a native Metal texture view and the current
+format map lacks RGB32 texel-buffer entries. An emulation path is a candidate,
+not yet implemented or measured. Then rerun GL gates and focused GL correctness
+checks before Wine integration and actual TFA/LUT assessment.
+
+Remaining capture limits include TES-only output, adjacency, primitive restart,
+indirect capture draws, multiple buffers/streams, large-count stress, multiview,
+and full pipeline-switching coverage. The current test workloads do not establish
+these. The shader path still rejects unsupported non-GS capture stages. No broad
+extension-conformance or end-to-end game success is claimed.
+
+Evidence under `docs/evidence/2026-10-31/`:
+
+- `xfb-20261030T233807.978016Z`: final 39-case suite, cold/cache controls,
+  independent negative controls, hashes and launch environment.
+- `gl-xfb-20261030T233811.101436Z`: final GL capture/overflow controls.
+- `render-20261030T233816.192099Z`: rendering regression and pixel control.
+- `gl-contexts-20261030T233256.483716Z`: version gates before the dynamic-topology
+  change; final GL capture logs independently confirm the same 3.3/RGB32 gate.
+- `xfb-20261030T232823.451573Z`: topology/cache failure before its correction.
+- `gl-xfb-20261030T233454.889522Z`: Zink pipeline rejection before dynamic support.
+
+Timestamps in directory names are UTC (October 30); local measurements were
+October 31 in Europe/Berlin. Generated pipeline-cache binaries remain in `build/`.
+
 ## 2026-10-30 — Native rendering and transform-feedback experiment
 
 **Measured:** fresh unmodified Mesa/Zink/KK passes 26/26 native GL rendering

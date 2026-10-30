@@ -1,0 +1,108 @@
+Device: Apple M1 Max
+vertex capture/base vertex+instance: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+vertex pause/resume: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+vertex nonzero resume offset: PASS bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+vertex overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+vertex instanced capture: PASS bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+vertex indexed capture: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+vertex capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+static capture/base vertex+instance: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+pause/resume: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+nonzero resume offset: PASS bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+buffer overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+static instanced capture: PASS bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+static indexed capture: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+dynamic GS counts/prefix sum: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+dynamic GS overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+dynamic instanced capture: PASS bytes=192 expected=192 mismatched_output_bytes=0 counter_guard=0
+dynamic indexed capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+vertex line list: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+vertex line list indexed: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+vertex line list whole-primitive overflow: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+vertex line strip: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+vertex line strip indexed: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+vertex line strip whole-primitive overflow: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+vertex triangle list: FAIL bytes=32 expected=48 mismatched_output_bytes=16 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle list indexed: FAIL bytes=32 expected=48 mismatched_output_bytes=16 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle list whole-primitive overflow: FAIL bytes=32 expected=0 mismatched_output_bytes=32 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle strip: FAIL bytes=64 expected=96 mismatched_output_bytes=34 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle strip indexed: FAIL bytes=64 expected=96 mismatched_output_bytes=34 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle strip whole-primitive overflow: FAIL bytes=32 expected=0 mismatched_output_bytes=32 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle fan: FAIL bytes=64 expected=96 mismatched_output_bytes=35 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle fan indexed: FAIL bytes=64 expected=96 mismatched_output_bytes=35 counter_guard=0
+  output[0] = 15.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = 13.000 23.000 30.000 1.000
+  output[3] = 14.000 23.000 30.000 1.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+vertex triangle fan whole-primitive overflow: FAIL bytes=32 expected=0 mismatched_output_bytes=32 counter_guard=0
+  output[0] = 12.000 23.000 30.000 1.000
+  output[1] = 13.000 23.000 30.000 1.000
+  output[2] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[3] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[4] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[5] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[6] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+  output[7] = -431602080.000 -431602080.000 -431602080.000 -431602080.000
+Pipeline cache saved: 120373 bytes
+XFB checks: 24/33 passed

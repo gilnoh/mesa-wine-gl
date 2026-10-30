@@ -1,0 +1,86 @@
+{
+  "probe_build": {
+    "binary_sha256": "0d3069691e00412a8a538d126c70f4324b74ebcd8921d553095cf0de5f71853f",
+    "inputs": {
+      "probes/vk-xfb.c": "c66537fe6cbc41a20f3ccbad860f8f2996d0600b7713bdfecd804198cb504a95",
+      "probes/xfb/capture.vert": "0f53be9061ff96ff106a5108b0695e3bd81146e63dbe45cbb9ec7c67b358426f",
+      "probes/xfb/dynamic.geom": "ba114617166259d4ac6cc73aa20c85bf90106f0ee224cc92aacf1b31d54970c5",
+      "probes/xfb/static.geom": "79742b153fd72bb16176fc63aedc6139991e7f5bbac1e77c963cf88ed13c1d59",
+      "probes/xfb/vertex-only.vert": "4ca1c67b56ee85cf0da34932b2eada0fdc2c0d71f778223aeea7c2c8abf18abb",
+      "build/xfb-shaders/capture.vert.spv": "6bbf4645efa55c3b1783d0d4bf98ae37bf8a054489ec95979637fe13149030f4",
+      "build/xfb-shaders/dynamic.geom.spv": "213898ca743b1d7ba143a9b07f4831abe7f6ed1f32e83e1ad9bd354ebbc7c183",
+      "build/xfb-shaders/static.geom.spv": "c3ab8fbe4586c3c20e81c10cdc256d07fbb550b2374f79f0f62a9e5bbbc8ef15",
+      "build/xfb-shaders/vertex-only.vert.spv": "5c1445aa299c1ed43118c2ef8cba0df726328a8d72e67466a95f661e17ed0524"
+    }
+  },
+  "sha256": {
+    "build/vk-xfb": "0d3069691e00412a8a538d126c70f4324b74ebcd8921d553095cf0de5f71853f",
+    "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+    "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "2192e6bed7a24a8c1f286ddb68f1b1e067993cdd550b9a423af4fc56af76f8b8",
+    "probes/vk-xfb.c": "c66537fe6cbc41a20f3ccbad860f8f2996d0600b7713bdfecd804198cb504a95",
+    "build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": "533c4ddfb3413c6cd9c9a4c522f3bd0a6bb1fd15ce18313318e3a21d55b5cd83",
+    "probes/xfb/capture.vert": "0f53be9061ff96ff106a5108b0695e3bd81146e63dbe45cbb9ec7c67b358426f",
+    "probes/xfb/dynamic.geom": "ba114617166259d4ac6cc73aa20c85bf90106f0ee224cc92aacf1b31d54970c5",
+    "probes/xfb/static.geom": "79742b153fd72bb16176fc63aedc6139991e7f5bbac1e77c963cf88ed13c1d59",
+    "probes/xfb/vertex-only.vert": "4ca1c67b56ee85cf0da34932b2eada0fdc2c0d71f778223aeea7c2c8abf18abb"
+  },
+  "runs": [
+    {
+      "name": "baseline",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 77,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "experiment-disabled",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 77,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "cache-miss",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--cache-miss-control"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "capture",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/vk-xfb",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-shaders",
+        "--cache-write",
+        "/Users/tailblues/mesa-wine-gl/build/xfb-20261030T232823.451573Z/pipelines.bin"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": false
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "probe_build": {
+    "binary_sha256": "d330a1d21b664a13e31a539908ffd5063f682c0dfbc0ac88df9f16ace42d3925",
+    "inputs": {
+      "probes/gl-baseline.c": "eb3a43bd7bf6f5e93de340440fe703192de3f1339aeff027866647b34258993d",
+      "probes/gl-render.c": "10f82bed959302fed3ff52b1c4807feb7399d64cfe3b6b0a8940e48305cc272c",
+      "probes/gl-xfb.c": "bf8f063db5a39884fcb7480463a3821d14c73e0cebd1348cfb4fb9d419283c30",
+      "sources.lock.json": "a955651f9a49314e086d82b27d207055facd523382c03b5bbcdc410f24b7911d"
+    }
+  },
+  "sha256": {
+    "build/gl-baseline": "d330a1d21b664a13e31a539908ffd5063f682c0dfbc0ac88df9f16ace42d3925",
+    "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+    "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "d7426ba854ddd9af2a295857edb29c75f4482e71a10aa1517dd66e29bdf53b0b",
+    "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+    "probes/gl-xfb.c": "bf8f063db5a39884fcb7480463a3821d14c73e0cebd1348cfb4fb9d419283c30",
+    "build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": "31ccb246ef024dec4a1139151d561b4f6b9709a41ea05cdfa73d5ad1c691e95f"
+  },
+  "runs": [
+    {
+      "name": "baseline",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "33",
+        "--xfb"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "experiment-disabled",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "33",
+        "--xfb"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    },
+    {
+      "name": "capture",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "33",
+        "--xfb"
+      ],
+      "environment": {
+        "MESA_SHADER_CACHE_DISABLE": "true",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": false
+    }
+  ]
+}

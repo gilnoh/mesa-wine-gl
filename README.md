@@ -55,10 +55,13 @@ experiments start from clean sources; old changes require individual justificati
   experimental capture.
 - `bin/build-kk-experiment`: build the isolated, explicitly patched KK worktree;
   `--verify-only` checks its source against the pin and `patches/series`.
-- `bin/build-xfb-probe` and `bin/measure-xfb`: build and run explicit-GS Vulkan
-  capture tests, disabled-feature controls, and wrong-output controls. The runner
+- `bin/build-xfb-probe` and `bin/measure-xfb`: build and run Vulkan
+  vertex/GS capture and query tests, cache-reload checks, disabled-feature controls,
+  and independent wrong-output/wrong-query controls. The runner
   supplies the experimental flag only for capture scenarios and rejects stale
   probe binaries. See [patch scope](patches/mesa/README.md).
+- `bin/measure-gl-xfb`: exercise capture and overflow through native GL/Zink,
+  with disabled-feature and wrong-output controls. Build with `bin/build-gl-probe`.
 - `bin/trace-tfa [--forward-compatible]`: trace a direct launch through the existing
   workbench prefix, with Steam already online. Saves runtime provenance and logs;
   a game still running at the observation timeout is left running.
@@ -86,12 +89,15 @@ For the isolated transform-feedback development experiment (requires
 ```sh
 git -C src/mesa worktree add --detach ../mesa-xfb <mesa.commit-from-sources.lock.json>
 git -C src/mesa-xfb apply ../../patches/mesa/0001-kk-gs-xfb-experiment.patch
+git -C src/mesa-xfb apply ../../patches/mesa/0002-kk-vertex-xfb-experiment.patch
+git -C src/mesa-xfb apply ../../patches/mesa/0003-kk-xfb-query-experiment.patch
 bin/build-kk-experiment
 bin/build-xfb-probe
 bin/measure-xfb
 bin/build-gl-probe
 bin/measure-gl
 bin/measure-gl --experimental-driver
+bin/measure-gl-xfb
 ```
 
 The baseline builder refuses modified sources; the experimental builder accepts
