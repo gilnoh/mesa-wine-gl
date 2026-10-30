@@ -1,0 +1,8 @@
+# Fetched sources, local toolchains, and generated artifacts.
+/src/
+/build/
+/dist/
+/toolchains/
+.venv/
+*.log
+.DS_Store

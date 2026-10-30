@@ -1,0 +1,58 @@
+WARNING: Some incorrect rendering might occur because the selected Vulkan device (Apple M1 Max) doesn't support base Zink requirements: have_EXT_custom_border_color 
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=0 compat=21 ES1=11 ES2=20
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Missing desktop version-gate extension: ARB_enhanced_layouts
+Missing desktop version-gate extension: ARB_texture_buffer_object_rgb32
+Missing desktop version-gate extension: ARB_transform_feedback2
+Missing desktop version-gate extension: ARB_transform_feedback3
+Missing desktop version-gate extension: ARB_transform_feedback_instanced
+Missing desktop version-gate extension: EXT_transform_feedback
+Requesting 1.0 compat context
+GL_VERSION: 2.1 Mesa 27.0.0-devel (git-18b8ad0b92)
+GL_RENDERER: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL_VERSION: 1.20
+GL error: 0x0
+FBO clear/readback: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 0: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 1: PASS mismatch_bytes=0 GL_error=0x0
+Texture draw/subimage/fence round 2: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 0: first mismatch byte=248 actual=196 expected=214
+1024x32 mip chain RGBA8 level 0: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 1: first mismatch byte=248 actual=120 expected=138
+1024x32 mip chain RGBA8 level 1: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 2: first mismatch byte=248 actual=228 expected=241
+1024x32 mip chain RGBA8 level 2: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 3: first mismatch byte=248 actual=167 expected=180
+1024x32 mip chain RGBA8 level 3: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 4: first mismatch byte=248 actual=24 expected=37
+1024x32 mip chain RGBA8 level 4: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 5: first mismatch byte=248 actual=224 expected=237
+1024x32 mip chain RGBA8 level 5: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 6: first mismatch byte=248 actual=86 expected=99
+1024x32 mip chain RGBA8 level 6: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA8 level 7: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 8: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 9: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA8 level 10: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 0: first mismatch byte=248 actual=196 expected=214
+1024x32 mip chain RGBA16F level 0: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 1: first mismatch byte=248 actual=120 expected=138
+1024x32 mip chain RGBA16F level 1: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 2: first mismatch byte=248 actual=228 expected=241
+1024x32 mip chain RGBA16F level 2: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 3: first mismatch byte=248 actual=167 expected=180
+1024x32 mip chain RGBA16F level 3: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 4: first mismatch byte=248 actual=24 expected=37
+1024x32 mip chain RGBA16F level 4: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 5: first mismatch byte=248 actual=224 expected=237
+1024x32 mip chain RGBA16F level 5: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 6: first mismatch byte=248 actual=86 expected=99
+1024x32 mip chain RGBA16F level 6: FAIL mismatch_bytes=6 GL_error=0x0
+1024x32 mip chain RGBA16F level 7: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 8: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 9: PASS mismatch_bytes=0 GL_error=0x0
+1024x32 mip chain RGBA16F level 10: PASS mismatch_bytes=0 GL_error=0x0
+Rendering checks: 12/26 passed

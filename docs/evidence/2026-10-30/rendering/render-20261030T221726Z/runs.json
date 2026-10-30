@@ -1,0 +1,33 @@
+{
+  "binary_sha256": "63a79667937343ab5d0e55f32188c736e53400306a168b06949da53a64402553",
+  "runs": [
+    {
+      "mode": "default",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render"
+      ],
+      "exit_status": 0
+    },
+    {
+      "mode": "custom-border",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render"
+      ],
+      "exit_status": 0
+    },
+    {
+      "mode": "wrong-expected",
+      "command": [
+        "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+        "10",
+        "--render",
+        "--wrong-expected"
+      ],
+      "exit_status": 1
+    }
+  ]
+}

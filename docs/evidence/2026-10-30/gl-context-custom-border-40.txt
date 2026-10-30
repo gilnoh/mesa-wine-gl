@@ -1,0 +1,13 @@
+Screen: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+Reported versions: core=0 compat=21 ES1=11 ES2=20
+Core limits: GLSL=460 color_attachments=8 samples=4 fake_msaa=0
+Core limits: texture_size=16384 renderbuffer_size=16384 cube_levels=15 3D_levels=12 layers=2048
+Core limits: VS_texture_units=32 VS_uniform_blocks=15 vertex_stride=2048
+Missing desktop version-gate extension: ARB_enhanced_layouts
+Missing desktop version-gate extension: ARB_texture_buffer_object_rgb32
+Missing desktop version-gate extension: ARB_transform_feedback2
+Missing desktop version-gate extension: ARB_transform_feedback3
+Missing desktop version-gate extension: ARB_transform_feedback_instanced
+Missing desktop version-gate extension: EXT_transform_feedback
+Requesting 4.0 core context
+Context creation failed: error=1

@@ -1,0 +1,13 @@
+{
+  "mesa": {
+    "url": "https://gitlab.freedesktop.org/mesa/mesa.git",
+    "commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+    "version": "27.0.0-devel",
+    "ref_observed": "main",
+    "observed_at": "2026-10-30"
+  },
+  "reference_release": {
+    "tag": "mesa-26.2.6",
+    "commit": "8e87a503ebd91408c88596d1b9eeb5f4c0b2088d"
+  }
+}

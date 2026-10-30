@@ -1,0 +1,29 @@
+{
+  "sha256": "a17b741445c0a025b1de39275ee8fcd4169876e20e4cc14f75ffd4ca302691d6",
+  "runs": [
+    {
+      "mode": "default",
+      "request": "40",
+      "exit_status": 1,
+      "log": "gl-context-default-40.txt"
+    },
+    {
+      "mode": "default",
+      "request": "10",
+      "exit_status": 0,
+      "log": "gl-context-default-10.txt"
+    },
+    {
+      "mode": "custom-border",
+      "request": "40",
+      "exit_status": 1,
+      "log": "gl-context-custom-border-40.txt"
+    },
+    {
+      "mode": "custom-border",
+      "request": "10",
+      "exit_status": 0,
+      "log": "gl-context-custom-border-10.txt"
+    }
+  ]
+}

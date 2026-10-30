@@ -1,0 +1,30 @@
+{
+  "mesa_commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+  "mesa_tracked_status": "",
+  "host": "ProductName:\t\tmacOS\nProductVersion:\t\t27.0.1\nBuildVersion:\t\t26A434\n",
+  "xcode": "/Applications/Xcode-26.6.0.app/Contents/Developer",
+  "sdk": "/Applications/Xcode-26.6.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+  "compiler": "Homebrew clang version 21.1.8\nTarget: x86_64-apple-darwin27.0.0\nThread model: posix\nInstalledDir: /usr/local/Cellar/llvm/21.1.8_1/bin\n",
+  "icd": {
+    "ICD": {
+      "api_version": "1.4.366",
+      "library_path": "/Users/tailblues/mesa-wine-gl/build/mesa-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib"
+    },
+    "file_format_version": "1.0.1"
+  },
+  "driver_sha256": "599c2aa8a30b73253b0c48278e9416cd1ef0959795f232b5f445e503f3060f63",
+  "assertions_enabled": true,
+  "game_modified": false,
+  "capability_commands": [
+    "/usr/local/bin/vulkaninfo",
+    "build/mesa-x86_64/src/gallium/drivers/zink/check_requirements/zink_check_requirements"
+  ],
+  "capability_environment": "Clear DYLD_*, VK_*, MESA_*, ZINK_*; set VK_DRIVER_FILES to the development ICD. Second configuration additionally sets MESA_KK_EXPERIMENTAL=custom_border.",
+  "capability_exit_statuses": {
+    "vulkan-default": 0,
+    "vulkan-custom-border": 0,
+    "zink-requirements-default": 0,
+    "zink-requirements-custom-border": 0
+  },
+  "note": "Zink checker exits 0 for unsupported profiles too; output is authoritative."
+}

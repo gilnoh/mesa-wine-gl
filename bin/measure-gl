@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""Run native GL rendering checks and their deliberate-failure control."""
+from datetime import datetime, timezone
+import hashlib
+import argparse
+import json
+import os
+from pathlib import Path
+import subprocess
+
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--experimental-driver',action='store_true',help='Use the separate KK build with XFB still disabled')
+args=parser.parse_args()
+root=Path(__file__).resolve().parent.parent
+out=root/'build'/('render-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'))
+out.mkdir(parents=True)
+env=os.environ.copy()
+for key in list(env):
+    if key.startswith(('MESA_','ZINK_','VK_','DYLD_')):env.pop(key)
+tree='kk-xfb-x86_64' if args.experimental_driver else 'mesa-x86_64'
+env['VK_DRIVER_FILES']=str(root/'build'/tree/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json')
+program=root/'build/gl-baseline'
+manifest=json.loads((root/'build/gl-baseline.build.json').read_text())
+if hashlib.sha256(program.read_bytes()).hexdigest()!=manifest['binary_sha256']:
+    raise SystemExit('Probe binary differs from its build manifest; rebuild it')
+for name,digest in manifest['inputs'].items():
+    if hashlib.sha256((root/name).read_bytes()).hexdigest()!=digest:
+        raise SystemExit(f'Probe input changed since build: {name}; rebuild it')
+results=[]
+failed=False
+for mode in ('default','custom-border','wrong-expected'):
+    if mode!='default':env['MESA_KK_EXPERIMENTAL']='custom_border'
+    command=[str(program),'10','--render']
+    if mode=='wrong-expected':command.append('--wrong-expected')
+    with (out/(mode+'.txt')).open('w') as log:
+        proc=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=60)
+    content=(out/(mode+'.txt')).read_text()
+    # An early crash is not a successful negative control.
+    expected_status=1 if mode=='wrong-expected' else 0
+    expected_summary='Rendering checks: 0/26 passed' if mode=='wrong-expected' else 'Rendering checks: 26/26 passed'
+    passed=proc.returncode==expected_status and expected_summary in content
+    results.append(dict(mode=mode,command=command,environment={k:v for k,v in env.items() if k.startswith(('MESA_','ZINK_','VK_','DYLD_'))},exit_status=proc.returncode,expected_outcome_observed=passed))
+    failed|=not passed
+    print(f'{mode}: exit={proc.returncode}, expected outcome={passed}',flush=True)
+(out/'runs.json').write_text(json.dumps(dict(probe_build=manifest,driver_sha256=hashlib.sha256((root/'build'/tree/'src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib').read_bytes()).hexdigest(),binary_sha256=hashlib.sha256(program.read_bytes()).hexdigest(),runs=results),indent=2)+'\n')
+print(out)
+raise SystemExit(1 if failed else 0)

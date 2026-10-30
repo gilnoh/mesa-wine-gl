@@ -1,0 +1,30 @@
+[
+  {
+    "mode": "default",
+    "command": [
+      "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+      "10",
+      "--render"
+    ],
+    "exit_status": 1
+  },
+  {
+    "mode": "custom-border",
+    "command": [
+      "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+      "10",
+      "--render"
+    ],
+    "exit_status": 1
+  },
+  {
+    "mode": "wrong-expected",
+    "command": [
+      "/Users/tailblues/mesa-wine-gl/build/gl-baseline",
+      "10",
+      "--render",
+      "--wrong-expected"
+    ],
+    "exit_status": 1
+  }
+]

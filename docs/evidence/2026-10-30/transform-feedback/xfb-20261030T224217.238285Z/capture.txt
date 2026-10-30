@@ -1,0 +1,14 @@
+Device: Apple M1 Max
+Vertex-only capture: explicitly unsupported (scope control PASS)
+static capture/base vertex+instance: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+pause/resume: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+nonzero resume offset: PASS bytes=80 expected=80 mismatched_output_bytes=0 counter_guard=0
+buffer overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+static instanced capture: PASS bytes=128 expected=128 mismatched_output_bytes=0 counter_guard=0
+static indexed capture: PASS bytes=64 expected=64 mismatched_output_bytes=0 counter_guard=0
+capture disabled: PASS bytes=3452816845 expected=3452816845 mismatched_output_bytes=0 counter_guard=0
+dynamic GS counts/prefix sum: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+dynamic GS overflow guard: PASS bytes=32 expected=32 mismatched_output_bytes=0 counter_guard=0
+dynamic instanced capture: PASS bytes=192 expected=192 mismatched_output_bytes=0 counter_guard=0
+dynamic indexed capture: PASS bytes=96 expected=96 mismatched_output_bytes=0 counter_guard=0
+XFB checks: 11/11 passed

@@ -1,0 +1,6 @@
+653415.938:0b30:trace:wgl:macdrv_context_create format 13, share_context 0x0, attrib_list 0x0
+653416.082:0b30:trace:wgl:macdrv_context_create format 17, share_context 0x0, attrib_list 0x10db40
+653416.082:0b30:trace:wgl:macdrv_context_create                            Attrib 0x2091: 4 / 0x0004
+653416.082:0b30:trace:wgl:macdrv_context_create                            Attrib 0x2092: 0 / 0x0000
+653416.082:0b30:trace:wgl:macdrv_context_create                            Attrib 0x9126: 1 / 0x0001
+653416.082:0b30:warn:wgl:macdrv_context_create OS X only supports forward-compatible 3.2+ contexts

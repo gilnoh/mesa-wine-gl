@@ -1,0 +1,2 @@
+MESA: error: ZINK: failed to load @rpath/libvulkan.1.dylib
+Zink screen creation failed

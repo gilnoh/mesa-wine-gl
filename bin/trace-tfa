@@ -1,0 +1,68 @@
+#!/usr/bin/env python3
+"""Trace one TFA baseline launch through the existing workbench runtime.
+Requires Steam already online in steam-winecx. Does not stop or restart Steam.
+"""
+import argparse
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import shutil
+import subprocess
+
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("--forward-compatible", action="store_true",
+                    help="Enable WineCX's existing CW Hack 24834 for this process")
+parser.add_argument("--timeout", type=int, default=40,
+                    help="Seconds to observe; a process still running is left running")
+args = parser.parse_args()
+root = Path(__file__).resolve().parent.parent
+wb = root.parent / "wine-workbench-macos"
+rt = wb / "runtimes/winecx-26.3.0-sse-x86_64"
+prefix = wb / "prefixes/steam-winecx"
+game = wb / "library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master"
+processes = subprocess.check_output(["ps", "-axo", "pid=,comm="], text=True)
+if any(line.rstrip().lower().endswith("tfa.exe") for line in processes.splitlines()):
+    raise SystemExit("TFA already running; refusing a second instance")
+if not any(line.rstrip().lower().endswith("steam.exe") for line in processes.splitlines()):
+    raise SystemExit("Start workbench Steam and wait for login before using this direct trace")
+for path in (game / "TFA.exe", rt / "bin/wine", rt / "PROVENANCE"):
+    if not path.is_file():
+        raise SystemExit(f"Required file missing: {path}")
+stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+out = root / "build" / f"tfa-{stamp}"
+out.mkdir(parents=True)
+env = os.environ.copy()
+clear = ("DYLD_LIBRARY_PATH", "DYLD_FALLBACK_LIBRARY_PATH", "DYLD_INSERT_LIBRARIES",
+         "MESA_WINE_LIB", "MESA_GL_VERSION_OVERRIDE", "MESA_GLSL_VERSION_OVERRIDE",
+         "VK_ICD_FILENAMES", "VK_DRIVER_FILES", "WINEDLLOVERRIDES", "CX_FWD_COMPAT_GL_CTX")
+for key in clear:
+    env.pop(key, None)
+selected = dict(WINEPREFIX=str(prefix), WINEMSYNC="1",
+                WINEDEBUG="+timestamp,+wgl,+loaddll", SteamAppId="1281220", SteamGameId="1281220")
+if args.forward_compatible:
+    selected["CX_FWD_COMPAT_GL_CTX"] = "1"
+env.update(selected)
+shutil.copyfile(rt / "PROVENANCE", out / "runtime-provenance.txt")
+for name in ("init.log", "Ogre.log"):
+    if (game / name).is_file():
+        shutil.copyfile(game / name, out / (name + ".before.txt"))
+command = [str(rt / "bin/wine"), "TFA.exe"]
+metadata = dict(started_utc=stamp, command=command, cwd=str(game),
+                environment=selected, cleared_environment=list(clear),
+                exe_sha256=hashlib.sha256((game / "TFA.exe").read_bytes()).hexdigest())
+with (out / "wine-trace.txt").open("w") as log:
+    process = subprocess.Popen(command, cwd=game, env=env, stdout=log, stderr=subprocess.STDOUT)
+    metadata["pid"] = process.pid
+    print(f"TFA PID {process.pid}; trace: {out}", flush=True)
+    try:
+        metadata["exit_status"] = process.wait(timeout=args.timeout)
+    except subprocess.TimeoutExpired:
+        metadata["exit_status"] = None
+        print("Still running; left it running for observation.")
+for name in ("init.log", "Ogre.log"):
+    if (game / name).is_file():
+        shutil.copyfile(game / name, out / (name + ".after.txt"))
+(out / "run.json").write_text(json.dumps(metadata, indent=2) + "\n")
+print(json.dumps(metadata, indent=2))

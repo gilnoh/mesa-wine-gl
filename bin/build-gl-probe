@@ -1,0 +1,72 @@
+#!/usr/bin/env python3
+"""Build the native probe against pinned Mesa, using Mesa's own compile flags."""
+import json
+import hashlib
+import os
+import re
+from pathlib import Path
+import shlex
+import subprocess
+
+root = Path(__file__).resolve().parent.parent
+build = root / 'build/mesa-x86_64'
+env = os.environ.copy()
+for key in ('CPATH','C_INCLUDE_PATH','CPLUS_INCLUDE_PATH','OBJC_INCLUDE_PATH','LIBRARY_PATH',
+            'CFLAGS','CXXFLAGS','OBJCFLAGS','CPPFLAGS','LDFLAGS'):
+    env.pop(key, None)
+env['PATH'] = f'{root}/toolchains/python-x86_64/bin:/usr/local/opt/llvm/bin:/usr/local/opt/bison/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin'
+env['SDKROOT'] = subprocess.check_output(['xcrun','--sdk','macosx','--show-sdk-path'], text=True).strip()
+env['MACOSX_DEPLOYMENT_TARGET'] = '26.0'
+lock = json.loads((root / 'sources.lock.json').read_text())
+assert subprocess.check_output(['git','-C',str(root/'src/mesa'),'rev-parse','HEAD'],text=True).strip() == lock['mesa']['commit']
+assert not subprocess.check_output(['git','-C',str(root/'src/mesa'),'status','--porcelain','--untracked-files=no'],text=True).strip()
+libraries = '''src/mesa/libmesa.a
+src/gallium/drivers/zink/libzink.a
+src/gallium/auxiliary/libgallium.a
+src/gallium/auxiliary/libgalliumvl_stub.a
+src/compiler/glsl/libglsl.a
+src/compiler/glsl/glcpp/libglcpp.a
+src/compiler/nir/libnir.a
+src/compiler/libcompiler.a
+src/compiler/spirv/libvtn.a
+src/mesa/glapi/shared-glapi/libglapi.a
+src/mesa/glapi/glapi/libglapi_bridge.a
+src/mesa/libmesa_sse41.a
+src/util/libmesa_util.a
+src/util/libxmlconfig.a
+src/util/blake3/libblake3.a
+src/util/libmesa_util_simd.a
+src/util/libmesa_util_clflush.a
+src/util/libmesa_util_clflushopt.a
+src/c11/impl/libmesa_util_c11.a
+src/vulkan/util/libvulkan_util.a'''.splitlines()
+with (root/'build/gl-probe-build.log').open('w') as log:
+    subprocess.run(['ninja','-C',str(build),'-j',env.get('JOBS','6'),*libraries],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    entry = next(x for x in json.loads((build/'compile_commands.json').read_text()) if x['file'].endswith('/st_manager.c'))
+    flags = shlex.split(entry['command'])
+    # Mesa's dependency-generation and output arguments begin at -MD.
+    flags = flags[:flags.index('-MD')]
+    version_source = (root/'src/mesa/src/mesa/main/version.c').read_text()
+    desktop = version_source.split('compute_version(',1)[1].split('if (ver_4_6)',1)[0]
+    fields = sorted(set(re.findall(r'extensions->(\w+)',desktop)))
+    # Diagnostic list comes from the pinned version gate, not a hand-maintained list.
+    (root/'build/gl-version-requirements.h').write_text(''.join(
+        f'CHECK_EXTENSION({field});\n' for field in fields))
+    flags += ['-I'+str(root/'build')]
+    output = root/'build/gl-baseline'
+    obj = root/'build/gl-baseline.o'
+    subprocess.run([*flags,'-o',str(obj),'-c',str(root/'probes/gl-baseline.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    render_obj = root/'build/gl-render.o'
+    subprocess.run([*flags,'-o',str(render_obj),'-c',str(root/'probes/gl-render.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    link = ['/usr/local/opt/llvm/bin/clang++','--no-default-config','-arch','x86_64','-o',str(output),str(obj),str(render_obj)]
+    link += [str(build/p) for p in libraries]
+    link += ['-L/usr/local/opt/llvm/lib','-lLLVM','-L/usr/local/opt/zstd/lib','-lzstd',
+             '-L/usr/local/opt/spirv-tools/lib','-lSPIRV-Tools',
+             '-L/usr/local/opt/vulkan-loader/lib','-lvulkan','-Wl,-rpath,/usr/local/opt/vulkan-loader/lib','-lexpat','-lz',
+             '-framework','CoreFoundation','-framework','IOKit','-framework','Metal','-framework','QuartzCore']
+    subprocess.run(link,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+inputs=[root/'probes/gl-baseline.c',root/'probes/gl-render.c',root/'sources.lock.json']
+manifest=dict(binary_sha256=hashlib.sha256(output.read_bytes()).hexdigest(),
+              inputs={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs})
+(root/'build/gl-baseline.build.json').write_text(json.dumps(manifest,indent=2)+'\n')
+print(output)

@@ -1,0 +1,19 @@
+#!/bin/bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd -P)"
+export SDKROOT="$(xcrun --sdk macosx --show-sdk-path)"
+mkdir -p "$ROOT/build/xfb-shaders"
+for source in "$ROOT"/probes/xfb/*; do
+    /usr/local/bin/glslangValidator -V --target-env vulkan1.3 "$source" -o "$ROOT/build/xfb-shaders/$(basename "$source").spv"
+done
+/usr/local/opt/llvm/bin/clang --no-default-config -arch x86_64 -std=c11 -O0 -g -Wall -Wextra \
+    -I"$ROOT/src/mesa/include" "$ROOT/probes/vk-xfb.c" \
+    -L/usr/local/opt/vulkan-loader/lib -lvulkan -o "$ROOT/build/vk-xfb"
+python3 - "$ROOT" <<'PY'
+from pathlib import Path
+import hashlib,json,sys
+root=Path(sys.argv[1]);program=root/'build/vk-xfb'
+inputs=[root/'probes/vk-xfb.c',*sorted((root/'probes/xfb').iterdir()),*sorted((root/'build/xfb-shaders').glob('*.spv'))]
+manifest=dict(binary_sha256=hashlib.sha256(program.read_bytes()).hexdigest(),inputs={str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs})
+(root/'build/vk-xfb.build.json').write_text(json.dumps(manifest,indent=2)+'\n')
+PY

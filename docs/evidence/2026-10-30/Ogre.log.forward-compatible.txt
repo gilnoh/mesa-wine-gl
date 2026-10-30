@@ -1,0 +1,1144 @@
+22:56:13: Creating resource group General
+22:56:13: Creating resource group Internal
+22:56:13: Creating resource group Autodetect
+22:56:13: SceneManagerFactory for type 'DefaultSceneManager' registered.
+22:56:13: Registering ResourceManager for type Material
+22:56:13: Registering ResourceManager for type Mesh
+22:56:13: Registering ResourceManager for type OldSkeleton
+22:56:13: MovableObjectFactory for type 'ParticleSystem' registered.
+22:56:13: ArchiveFactory for archive type FileSystem registered.
+22:56:13: ArchiveFactory for archive type Zip registered.
+22:56:13: ArchiveFactory for archive type EmbeddedZip registered.
+22:56:13: DDS codec registering
+22:56:13: FreeImage version: 3.15.3
+22:56:13: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+22:56:13: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic
+22:56:13: ETC codec registering
+22:56:13: Registering ResourceManager for type HighLevelGpuProgram
+22:56:13: MovableObjectFactory for type 'Entity' registered.
+22:56:13: MovableObjectFactory for type 'Light' registered.
+22:56:13: MovableObjectFactory for type 'BillboardSet' registered.
+22:56:13: MovableObjectFactory for type 'ManualObject' registered.
+22:56:13: MovableObjectFactory for type 'BillboardChain' registered.
+22:56:13: MovableObjectFactory for type 'RibbonTrail' registered.
+22:56:13: Loading library .\RenderSystem_GL3Plus
+22:56:13: Installing plugin: GL 3+ RenderSystem
+22:56:13: OpenGL 3+ Rendering Subsystem (ALPHA) created.
+22:56:14: Plugin successfully installed
+22:56:14: Loading library .\RenderSystem_NULL
+22:56:14: Loading library .\Plugin_ParticleFX
+22:56:14: Installing plugin: ParticleFX
+22:56:14: Particle Emitter Type 'Point' registered
+22:56:14: Particle Emitter Type 'Box' registered
+22:56:14: Particle Emitter Type 'Ellipsoid' registered
+22:56:14: Particle Emitter Type 'Cylinder' registered
+22:56:14: Particle Emitter Type 'Ring' registered
+22:56:14: Particle Emitter Type 'HollowEllipsoid' registered
+22:56:14: Particle Affector Type 'LinearForce' registered
+22:56:14: Particle Affector Type 'ColourFader' registered
+22:56:14: Particle Affector Type 'ColourFader2' registered
+22:56:14: Particle Affector Type 'ColourImage' registered
+22:56:14: Particle Affector Type 'ColourInterpolator' registered
+22:56:14: Particle Affector Type 'Scaler' registered
+22:56:14: Particle Affector Type 'Scaler2' registered
+22:56:14: Particle Affector Type 'Rotator' registered
+22:56:14: Particle Affector Type 'DirectionRandomiser' registered
+22:56:14: Particle Affector Type 'DeflectorPlane' registered
+22:56:14: Plugin successfully installed
+22:56:14: Loading library .\Plugin_ParticleComposers
+22:56:14: Installing plugin: ParticleComposers
+22:56:14: Plugin successfully installed
+22:56:14: Loading library .\OgreOggSound
+22:56:14: Installing plugin: OgreOggSound
+22:56:14: MovableObjectFactory for type 'OgreOggISound' registered.
+22:56:14: Plugin successfully installed
+22:56:14: *-*-* OGRE Initialising
+22:56:14: *-*-* Version 2.0.0unstable (Tindalos)
+22:56:14: Loading config file
+22:56:14: Initializing video modes
+22:56:14: Refreshing video modes
+22:56:14: CPU Identifier & Features
+22:56:14: -------------------------
+22:56:14:  *   CPU ID: GenuineIntel: VirtualApple @ 2.50GHz
+22:56:14:  *   Logical cores: 10
+22:56:14:  *      SSE: yes
+22:56:14:  *     SSE2: yes
+22:56:14:  *     SSE3: yes
+22:56:14:  *      MMX: yes
+22:56:14:  *   MMXEXT: yes
+22:56:14:  *    3DNOW: no
+22:56:14:  * 3DNOWEXT: no
+22:56:14:  *     CMOV: yes
+22:56:14:  *      TSC: yes
+22:56:14:  *      FPU: yes
+22:56:14:  *      PRO: yes
+22:56:14:  *       HT: no
+22:56:14: -------------------------
+22:56:14: *** Starting Win32GL Subsystem ***
+22:56:14: GL3PlusRenderSystem::_createRenderWindow "Plankton", 1920x1080 windowed  miscParams: FSAA=0 FSAAHint= border=none colourDepth=32 displayFrequency=0 gamma=false monitorIndex=0 vsync=false vsyncInterval=1 
+22:56:14: Created Win32Window 'Plankton' : 1920x1080, 32bpp
+22:56:14: GL_VERSION = 4.1.0.0
+22:56:14: GL_VENDOR = Apple
+22:56:14: GL_RENDERER = Apple M1 Max
+22:56:14: GL_EXTENSIONS = 
+22:56:14: GL_APPLE_client_storage
+22:56:14: GL_APPLE_container_object_shareable
+22:56:14: GL_APPLE_flush_render
+22:56:14: GL_APPLE_rgb_422
+22:56:14: GL_APPLE_row_bytes
+22:56:14: GL_APPLE_texture_range
+22:56:14: GL_ARB_ES2_compatibility
+22:56:14: GL_ARB_blend_func_extended
+22:56:14: GL_ARB_draw_buffers_blend
+22:56:14: GL_ARB_draw_indirect
+22:56:14: GL_ARB_explicit_attrib_location
+22:56:14: GL_ARB_gpu_shader5
+22:56:14: GL_ARB_gpu_shader_fp64
+22:56:14: GL_ARB_instanced_arrays
+22:56:14: GL_ARB_internalformat_query
+22:56:14: GL_ARB_occlusion_query2
+22:56:14: GL_ARB_sample_shading
+22:56:14: GL_ARB_sampler_objects
+22:56:14: GL_ARB_separate_shader_objects
+22:56:14: GL_ARB_shader_bit_encoding
+22:56:14: GL_ARB_shader_subroutine
+22:56:14: GL_ARB_shading_language_include
+22:56:14: GL_ARB_tessellation_shader
+22:56:14: GL_ARB_texture_buffer_object_rgb32
+22:56:14: GL_ARB_texture_cube_map_array
+22:56:14: GL_ARB_texture_gather
+22:56:14: GL_ARB_texture_query_lod
+22:56:14: GL_ARB_texture_rgb10_a2ui
+22:56:14: GL_ARB_texture_storage
+22:56:14: GL_ARB_texture_swizzle
+22:56:14: GL_ARB_timer_query
+22:56:14: GL_ARB_transform_feedback2
+22:56:14: GL_ARB_transform_feedback3
+22:56:14: GL_ARB_vertex_attrib_64bit
+22:56:14: GL_ARB_vertex_type_2_10_10_10_rev
+22:56:14: GL_ARB_viewport_array
+22:56:14: GL_EXT_debug_label
+22:56:14: GL_EXT_debug_marker
+22:56:14: GL_EXT_framebuffer_multisample_blit_scaled
+22:56:14: GL_EXT_texture_compression_s3tc
+22:56:14: GL_EXT_texture_filter_anisotropic
+22:56:14: GL_EXT_texture_sRGB_decode
+22:56:14: GL_NV_texture_barrier
+22:56:14: WGL_EXT_extensions_string
+22:56:14: WGL_EXT_swap_control
+22:56:14: Supported WGL extensions: WGL_ARB_pixel_format_float WGL_ATI_pixel_format_float WGL_ARB_multisample WGL_ARB_framebuffer_sRGB WGL_NV_render_texture_rectangle WGL_EXT_framebuffer_sRGB WGL_EXT_pixel_format_packed_float WGL_WINE_query_renderer WGL_ARB_pixel_format WGL_ARB_extensions_string WGL_EXT_extensions_string WGL_WINE_pixel_format_passthrough WGL_ARB_create_context WGL_ARB_create_context_no_error WGL_ARB_create_context_profile WGL_ARB_make_current_read WGL_ARB_pbuffer WGL_ARB_render_texture WGL_EXT_swap_control WGL_EXT_swap_control_tear
+22:56:14: **************************************
+22:56:14: ***   OpenGL 3+ Renderer Started   ***
+22:56:14: **************************************
+22:56:14: Registering ResourceManager for type GpuProgram
+22:56:14: GL3+: Using FBOs for rendering to textures
+22:56:14: FBO PF_UNKNOWN depth/stencil support: D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_L8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_L16 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_BYTE_LA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R5G6B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A4R4G4B4 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A1R5G5B5 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_B8G8R8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A2R10G10B10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_A2B10G10R10 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT16_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT16_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT32_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT32_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_X8R8G8B8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_X8B8G8R8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8A8 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_DEPTH depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_SHORT_RGBA depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R3G3B2 depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT16_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT32_R depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_SHORT_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT16_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_FLOAT32_GR depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_SHORT_RGB depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R11G11B10_FLOAT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8A8_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16B16_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16B16A16_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32B32_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32B32A32_UINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R8G8B8A8_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16B16_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R16G16B16A16_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32B32_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_R32G32B32A32_SINT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: FBO PF_D32_FLOAT depth/stencil support: D0S0 D0S1 D0S4 D0S8 D0S16 D16S0 D16S1 D16S4 D16S8 D16S16 D24S0 D24S1 D24S4 D24S8 D24S16 D32S0 D32S1 D32S4 D32S8 D32S16 D32S0 D32S1 D32S4 D32S8 D32S16 Packed-D24S8 Packed-D32S8 
+22:56:14: [GL] : Valid FBO targets PF_UNKNOWN PF_L8 PF_L16 PF_BYTE_LA PF_R5G6B5 PF_A4R4G4B4 PF_A1R5G5B5 PF_R8G8B8 PF_B8G8R8 PF_A8R8G8B8 PF_A8B8G8R8 PF_B8G8R8A8 PF_A2R10G10B10 PF_A2B10G10R10 PF_FLOAT16_RGB PF_FLOAT16_RGBA PF_FLOAT32_RGB PF_FLOAT32_RGBA PF_X8R8G8B8 PF_X8B8G8R8 PF_R8G8B8A8 PF_DEPTH PF_SHORT_RGBA PF_R3G3B2 PF_FLOAT16_R PF_FLOAT32_R PF_SHORT_GR PF_FLOAT16_GR PF_FLOAT32_GR PF_SHORT_RGB PF_R11G11B10_FLOAT PF_R8_UINT PF_R8G8_UINT PF_R8G8B8_UINT PF_R8G8B8A8_UINT PF_R16_UINT PF_R16G16_UINT PF_R16G16B16_UINT PF_R16G16B16A16_UINT PF_R32_UINT PF_R32G32_UINT PF_R32G32B32_UINT PF_R32G32B32A32_UINT PF_R8_SINT PF_R8G8_SINT PF_R8G8B8_SINT PF_R8G8B8A8_SINT PF_R16_SINT PF_R16G16_SINT PF_R16G16B16_SINT PF_R16G16B16A16_SINT PF_R32_SINT PF_R32G32_SINT PF_R32G32B32_SINT PF_R32G32B32A32_SINT PF_D32_FLOAT 
+22:56:14: RenderSystem capabilities
+22:56:14: -------------------------
+22:56:14: RenderSystem Name: OpenGL 3+ Rendering Subsystem (ALPHA)
+22:56:14: GPU Vendor: apple
+22:56:14: Device Name: Apple M1 Max
+22:56:14: Driver Version: 4.1.0.0
+22:56:14:  * Fixed function pipeline: no
+22:56:14:  * Hardware generation of mipmaps: yes
+22:56:14:  * Texture blending: yes
+22:56:14:  * Anisotropic texture filtering: yes
+22:56:14:  * Dot product texture operation: yes
+22:56:14:  * Cube mapping: yes
+22:56:14:  * Hardware stencil buffer: yes
+22:56:14:    - Stencil depth: 8
+22:56:14:    - Two sided stencil support: yes
+22:56:14:    - Wrap stencil values: yes
+22:56:14:  * Hardware vertex / index buffers: yes
+22:56:14:  * 32-bit index buffers: yes
+22:56:14:  * Vertex programs: yes
+22:56:14:  * Number of floating-point constants for vertex programs: 4096
+22:56:14:  * Number of integer constants for vertex programs: 4096
+22:56:14:  * Number of boolean constants for vertex programs: 4096
+22:56:14:  * Fragment programs: yes
+22:56:14:  * Number of floating-point constants for fragment programs: 4096
+22:56:14:  * Number of integer constants for fragment programs: 4096
+22:56:14:  * Number of boolean constants for fragment programs: 4096
+22:56:14:  * Geometry programs: yes
+22:56:14:  * Number of floating-point constants for geometry programs: 4096
+22:56:14:  * Number of integer constants for geometry programs: 4096
+22:56:14:  * Number of boolean constants for geometry programs: 4096
+22:56:14:  * Tessellation Hull programs: yes
+22:56:14:  * Number of floating-point constants for tessellation hull programs: 4096
+22:56:14:  * Number of integer constants for tessellation hull programs: 4096
+22:56:14:  * Number of boolean constants for tessellation hull programs: 4096
+22:56:14:  * Tessellation Domain programs: yes
+22:56:14:  * Number of floating-point constants for tessellation domain programs: 4096
+22:56:14:  * Number of integer constants for tessellation domain programs: 4096
+22:56:14:  * Number of boolean constants for tessellation domain programs: 4096
+22:56:14:  * Compute programs: no
+22:56:14:  * Number of floating-point constants for compute programs: 0
+22:56:14:  * Number of integer constants for compute programs: 0
+22:56:14:  * Number of boolean constants for compute programs: 15
+22:56:14:  * Supported Shader Profiles: glsl glsl130 glsl140 glsl150 glsl330 glsl400 glsl410
+22:56:14:  * Texture Compression: yes
+22:56:14:    - DXT: yes
+22:56:14:    - VTC: no
+22:56:14:    - PVRTC: no
+22:56:14:    - ATC: no
+22:56:14:    - ETC1: no
+22:56:14:    - ETC2: no
+22:56:14:    - BC4/BC5: yes
+22:56:14:    - BC6H/BC7: no
+22:56:14:  * Scissor Rectangle: yes
+22:56:14:  * Hardware Occlusion Query: yes
+22:56:14:  * User clip planes: yes
+22:56:14:  * VET_UBYTE4 vertex element type: yes
+22:56:14:  * Infinite far plane projection: yes
+22:56:14:  * Hardware render-to-texture: yes
+22:56:14:  * Floating point textures: yes
+22:56:14:  * Non-power-of-two textures: yes
+22:56:14:  * 1d textures: yes
+22:56:14:  * Volume textures: yes
+22:56:14:  * Multiple Render Targets: 8
+22:56:14:    - With different bit depths: yes
+22:56:14:  * Point Sprites: yes
+22:56:14:  * Extended point parameters: yes
+22:56:14:  * Max Point Size: 64
+22:56:14:  * Vertex texture fetch: yes
+22:56:14:  * Number of world matrices: 0
+22:56:14:  * Number of texture units: 80
+22:56:14:  * Stencil buffer depth: 8
+22:56:14:  * Number of vertex blend matrices: 0
+22:56:14:    - Max vertex textures: 16
+22:56:14:    - Vertex textures shared: yes
+22:56:14:  * Render to Vertex Buffer : yes
+22:56:14:  * Hardware Atomic Counters: no
+22:56:14:  * GL 1.5 without VBO workaround: no
+22:56:14:  * Frame Buffer objects: yes
+22:56:14:  * Frame Buffer objects (ARB extension): no
+22:56:14:  * Frame Buffer objects (ATI extension): no
+22:56:14:  * PBuffer support: no
+22:56:14:  * GL 1.5 without HW-occlusion workaround: no
+22:56:14:  * Vertex Array Objects: yes
+22:56:14:  * Separate shader objects: no
+22:56:14:    - redeclare GLSL interface block: no
+22:56:14:  * Debugging/ profiling events: no
+22:56:14:  * Map buffer storage: yes
+22:56:14: Registering ResourceManager for type Texture
+22:56:14: DefaultWorkQueue('Root') initialising on thread 2880.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2896 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2900 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2892 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2904 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2908 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2912 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2916 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2920 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2924 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2928 starting.
+22:56:14: Particle Renderer Type 'billboard' registered
+22:56:14: DefaultWorkQueue('Root') shutting down on thread 2880.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2900 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2896 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2908 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2892 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2928 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2920 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2924 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2912 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2916 stopped.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2904 stopped.
+22:56:14: DefaultWorkQueue('Root') initialising on thread 2880.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2932 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2936 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2940 starting.
+22:56:14: DefaultWorkQueue('Root')::WorkerFunc - thread 2944 starting.
+OverlayElementFactory for type Panel registered.
+OverlayElementFactory for type BorderPanel registered.
+OverlayElementFactory for type TextArea registered.
+Registering ResourceManager for type Font
+OverlayElementFactory for type Table registered.
+OverlayElementFactory for type RadialMenu registered.
+Particle Emitter Type 'Line' registered
+Particle Emitter Type 'GrowingSphere' registered
+Particle Affector Type 'ExplosionField' registered
+Particle Affector Type 'Drag' registered
+*****************************************
+*** --- Initialising OgreOggSound --- ***
+*** ---     OgreOggSound v1.22    --- ***
+*****************************************
+*** --- OpenAL version 2.2
+*** --- Choosing: OpenAL Soft (Default device)
+*** --- OpenAL Device successfully created
+*** --- OpenAL Context successfully created
+*** --- SUPPORTED FORMATS
+*** --- AL_FORMAT_MONO16 -- Monophonic Sound
+*** --- AL_FORMAT_STEREO16 -- Stereo Sound
+*** --- AL_FORMAT_QUAD16 -- 4 Channel Sound
+*** --- AL_FORMAT_51CHN16 -- 5.1 Surround Sound
+*** --- AL_FORMAT_61CHN16 -- 6.1 Surround Sound
+*** --- AL_FORMAT_71CHN16 -- 7.1 Surround Sound
+*** --- EFX Detected
+*** --- 64 Auxiliary Effect Slot(s)
+*** --- 4 Auxiliary Send(s) per Source
+*** --- EFFECTS SUPPORTED:
+*** --- 'Reverb' Support: YES
+*** --- 'EAX Reverb' Support: YES
+*** --- 'Chorus' Support: YES
+*** --- 'Distortion' Support: YES
+*** --- 'Echo' Support: YES
+*** --- 'Flanger' Support: YES
+*** --- 'Frequency shifter' Support: YES
+*** --- 'Vocal Morpher' Support: YES
+*** --- 'Pitch shifter' Support: YES
+*** --- 'Ring modulator' Support: YES
+*** --- 'Autowah' Support: YES
+*** --- 'Compressor' Support: YES
+*** --- 'Equalizer' Support: YES
+*** --- FILTERS SUPPORTED: 
+*** --- 'Low Pass' Support: YES
+*** --- 'High Pass' Support: YES
+*** --- 'Band Pass' Support: YES
+*** --- XRAM NOT Detected
+*** --- EAX 5.0 Detected
+*** --- Created 100 sources for simultaneous sounds
+*** --- Using STD threads for streaming
+*** --- Recording devices available:
+***--- 'OpenAL Soft on MacBook Pro Microphone'
+***--- 'OpenAL Soft on Microsoft® LifeCam HD-3000'
+*****************************************
+*** ---  OgreOggSound Initialised --- ***
+*****************************************
+MovableObjectFactory for type 'PlanktonBillboardTreePage' registered.
+MovableObjectFactory for type 'GeometryTreePage' registered.
+OGRE EXCEPTION(6:FileNotFoundException): 'PlanktonPlugins.cfg' file not found! in ConfigFile::load at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreConfigFile.cpp (line 88)
+Creating resource group PlanktonFramework
+Added resource location '../../PlanktonFramework' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/models' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/textures' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/glsl' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/hlsl' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/FSR' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/trays' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/fonts' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/ShaderGen' of type 'FileSystem' to resource group 'PlanktonFramework'
+Added resource location '../../PlanktonFramework/Widgets' of type 'FileSystem' to resource group 'PlanktonFramework'
+Initialising resource group PlanktonFramework
+Parsing scripts for resource group PlanktonFramework
+Parsing script a.program
+Parsing script HardwareSkinning.program
+Parsing script Instanced.program
+Parsing script OctahedralImpostor.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_OctahedralImpostor_VP.glsl' ERROR: 0:370: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program OctahedralImpostor/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(6): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(7): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(9): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(11): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_OctahedralImpostorTrees_VP.glsl' ERROR: 0:360: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program OctahedralBillboardTreeRenderer/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(19): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(20): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(21): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(22): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in OctahedralImpostor.program(24): setting of constant failed
+Parsing script Plankton.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_PBS_VP.glsl' ERROR: 0:72: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/PBS/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(295): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(296): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(297): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(299): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(300): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(301): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_PBS_VP.glsl' ERROR: 0:72: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/PBS/VP/NoLogZ/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(311): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(312): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(313): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(315): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(316): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(317): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Terrace_Height_VP.glsl' ERROR: 0:18: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/TerraceHeight/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(391): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(392): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_SoftParticles_VP.glsl' ERROR: 0:50: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/SoftParticles/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(421): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(422): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(423): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(424): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_SoftParticles_VP.glsl' ERROR: 0:50: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/HardParticles/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(436): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(437): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(438): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_SoftParticles_VP.glsl' ERROR: 0:50: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/HardParticlesAdditive/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(497): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(498): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(499): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_SoftParticles_VP.glsl' ERROR: 0:50: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/SoftParticlesAdditive/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(511): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(512): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(513): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Transparent_VP.glsl' ERROR: 0:38: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Transparent/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(561): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(562): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(563): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Font_VP.glsl' ERROR: 0:37: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Font/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(598): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(599): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Font_VP.glsl' ERROR: 0:37: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Font/Shadow/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(610): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(611): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(612): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Unlit_VP.glsl' ERROR: 0:16: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Unlit/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(653): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Unlit_VertexColour_VP.glsl' ERROR: 0:22: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Unlit/VertexColour/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(684): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(685): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_DebugProbe_VP.glsl' ERROR: 0:18: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/DebugProbe/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(705): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(706): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_RenderBillboard_VP.glsl' ERROR: 0:27: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/RenderBillboard/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(724): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(725): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called remapValues does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in Plankton.program(749): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_CubeMap_VP.glsl' ERROR: 0:18: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/CubeMap/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(757): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(758): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Colour_VP.glsl' ERROR: 0:21: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Colour/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(777): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(778): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(779): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Sky_VP.glsl' ERROR: 0:46: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Sky/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(798): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(799): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(801): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Foliage_VP.glsl' ERROR: 0:118: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Trunk/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(897): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(898): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(899): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(901): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(904): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Foliage_VP.glsl' ERROR: 0:118: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Foliage/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(915): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(916): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(917): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(919): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(922): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Foliage_VP.glsl' ERROR: 0:118: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Trunk/Shadows/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(952): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(953): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(954): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Foliage_VP.glsl' ERROR: 0:118: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Foliage/Shadows/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(968): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(969): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(970): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Grass_VP.glsl' ERROR: 0:53: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Grass/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1024): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1025): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1026): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1028): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_AlphaTest_Shadows_VP.glsl' ERROR: 0:13: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/AlphaTest/Shadows/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1378): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Stars_VP.glsl' ERROR: 0:17: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Stars_VP/glsl encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton.program(1397): setting of constant failed
+Parsing script Plankton_AmbientProbe.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_AmbientProbe_VP.glsl' ERROR: 0:23: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/AmbientProbe/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_AmbientProbe.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_AmbientProbe.program(9): setting of constant failed
+Parsing script Plankton_Compositors.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Compositor_VP.glsl' ERROR: 0:17: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Compositor/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(93): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Compositor_LightShafts.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/LightShafts/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(255): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_SSAO.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/SSAO/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(288): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(289): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(290): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(291): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_BlurV.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/BlurV/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(325): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(326): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_BlurH.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/BlurH/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(334): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(335): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Compositor_FXAA.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Compositor/FXAA/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Compositors.program(343): setting of constant failed
+Parsing script Plankton_DeferredDecal.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_DeferredDecal_VP.glsl' ERROR: 0:23: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/DeferredDecal/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_DeferredDecal.program(7): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_DeferredDecal.program(8): setting of constant failed
+Parsing script Plankton_DeferredLight.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_DeferredLight_VP.glsl' ERROR: 0:14: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/DeferredLight/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_DeferredLight.program(18): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_DeferredLight.program(19): setting of constant failed
+Parsing script Plankton_FogVolume.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_FogVolume_VP.glsl' ERROR: 0:23: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/FogVolume/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_FogVolume.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_FogVolume.program(9): setting of constant failed
+Parsing script Plankton_Font.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Decal_Font_VP.glsl' ERROR: 0:29: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/DeferredFontDecal/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Font.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Font.program(9): setting of constant failed
+Parsing script Plankton_ForestGeometryBatch.program
+Parsing script Plankton_Raymarched_Clouds.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_RayMarchedClouds_CS.glsl' ERROR: 0:1: '' :  version '440' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/RayMarchedClouds/CloudsCubeMapFace/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(7): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(9): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(10): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(11): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(12): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(13): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(14): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_RayMarchedClouds_Atmosphere_FP.glsl' ERROR: 0:1: '' :  version '440' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/RayMarchedClouds/AtmosphereCubeMapFace/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(29): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(30): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(31): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(32): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_RayMarchedClouds_CS.glsl' ERROR: 0:1: '' :  version '440' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/RayMarchedClouds/CubeMapFace/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(47): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(48): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(49): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(50): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(51): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(52): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(53): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(54): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(55): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_RayMarchedClouds_BSM_FP.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/RayMarchedClouds/BSM/FP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(69): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(70): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(71): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(72): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(73): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(74): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called cloudssamplerpoint does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(131): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called smrt3sampler does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(132): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called downsampleddepthsampler does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(133): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called screensize does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(134): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Clouds_DepthPeeled_VP.glsl' ERROR: 0:15: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Clouds/DepthPeeled/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Raymarched_Clouds.program(153): setting of constant failed
+Parsing script Plankton_Water.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Water_VP.glsl' ERROR: 0:47: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Water/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(16): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(17): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(18): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(19): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(20): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(21): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(22): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Ocean_VP.glsl' ERROR: 0:160: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Ocean/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(33): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(34): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(35): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(36): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(37): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(38): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(39): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(40): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(41): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(42): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(43): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(44): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(45): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(46): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(47): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(48): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(50): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_UnderWater_Mask_VP.glsl' ERROR: 0:96: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/UnderWaterMask/VP encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(134): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(135): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(136): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(137): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(138): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(139): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(140): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(141): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(142): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(143): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(144): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(145): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_BlurReflection.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/BlurReflection encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(161): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(162): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in Plankton_Water.program(163): setting of constant failed
+Parsing script terrain.program
+OGRE EXCEPTION(3:RenderingAPIException): 'Plankton_Terrain_VP.glsl' ERROR: 0:66: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/Terrain/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(39): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(40): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(41): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(42): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(43): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(44): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(45): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in terrain.program(46): setting of constant failed
+Parsing script TreeRenderer.program
+OGRE EXCEPTION(3:RenderingAPIException): 'BillboardTreeRenderer_VP.glsl' ERROR: 0:150: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program BillboardTreeRenderer/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(6): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(7): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(8): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(9): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'BillboardTreeRenderer_VP.glsl' ERROR: 0:150: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program BillboardTreeRenderer/ShadowCaster/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(41): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(42): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(43): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(44): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'BillboardTreeRenderer_Blob_VP.glsl' ERROR: 0:52: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program BillboardTreeRenderer/Blob/VP/GLSL encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(75): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(76): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in TreeRenderer.program(78): setting of constant failed
+Parsing script volumeterrain.program
+Parsing script debug.material
+OGRE EXCEPTION(3:RenderingAPIException): 'COLOR_VP.glsl' ERROR: 0:13: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program COLOR_VP/glsl encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in debug.material(26): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'VERTEX_COLOR_VP.glsl' ERROR: 0:16: ';' : syntax error: syntax error
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program VERTEX_COLOR_VP/glsl encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in debug.material(51): setting of constant failed
+Parsing script plankton.material
+OGRE EXCEPTION(2:InvalidParametersException): Parameter called remapValues does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2211)
+Compiler error: invalid parameters in plankton.material(844): setting of constant failed
+Parsing script Plankton_AmbientProbe.material
+Compiler error: reference to a non existing object in Plankton_AmbientProbe.material(16)
+Compiler error: reference to a non existing object in Plankton_AmbientProbe.material(88)
+Parsing script Plankton_Compositors.material
+Parsing script Plankton_DeferredDecal.material
+Parsing script Plankton_DeferredLight.material
+Parsing script Plankton_FogVolume.material
+Parsing script Plankton_Font.material
+Parsing script Plankton_RayMarchedClouds.material
+Parsing script Plankton_Water.material
+Parsing script SimpleTerrain.material
+Parsing script TerrainBrush.material
+Parsing script tonemapping.material
+OGRE EXCEPTION(3:RenderingAPIException): 'hdr_downscale3x3brightpass.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/ToneMapping/downscale3x3brightpassGLSL_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(152): setting of constant failed
+OGRE EXCEPTION(3:RenderingAPIException): 'hdr_finalToneMapping.glsl' ERROR: 0:1: '' :  version '430' is not supported
+ERROR: 0:2: '' :  #version required and missing.
+ in compile at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\RenderSystems\GL3Plus\src\GLSL\OgreGLSLShader.cpp (line 457)
+Gpu program Plankton/ToneMapping/finaltonemappingGLSL_fp encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(291): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(293): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(294): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(295): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(296): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(297): setting of constant failed
+OGRE EXCEPTION(2:InvalidParametersException): Named constants have not been initialised, perhaps a compile error. in GpuProgramParameters::_findNamedConstantDefinition at C:\Users\Crashy\Desktop\Plankton-tech\Plankton_Package_Source\Dependencies\Ogre\OgreMain\src\OgreGpuProgramParams.cpp (line 2193)
+Compiler error: invalid parameters in tonemapping.material(298): setting of constant failed
+Parsing script TreeRenderer.material
+Parsing script volumeterrain.material
+Parsing script SdkTrays.material
+Parsing script BaseWidgets.material
+Parsing script Plankton_Compositors.compositor
+Parsing script Plankton_LevelCubeMap.compositor
+Parsing script Plankton_LocalCubemap.compositor
+Parsing script Plankton_Ocean.compositor
+Parsing script Plankton_ParticleEditor.compositor
+Parsing script Plankton_Raymarched_Clouds.compositor
+Parsing script Plankton_Thumbnails.compositor
+Parsing script ShadowMapBaker.compositor
+Parsing script SdkTrays.fontdef
+Parsing script SdkTrays_Caption_SDF.fontdef
+Parsing script DroidSans.fontdef
+Parsing script DroidSans_SDF.fontdef
+Parsing script SdkTrays.overlay
+WARNING: material SdkTrays/Cursor has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Tray has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Button/Up has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/MiniButton/Up has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/TextBox has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/MiniTray has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/ScrollTrack has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Handle has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Transparent has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/SelectMenu/Tick has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/GradiantShadowed has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/MiniTextBox has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/SliderTrack has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Label has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Separator has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/Logo has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+Texture memory usage: 0(MB)
+Texture: white.tga: Loading 1 faces(PF_A8R8G8B8,64x64x1) with 6 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x64x1.
+Texture memory usage: 0(MB)
+Texture: sdk_shade.png: Loading 1 faces(PF_A8R8G8B8,64x48x1) with 6 hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x48x1.
+WARNING: material SdkTrays/Frame has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/ProgressFill has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+Parsing script BaseWidgets.overlay
+WARNING: material PlanktonWidgets/Base has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material PlanktonWidgets/CheckMark has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material PlanktonWidgets/VTrack has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material PlanktonWidgets/Round has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+Bad element attribute line: 'border_material PlanktonWidgets/Round' for element PlanktonWidgets/MenuScrollHandle in overlay 
+WARNING: material PlanktonWidgets/White has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+Bad element attribute line: 'border_material PlanktonWidgets/Round' for element PlanktonWidgets/TextBoxScrollHandle in overlay 
+Bad element attribute line: 'border_size 0 0 0 0' for element PlanktonWidgets/MarkdownTextBoxContainer in overlay 
+Bad element attribute line: 'right 0' for element PlanktonWidgets/MarkdownTextBoxContainer in overlay 
+Bad element attribute line: 'border_material PlanktonWidgets/Round' for element PlanktonWidgets/MarkdownTextBoxScrollHandle in overlay 
+Finished parsing scripts for resource group PlanktonFramework
+Creating resources for group PlanktonFramework
+All done
+Texture memory usage: 0(MB)
+Texture: base_lut.png: Loading 1 faces(PF_R8G8B8,1024x32x1) Internal format is PF_X8R8G8B8,1024x32x1.
+Creating resource group RTShaderLibrary
+Added resource location '../../RTShaderLib/cache' of type 'FileSystem' to resource group 'RTShaderLibrary'
+Added resource location '../../RTShaderLib/GLSL' of type 'FileSystem' to resource group 'RTShaderLibrary'
+Added resource location '../../RTShaderLib/HLSL_Cg' of type 'FileSystem' to resource group 'RTShaderLibrary'
+Added resource location '../../RTShaderLib/materials' of type 'FileSystem' to resource group 'RTShaderLibrary'
+Initialising resource group RTShaderLibrary
+Parsing scripts for resource group RTShaderLibrary
+Parsing script DualQuaternionSkinning_Shadow.material
+Parsing script HardwareSkinningShadow.material
+Parsing script RTShaderSystem.material
+Compiler error: unknown error in RTShaderSystem.material(34): token class, sampler, unrecognized.
+Compiler error: invalid parameters in RTShaderSystem.material(64): lighting_stage
+Compiler error: invalid parameters in RTShaderSystem.material(64): lighting_stage
+Parsing script TriplanarTexturing.material
+Finished parsing scripts for resource group RTShaderLibrary
+Creating resources for group RTShaderLibrary
+All done
+Texture memory usage: 0(MB)
+Texture: environmentMap.dds: Loading 6 faces(PF_A8R8G8B8,128x128x1) with 7 custom mipmaps from Image. Internal format is PF_A8R8G8B8,128x128x1.
+Creating resource group ProjectResourceGroup
+Creating resource group LoadingScreenGroup
+Added resource location '../..//LoadingScreen' of type 'FileSystem' to resource group 'LoadingScreenGroup'
+Added resource location '../..//LoadingScreen/backgrounds' of type 'FileSystem' to resource group 'LoadingScreenGroup'
+Initialising resource group LoadingScreenGroup
+Parsing scripts for resource group LoadingScreenGroup
+Parsing script LoadingScreen.material
+Parsing script Constantine_SDF.fontdef
+Parsing script LoadingScreen.overlay
+WARNING: material LoadingScreen/BlackBG has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material LoadingScreen/Background has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material SdkTrays/ProgressBackground has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+WARNING: material LoadingScreen/Fill has no supportable Techniques and will be blank. Explanation: 
+Pass 0: Vertex program Plankton/Unlit/VertexColour/VP cannot be used - not supported.
+
+Finished parsing scripts for resource group LoadingScreenGroup
+Creating resources for group LoadingScreenGroup
+All done
+Texture memory usage: 0(MB)
+Texture: ConstantineTexture_SDF.tga: Loading 1 faces(PF_L8,1024x1024x1) Internal format is PF_L8,1024x1024x1.
+Material PlanktonVideoPlayerMaterial:0 was requested with isManual=true, but this is not applicable for materials; the flag has been reset to false
+Texture memory usage: 1(MB)
+Texture: backgrounds/LoadScr_09_SBD_Dive.png.dds: Loading 1 faces(PF_DXT3,1920x1080x1) with 10 custom mipmaps from Image. Internal format is PF_DXT3,1920x1080x1.

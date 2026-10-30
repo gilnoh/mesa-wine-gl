@@ -1,0 +1,53 @@
+#!/usr/bin/env python3
+"""Record fresh KK capabilities and upstream Zink profile checks; no GL overrides."""
+from datetime import datetime, timezone
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+
+root = Path(__file__).resolve().parent.parent
+build = root/'build/mesa-x86_64'
+icd = build/'src/kosmickrisp/vulkan/kosmickrisp_mesa_devenv_icd.x86_64.json'
+driver = build/'src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib'
+checker = build/'src/gallium/drivers/zink/check_requirements/zink_check_requirements'
+vulkaninfo = Path('/usr/local/bin/vulkaninfo')
+for path in (icd, driver, checker, vulkaninfo):
+    if not path.is_file():
+        raise SystemExit(f'Missing {path}; build Mesa first')
+stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ')
+out = root/'build'/f'vulkan-{stamp}'
+out.mkdir(parents=True)
+env = os.environ.copy()
+cleared = []
+for key in list(env):
+    if key.startswith(('DYLD_', 'VK_', 'MESA_', 'ZINK_')):
+        cleared.append(key)
+        env.pop(key)
+env['VK_DRIVER_FILES'] = str(icd)
+metadata = dict(started_utc=stamp, cleared_environment=cleared, icd=json.loads(icd.read_text()),
+                source_commit=subprocess.check_output(['git','-C',str(root/'src/mesa'),'rev-parse','HEAD'],text=True).strip(),
+                sha256={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in (driver,checker,vulkaninfo)},
+                runs=[])
+for mode in ('default','custom-border'):
+    if mode == 'custom-border':
+        env['MESA_KK_EXPERIMENTAL'] = 'custom_border'
+    selected = {k:v for k,v in env.items() if k.startswith(('VK_','MESA_','ZINK_','DYLD_'))}
+    for name, executable in (('vulkaninfo',vulkaninfo), ('zink-requirements',checker)):
+        log = out/f'{name}-{mode}.txt'
+        with log.open('w') as f:
+            p = subprocess.run([str(executable)],env=env,stdout=f,stderr=subprocess.STDOUT,timeout=60)
+        record = dict(mode=mode,command=[str(executable)],environment=selected,exit_status=p.returncode,log=log.name)
+        if name == 'zink-requirements':
+            # Upstream returns 0 even for unsupported profiles. Read each result.
+            record['profiles'] = {}
+            for block in log.read_text().split('Checking profile ')[1:]:
+                profile = block.splitlines()[0]
+                record['profiles'][profile] = ('unsupported' if 'UNSUPPORTED' in block else
+                                               'supported' if '\nSupported\n' in block else 'incomplete')
+        metadata['runs'].append(record)
+        print(f'{mode} {name}: exit={p.returncode}', flush=True)
+(out/'run.json').write_text(json.dumps(metadata,indent=2)+'\n')
+print(out)
+print('Capability checks do not establish rendering correctness; inspect profile results, not only exit codes.')

@@ -1,0 +1,2 @@
+Deliberately mismatched source digest: rejected before GPU launch.
+Probe input changed since build: probes/vk-xfb.c; rebuild it
