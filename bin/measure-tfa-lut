@@ -1,0 +1,84 @@
+#!/usr/bin/env python3
+"""Measure installed TFA tone mapping/LUT through WGL; no Steam or game launch.
+Requires Pillow and MinGW. Private game assets remain in ignored build output.
+"""
+import argparse, hashlib, json, math, os, shutil, struct, subprocess
+from datetime import datetime, timezone
+from pathlib import Path
+from PIL import Image
+p=argparse.ArgumentParser(description=__doc__)
+p.add_argument('--bundle',type=Path,required=True)
+a=p.parse_args()
+r=Path(__file__).resolve().parent.parent; wb=r.parent/'wine-workbench-macos'
+game=wb/'library/SteamLibrary/steamapps/common/Task Force Admiral'
+framework=game/'PlanktonFramework'; bundle=a.bundle.resolve()
+runtime=wb/'runtimes/winecx-26.3.0-mesa-gl-x86_64'; prefix=r/'build/prefix-wgl'
+out=r/'build'/('tfa-lut-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'));out.mkdir()
+assets=out/'assets';assets.mkdir()
+sha=lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
+inputs=[(0,0,0),(.0001,.001,.002),(.003,.01,.02),(.05,.1,.2),(.4,.7,1),(1,2,3),(4,8,16),(32,64,128),(1,0,0),(0,1,0),(0,0,1),(.18,.18,.18),(.5,.5,.5),(1,1,1),(5,5,5),(2.3,.07,.51)]
+flat=[c for v in inputs for c in (*v,1)]
+(assets/'inputs.bin').write_bytes(struct.pack('<64f',*flat))
+image=Image.open(framework/'textures/base_lut.png').convert('RGBA')
+assert image.size==(1024,32)
+lut=image.tobytes();(assets/'lut.rgba').write_bytes(lut)
+# Independent scalar reference: tone curve, linear->sRGB, two bilinear LUT
+# samples and interpolation between adjacent blue slices. PNG rows stay in file
+# order, matching the GL upload; the shader explicitly flips the green axis.
+def tone(x):
+    A,B,C,D,E,F=.15,.50,.10,.20,.02,.30
+    return ((x*(A*x+C*B)+D*E)/(x*(A*x+B)+D*F))-E/F
+def display(x):
+    x=tone(2*x)/tone(10)
+    return min(1,max(0,12.92*x if x<.0031308 else 1.055*x**(1/2.4)-.055))
+def bilinear(u,v,channel,invert):
+    x,y=u*1024-.5,v*32-.5; x0,y0=math.floor(x),math.floor(y);fx,fy=x-x0,y-y0
+    value=0
+    for dy,wy in ((0,1-fy),(1,fy)):
+        for dx,wx in ((0,1-fx),(1,fx)):
+            ix=max(0,min(1023,x0+dx));iy=max(0,min(31,y0+dy))
+            b=lut[(iy*1024+ix)*4+channel];value+=(255-b if invert else b)/255*wx*wy
+    return value
+expected=[]
+for invert in (False,True):
+    for rgb in inputs:
+        red,green,blue=map(display,rgb); slice_=blue*31;low=math.floor(slice_);frac=slice_-low
+        u=(low*32+red*31+.5)/1024;v=1-(green*31+.5)/32
+        expected.extend([bilinear(u,v,c,invert)*(1-frac)+bilinear(u+1/32,v,c,invert)*frac for c in range(3)]+[1])
+(assets/'expected.bin').write_bytes(struct.pack('<128f',*expected))
+files={'final.glsl':framework/'glsl/hdr_finalToneMapping.glsl','utility.glsl':framework/'glsl/hdr_tonemap_util.glsl'}
+for dest,source in files.items():shutil.copyfile(source,assets/dest)
+tracked=[*files.values(),framework/'textures/base_lut.png',framework/'tonemapping.material',framework/'a.program',wb/'library/SteamLibrary/steamapps/appmanifest_1281220.acf']
+sources=[r/'probes/wine-tfa-lut.c',r/'probes/wine-gl-window.c',Path(__file__).resolve()]
+cc=shutil.which('x86_64-w64-mingw32-gcc'); assert cc,'MinGW required'
+exe=out/'wine-tfa-lut.exe'
+command=[cc,'-O2','-Wall','-Werror',str(sources[0]),'-o',str(exe),'-lopengl32','-lgdi32','-luser32','-lm']
+subprocess.run(command,check=True)
+package=json.loads((bundle/'manifest.json').read_text())
+for lib in package['libraries'].values():assert sha(bundle/'lib'/lib['name'])==lib['bundled_sha256']
+manifest={'game_files':{str(f.relative_to(wb)):sha(f) for f in tracked},'probe_inputs':{str(f.relative_to(r)):sha(f) for f in sources},'binary_sha256':sha(exe),'compiler':subprocess.check_output([cc,'--version'],text=True),'compile_command':command,'package':package,'winemac_sha256':sha(runtime/'lib/wine/x86_64-unix/winemac.so'),'runtime_provenance':(runtime/'PROVENANCE').read_text(),'reference':{'hdr_inputs':inputs,'expected_rgba':expected,'tolerance':.002,'curve':[.15,.5,.1,.2,.02,.3],'exposure':1,'white_point':1,'saturation':1,'bloom_and_shafts_inputs':0,'variants':['actual LUT, one level','actual LUT, 11 generated levels','diagnostic inverted LUT, 11 generated levels']},'runs':[]}
+base=os.environ.copy()
+for key in list(base):
+    if key.startswith(('MESA_','ZINK_','VK_','DYLD_','WINE')):base.pop(key)
+base.update(WINEPREFIX=str(prefix),WINEDEBUG='-all',WINEDLLOVERRIDES='mscoree,mshtml=',WINEARCH='win64')
+failed=False
+try:
+    with (out/'wineboot.txt').open('w') as log:subprocess.run([str(runtime/'bin/wine'),'wineboot','-u'],env=base,stdout=log,stderr=subprocess.STDOUT,timeout=120,check=True)
+    for mode in ('positive','wrong-lut'):
+        env=base|{'MESA_WINE_LIB':str(bundle/'lib/libmesa_wine.dylib'),'VK_DRIVER_FILES':str(bundle/'kosmickrisp.json'),'MESA_KK_EXPERIMENTAL':'xfb_gs_probe,custom_border,rgb32_texel'}
+        command=[str(runtime/'bin/wine'),str(exe),'Z:'+str(assets).replace('/','\\')]
+        if mode=='wrong-lut':command+=['--wrong-lut']
+        print(f'{mode}: running; log={out/(mode+".txt")}',flush=True)
+        with (out/(mode+'.txt')).open('w') as log:
+            try:status=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=240).returncode
+            except subprocess.TimeoutExpired:status='timeout'
+        content=(out/(mode+'.txt')).read_text(errors='replace')
+        ok=(status==0 and 'SUMMARY checks=139 failures=0' in content) if mode=='positive' else (status==1 and 'SUMMARY checks=139 failures=96' in content)
+        manifest['runs'].append({'mode':mode,'command':command,'environment':{k:v for k,v in env.items() if k.startswith(('MESA_','VK_','WINE'))},'exit_status':status,'expected_outcome_observed':ok})
+        failed|=not ok;print(f'{mode}: exit={status}, expected outcome={ok}',flush=True)
+        if status=='timeout':break
+finally:
+    (out/'runs.json').write_text(json.dumps(manifest,indent=2)+'\n')
+    subprocess.run([str(runtime/'bin/wineserver'),'-k'],env=base,timeout=15,check=False)
+print(out)
+raise SystemExit(1 if failed else 0)

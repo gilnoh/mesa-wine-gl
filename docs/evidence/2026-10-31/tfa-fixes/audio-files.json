@@ -1,0 +1,10 @@
+{
+  "note": "Hashes recorded after listening tests; source includes optional offline-rate experiment. Logs and user reports are the original test evidence.",
+  "sha256": {
+    "/Users/tailblues/wine-workbench-macos/library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master/OpenAL32.dll": "808ba8e86843b156c5bcbf0f5cc6bb95d2a9572a29fc2401976322789a410b14",
+    "/Users/tailblues/wine-workbench-macos/library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master/SDL3.dll": "2dfe1c60557c3e054ddda61bf7f29fdfd462c10faddf04dc6864961f43960df6",
+    "/Users/tailblues/mesa-wine-gl/build/wine-openal.exe": "514e28eb0d9014ce96e24671071a19fe16d4bca8267cc14206eab532c4b932a0",
+    "/Users/tailblues/mesa-wine-gl/probes/wine-openal.c": "37e0719c8fb149633b634be892decb36c83072f70ab42bd34c9907b5a124d0ac",
+    "/Users/tailblues/mesa-wine-gl/build/audio-clean-tone.f32": "d427b4075ee63f64ae4e587c507c3d53d84ccd6ebac757eb9175bc14bd8054d6"
+  }
+}

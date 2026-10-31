@@ -1,0 +1,117 @@
+{
+  "started_utc": "20261031T082354.135183Z",
+  "command": [
+    "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/bin/wine",
+    "TFA.exe"
+  ],
+  "cwd": "/Users/tailblues/wine-workbench-macos/library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master",
+  "launcher_sha256": "9abc946898af966e5f081955839b90d745f49968e77eabe80c548c3a622759ac",
+  "keep_launcher_alive": true,
+  "environment": {
+    "WINEPREFIX": "/Users/tailblues/wine-workbench-macos/prefixes/steam-winecx",
+    "WINEMSYNC": "1",
+    "WINEDEBUG": "+timestamp,+wgl,+loaddll",
+    "SteamAppId": "1281220",
+    "SteamGameId": "1281220",
+    "MESA_WINE_LIB": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-integration-2/lib/libmesa_wine.dylib",
+    "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-integration-2/kosmickrisp.json",
+    "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel",
+    "GST_PLUGIN_SYSTEM_PATH": "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/lib/bundled/gstreamer-1.0",
+    "GST_PLUGIN_PATH": "",
+    "GST_PLUGIN_SCANNER": "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/lib/bundled/gst-plugin-scanner",
+    "GST_REGISTRY": "/Users/tailblues/wine-workbench-macos/prefixes/steam-winecx/gstreamer-1.0-registry.x86_64.bin"
+  },
+  "cleared_environment": [
+    "CX_FWD_COMPAT_GL_CTX",
+    "DYLD_FALLBACK_LIBRARY_PATH",
+    "DYLD_INSERT_LIBRARIES",
+    "DYLD_LIBRARY_PATH",
+    "MESA_GLSL_VERSION_OVERRIDE",
+    "MESA_GL_VERSION_OVERRIDE",
+    "MESA_WINE_LIB",
+    "VK_DRIVER_FILES",
+    "VK_ICD_FILENAMES",
+    "WINEDLLOVERRIDES"
+  ],
+  "graphics_package": {
+    "bridge_build": {
+      "binary_sha256": "6a6f4b11f3b4f248aa588e87085b241b7630cbb37ebcffd48f7e18934503e81d",
+      "inputs": {
+        "bridge/mesa_wine.c": "f8a32ea531869e5b66564727ab82983c5f560f43792ba34a74431b52c2a1858e",
+        "bridge/mesa_wine_api.h": "19a7a5fd71897682272577410f01a42f8d3c5275884f750ad9dcc93c477ffce8",
+        "sources.lock.json": "78057ed7a192bf4cf6bbdcd3aef052d86f65370acc09015cccf6f32174d31f62",
+        "bin/build-bridge": "d206f7b1a56141a23a1c4f9b226415ddddff53ab158b06c6f6590e7793e866ff",
+        "patches/bridge.series": "568545bcf3afd33b0b7ebe0d35efe503c95681bb9125d4e9b6c81e32e969afa9",
+        "patches/mesa/0005-zink-metal-surface.patch": "b5e134ea0ff9e6bceb0cde1c784d12a12c7d698fb68c5c1f881f1957f57778ee",
+        "patches/mesa/0006-zink-present-fences.patch": "64b46f43c74a8b285f8fe5329f15baade0c3dd3e2e7c8b4cc70c4dea0074bf82"
+      }
+    },
+    "libraries": {
+      "/Users/tailblues/mesa-wine-gl/build/bridge/libmesa_wine.dylib": {
+        "name": "libmesa_wine.dylib",
+        "source_sha256": "6a6f4b11f3b4f248aa588e87085b241b7630cbb37ebcffd48f7e18934503e81d",
+        "bundled_sha256": "455b988800eb82d0e5077eff634c619464bd7c7bf68be89e40cc4e26159a7204"
+      },
+      "/usr/local/Cellar/llvm/21.1.8_1/lib/libLLVM.dylib": {
+        "name": "libLLVM.dylib",
+        "source_sha256": "d39d0604f7a31efae4b26e7794a38877c7a89a255b19f2c520a33a5b40b57d11",
+        "bundled_sha256": "1e232bc3fcdd9c7606eeda9fa2d8085c4b3542b567485956d36ae993d996efb3"
+      },
+      "/usr/local/Cellar/z3/4.15.4/lib/libz3.4.15.4.0.dylib": {
+        "name": "libz3.4.15.4.0.dylib",
+        "source_sha256": "f4a15476d4e4901ed379f0f0866882bd9fea59c50b5ca55ffa2bd0d6c9976e88",
+        "bundled_sha256": "50befb64a301f4af984bf52b1e8f3fa77aa14eda302271b80e445f416611715c"
+      },
+      "/usr/local/Cellar/zstd/1.5.7_1/lib/libzstd.1.5.7.dylib": {
+        "name": "libzstd.1.5.7.dylib",
+        "source_sha256": "fb01d38cf980e9423cdf69d04affb2d6b7985e029e4f9d8883833df732dfe3da",
+        "bundled_sha256": "96094795b77626c62fba61456a1c05948e4131c50df248dd3aa6a9ea300d5ce2"
+      },
+      "/usr/local/Cellar/spirv-tools/1.4.341.0/lib/libSPIRV-Tools.dylib": {
+        "name": "libSPIRV-Tools.dylib",
+        "source_sha256": "efc1704b0d16db555421e11d11767c7bca758e75ed8156aa7968dea501a1d498",
+        "bundled_sha256": "0ab20021f9bb997c6395379e849eaf7b5f439517a5ec00371b48b97651424128"
+      },
+      "/usr/local/Cellar/vulkan-loader/1.4.341.0/lib/libvulkan.1.4.341.dylib": {
+        "name": "libvulkan.1.dylib",
+        "source_sha256": "028ae4b064efa4bef93ff421905fa1a30d6d994ec0d0a662459042201b72244f",
+        "bundled_sha256": "57a23544414b424203873028784608be7a7efff575777f58916ee830aca8774b"
+      },
+      "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": {
+        "name": "libvulkan_kosmickrisp.dylib",
+        "source_sha256": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3",
+        "bundled_sha256": "6efb2739083d578e970e8c840e84b438cc36d859358a85c5b34ffc18d6012d70"
+      }
+    },
+    "sources": {
+      "mesa": {
+        "url": "https://gitlab.freedesktop.org/mesa/mesa.git",
+        "commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+        "version": "27.0.0-devel",
+        "ref_observed": "main",
+        "observed_at": "2026-10-30"
+      },
+      "reference_release": {
+        "tag": "mesa-26.2.6",
+        "commit": "8e87a503ebd91408c88596d1b9eeb5f4c0b2088d"
+      },
+      "wine": {
+        "source": "CodeWeavers CrossOver 26.3.0 published source",
+        "vendor_commit": "ea73f4a0be373d8a70bd774738ff7f861bac5623",
+        "source_subdirectory": "sources/wine",
+        "wine_version": "11.0"
+      }
+    },
+    "kk_patches": {
+      "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "21501fdbc445de74a5c89192b608999eede93e93984bc5504120f0eda8ab29d1",
+      "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+      "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+      "patches/mesa/0004-kk-rgb32-texel-experiment.patch": "8f0b60516e99d35f6af7298c5a701c43ed69b70798369aed2b8452338608ff1e"
+    }
+  },
+  "winemac_sha256": "8e278cf90195e752627c2120e010644e06ba231edc3dae15f5f5d07d3c2fff90",
+  "exe_sha256": "2ac4c7f21711d46f223e7ea9f930d33b9b9e782b33cb6b655b6dcc92670f4456",
+  "pid": 48245,
+  "exit_status": -15,
+  "finished_utc": "2026-10-31T08:33:42.783969+00:00"
+}

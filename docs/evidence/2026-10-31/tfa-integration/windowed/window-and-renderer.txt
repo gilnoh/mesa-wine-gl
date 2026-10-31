@@ -1,0 +1,2 @@
+09:34:39: GL3PlusRenderSystem::_createRenderWindow "Plankton", 1280x720 windowed  miscParams: FSAA=0 FSAAHint= border=default colourDepth=32 displayFrequency=0 gamma=false monitorIndex=0 vsync=false vsyncInterval=1 
+09:34:40: GL_RENDERER = zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))

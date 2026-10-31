@@ -5,16 +5,256 @@ and hypotheses. Historical reference results are not measurements of this projec
 
 
 
+
+
+## 2026-10-31 — Working stack available through workbench gamerun tfa
+
+The workbench's `bin/gamerun tfa` now selects the tested runtime, graphics-bundle-
+swap-fix, existing Steam prefix and direct WASAPI audio. It launches TFA directly
+with SteamAppId/SteamGameId, checks the running Steam executable belongs to that
+prefix, validates bundle hashes, and refuses a duplicate game. Start workbench
+Steam first and wait for login. `tfa-baseline` preserves the former Apple profile.
+This supersedes the older instruction that only trace-tfa selects this stack.
+
+**Measured:** `tfa-gamerun-20261031T094215Z.log` initializes GL 4.6 on Zink/KK,
+presents a GPU frame and selects WASAPI at 44100 Hz, 441/2646 buffering.
+**User confirmed:** menu and clear music work as before. Missing-bundle and
+live duplicate-game controls both reject the launch. The successful game is left
+running. Log snapshot and launcher-source hashes are in
+`docs/evidence/2026-10-31/tfa-gamerun/`. No CrossOver.app compatibility or portable
+binary packaging is established by this launcher change.
+
+## 2026-10-31 — Loading flicker fixed; direct WASAPI music confirmed in mission
+
+**User-confirmed outcome:** loading-picture alternation/overlap disappeared in
+museum testing. With direct OpenAL WASAPI output, music is clear at startup/menu
+and in a mission ("it sounded perfect"). The user considers the currently observed
+issues resolved sufficiently to enjoy the game. Earlier museum rendering, textures,
+mission progression and map controls also worked. This is a usable early TFA
+baseline, not general GL conformance or coverage of every mission/material.
+
+**Measured graphics cause/fix:** after exchanging front/back resources, the bridge
+updated the drawable stamp but did not dirty Mesa's cached framebuffer state.
+`mesa_wine_swap_buffers` now calls
+`st_context_invalidate_state(st, ST_INVALIDATE_FB_STATE)`, as Mesa's WGL frontend
+does after flush. The new `wine-gl-swap` probe batches draws/swaps without per-frame
+readbacks or framebuffer rebinds. The old bundle fails four of 49 checks (even-size
+batches present an older image); the fixed bundle passes 49/49. The deliberate
+wrong-reference control fails 25 checks, and missing-bridge/Apple controls fail as
+expected. The installed TFA LUT regression still passes 139 checks, with its
+wrong-reference control failing the expected 96. This addresses the reproduced
+cached-framebuffer defect and the user-confirmed game symptom.
+
+**Measured audio isolation and user listening:** the game's own OpenAL DLL reports
+OpenAL Soft 1.24.2-unknown (the earlier Ogre "OpenAL version 2.2" line was not its
+implementation version). An isolated static-buffer tone probe, with no game, GL,
+video decoding or streaming refill, reproduced the periodic garble in both float
+and signed-16-bit inputs through the default SDL3 backend. Identical inputs with
+only `ALSOFT_DRIVERS=wasapi` changed sounded clear in both formats. The actual game
+then used that backend without diagnostic injection; the user confirmed clear
+in-mission music. Logs show both backends output stereo Float32 at 44100 Hz;
+SDL3 uses 441/882 buffering, direct WASAPI 441/2646. SDL3 itself selects WASAPI.
+Thus direct WASAPI is a validated backend workaround; the precise SDL3/Wine
+buffering/timing defect is not yet located. Do not label this a float-format or
+sample-rate-only bug, or infer why effects were less audibly affected.
+
+Offline OpenAL loopback at 48 kHz reproduced the independent decoded reference
+exactly for float input; signed-16-bit differed only by expected quantization
+(RMS 9.09e-6). The first 20 contiguous captured splash PCM blocks matched an
+independent FFmpeg decode within about 1.2e-7. These are bounded checks, not proof
+of every music stream. A 44.1 kHz comparison against FFmpeg differed and is not a
+validated resampler diagnosis. Copyrighted PCM remains ignored under build/tmp.
+
+**Working launch** (Steam already online in the existing workbench prefix):
+
+```sh
+cd /Users/tailblues/mesa-wine-gl
+bin/trace-tfa --graphics-bundle build/graphics-bundle-swap-fix \
+  --openal-driver wasapi --wine-debug=-all,+loaddll --wait
+```
+
+Runtime: `winecx-26.3.0-mesa-gl-x86_64`, normal workbench fixes plus graphics
+integration, WINEMSYNC=1. The original integration-2 bundle remains available for
+comparison. Bordered 1280x720 settings remain in effect. No game DLL/shader/music
+replacement was used. The stock workbench `tfa` profile is still the old baseline;
+use the command above for this tested configuration.
+
+Evidence: `docs/evidence/2026-10-31/tfa-fixes/` contains before/after probes,
+LUT regression, audio backend logs/hashes, and a snapshot of the successful game
+run `tfa-20261031T091238.886790Z`. Game run was left running; the snapshot is not an
+exit-status claim. Exact live logs remain under build. Remaining broader work:
+repeatability/performance and additional GL/application coverage, separately from
+these two resolved user-visible issues.
+
+## 2026-10-31 — Mission progression and music-only distortion clarified
+
+**User report from the ongoing windowed run:** Coral Sea starts at midnight,
+simulation time advances toward morning, and map operations appear correct.
+The game itself is reported to work. Engine, wind and sea-ambience audio sound
+correct; **only music playback is garbled/broken**. This supersedes the broader
+"audio broken" description above/in older entries. The static loading picture
+and progress-bar screen still flicker between different pictures.
+
+These are two remaining user-reported defects in the tested session, not a
+claim that all game features or general GL compatibility are complete. The
+music-specific result makes music decoding/streaming/buffering a useful next
+investigation target; it does not yet locate the fault or exclude shared audio
+code. Preserve the working effects path and compare music separately. For the
+loading flicker, reduce presentation behaviour without per-frame readbacks
+before changing buffer exchange/invalidation. Keep the ongoing mission running.
+
+## 2026-10-31 — First mission user report and runtime patch verification
+
+**User report, current windowed run:** mission entered and is proceeding okay;
+loading-image alternation persists, loading was somewhat long, and garbled audio
+(possibly music) also persists during the mission and is now the worst issue.
+This is initial mission evidence, not a completed mission or performance benchmark.
+
+**Verified from runtime provenance and current patch hashes:** the Mesa Wine
+runtime includes all three normal workbench Wine patches: argument injection
+0004, msync contention cleanup 0007, and macOS GS last-error mirroring 0008, plus
+the two opt-in graphics patches. Forced SSE PE compilation is retained. The live
+run records WINEMSYNC=1, the existing Steam prefix and bundled GStreamer paths.
+Diagnostic-only patches are excluded as in the normal runtime; DXMT is a separate
+backend and is not involved in this OpenGL run. The trace loads native OpenAL32,
+OgreOggSound and SDL3, plus Wine mmdevapi/CoreAudio. Which audio producer causes
+the distorted music remains unmeasured; the old 32-bit DirectSound/x87 cause
+must not be assumed. Next priority is a bounded audio comparison/reduction.
+
+## 2026-10-31 — Museum visually confirmed; usable windowed follow-up
+
+**Measured/user-confirmed:** `tfa-20261031T082354.135183Z`, with the persistent
+launcher, reached the main menu and museum. The user's 09:28:12 and 09:29:02
+screenshots show a carrier and South Dakota with ship surfaces, ocean, sky and
+museum controls. The user reports textures look normal. Hash rechecks confirm
+both tone-mapping GLSL files, `base_lut.png`, `tonemapping.material` and `a.program`
+are unchanged from the focused probe. LUT is enabled in the installed shader;
+there was no game shader workaround. This establishes museum rendering, not all
+materials, dynamic LUT presets, mission correctness or frame-time performance.
+
+The apparent museum hang recovered without intervention. A three-second sample
+while its loading image persisted caught the main thread waiting during texture
+upload, the Gallium worker waiting on a compute pipeline, and a Zink compiler
+worker inside KK -> `mtl_new_library` -> Metal compiler scheduling. This measures
+a compilation wait during the delay, not the duration or cause of every loading
+pause. **User reports still open:** rapid alternation of old/new loading images
+at transitions, and garbled audio with intermittent beeps. The loaded audio path
+is native game OpenAL Soft 2.2 -> Wine mmdevapi/CoreAudio; no `dsound.dll` load was
+found in this trace. Both runtime provenance files retain forced SSE codegen, so
+the old 32-bit DirectSound/x87 diagnosis is not established for this workload.
+
+**Archive comparison, source inspection:** March's `run_tfa.sh` disabled
+`GALLIUM_THREAD` and `mesa_glthread`, inserted `nofatal_assert.dylib`, and used
+its own Wine/prefix and loader paths. Its project also forced GL versions,
+modified re-entrant submission/queue locking and suppressed assertions, matched
+some varyings by type, and disabled the game's `applyLut`. Its bridge presented
+from the same back resource rather than exchanging front/back textures. Today's
+KK already updates the push-descriptor layout unconditionally (the archive's
+specific descriptor fix). None of those old changes was applied blindly here.
+Current Mesa's WGL frontend explicitly invalidates framebuffer state after flush;
+our bridge swaps resources and bumps a stamp. A missing invalidation is a candidate
+for the reported image alternation, not yet a reproduced fault. Future reduction
+should avoid per-frame readbacks that could disturb cached framebuffer state.
+
+**Display usability:** the user could not reach the museum Exit button because
+the bottom was clipped. At their request only TFA PID 48245 was stopped (SIGTERM,
+recorded exit -15); Steam remained running. The original settings were already
+`Full Screen=No`, `Video Mode=1920 x 1080`, `border=No`: borderless windowed.
+After backing up `Documents/My Games/TaskForceAdmiral/config/options.cfg`, only
+resolution and border were changed to 1280x720 and Yes. Relaunch
+`tfa-20261031T083438.062691Z` logs `1280x720 windowed`, `border=default`, and the
+same Zink/KK renderer. **User confirmation: the window fits.** This run also uses
+`--wine-debug=-all,+loaddll` to remove the very verbose per-frame WGL trace; do not
+treat any performance/audio difference as a resolution-only A/B test. The game
+is left running with `--wait`. Stock launch profile and shader assets are unchanged.
+
+**Next:** a small mission now that controls are reachable; independently reduce
+loading-image alternation, compare warm loading/compilation times, and diagnose
+audio using its actual OpenAL path. Missions are not yet tested. Screenshots,
+compressed traces/samples, settings backup and window verification are under
+`docs/evidence/2026-10-31/tfa-integration/`.
+
+## 2026-10-31 — Installed TFA LUT probe and first game launch
+
+**Measured:** the installed, unchanged `hdr_finalToneMapping.glsl` and separately
+attached `hdr_tonemap_util.glsl` compile, link and produce reference-matching
+pixels through the Windows WGL bridge. `tfa-lut-20261031T081959.681228Z` completes
+**139 checks, 0 failures**; its wrong-reference control completes **139 checks,
+exactly 96 failures**, exit 1. The largest absolute component error is 0.000163093
+against a 0.002 tolerance. The historical LUT failure is not reproduced by this
+focused test; this does not settle colour grading inside the full game.
+
+`bin/measure-tfa-lut --bundle build/graphics-bundle-integration-2` compiles the
+probe with MinGW and reads game assets into ignored build output. No proprietary
+shader/image assets are committed. Evidence records their hashes, the probe and
+launcher source hashes, binary/compiler, graphics bundle and Wine provenance.
+The probe reuses the 33-check WGL window test, then adds 106 checks:
+
+- Sixteen HDR input colours (black, low values, primaries, greys, mixed colours,
+  highlights) are read from an SSBO by a synthetic compute shader, written to an
+  RGBA32F image and sampled by the actual TFA fragment program after a texture-fetch
+  memory barrier. A second dispatch rotates inputs, detecting stale results.
+- TFA's curve/exposure/white-point/saturation defaults are supplied through its
+  two uniform blocks. Bloom and light-shaft input textures are zero. A scalar CPU
+  reference independently calculates filmic tone mapping, sRGB conversion,
+  bilinear LUT sampling with the shader's Y flip, and blue-slice interpolation.
+- The actual 1024x32 `base_lut.png` is tested with one level and an 11-level
+  generated mip chain; exact base-level upload/readback is checked. A diagnostic
+  RGB-inverted copy verifies that changing the LUT changes output. The game
+  asset is never edited. All three variants use clamp and bilinear filtering.
+- The negative control offsets the expected RGB values by 0.125 and must fail
+  every one of the 96 final pixel comparisons while completing the same path.
+
+**Scope:** actual final-pass GLSL and LUT, synthetic vertex/compute producer,
+controlled uniforms/textures and a float FBO. This does not test all TFA shaders,
+its actual culling compute programs, nonzero bloom/shafts, OGRE's texture upload
+choices, museum scenes or missions. No Wine/Mesa driver patch was needed here.
+
+**First game launch, measured:** `tfa-20261031T082132.514242Z` used the new
+runtime/bundle directly with the existing live `steam-winecx` Steam session.
+The stock game/profile were unchanged, no second Steam client was started.
+Ogre reports GL 4.6 and Zink/KosmicKrisp; the bridge logs its render fence and
+first GPU presentation, followed by repeated swaps. Loading-screen resources and
+project resources are parsed. **User report:** TFA appeared to run normally and
+was loading toward the main menu, then disappeared. No interactive menu, museum,
+mission or in-game LUT correctness has yet been confirmed.
+
+The runner's 50-second snapshot recorded the process still alive, but the trace
+stopped about two seconds after the wrapper exited and a later process check
+found no TFA or crash reporter. There is no crash diagnostic in the captured tail.
+**Hypothesis, not established:** managed tool-session cleanup ended the orphaned
+process. The launcher now supports `--wait` to stay alive until TFA exits and
+record its final status. Relaunch `tfa-20261031T082354.135183Z` uses that option.
+Some Ogre script warnings mention missing parameters/resources; their effect is
+unresolved and they are not evidence of a driver compiler failure by themselves.
+
+The capture-probe timeout is now 240 seconds when holding a window for 90 seconds,
+allowing startup time as well; normal runs retain 120 seconds. A new held run has
+not yet verified that timeout adjustment.
+
+**Next:** verify the persistent game launch reaches an interactive menu, then
+museum and representative missions with LUT enabled; capture concrete rendering
+failures before changing the driver. Evidence is in
+`docs/evidence/2026-10-31/tfa-integration/`.
+
 ## 2026-10-31 — First Wine bridge integration measurements
 
 **Measured:** an x86-64 Windows probe runs through WineCX -> Mesa/Zink ->
 KosmicKrisp -> Metal with GL 4.6 core / GLSL 4.60, without version/extension
 overrides. The complete controlled run passes all 33 positive checks. This is
-Windows API/rendering and presentation-submission evidence. **Visible window
-orientation/colour confirmation remains pending**: the desktop tool did not
-return a capture and could not attach to the Wine-hosted application. The user
-has been asked to confirm blue/yellow above red/green. Do not call this a visually
-verified game or general GL compatibility result.
+Windows API/rendering and presentation-submission evidence. **Visually confirmed
+from the user's screenshot (2026-10-31 08:58:15 local):** the Wine integration
+probe is visible with blue/yellow above red/green, matching the expected colours
+and orientation. This confirms this probe's onscreen output, not a game or general
+GL compatibility result. The desktop tool itself still could not capture it.
+
+The visual-confirmation run `wine-gl-20261031T075719.775217Z` reached
+`PASS 60 consecutive GPU presentations` and `CAPTURE_READY`, but the runner
+subsequently reported `exit=timeout` during the requested hold; there is no final
+summary. Retain this as visual evidence, not another completed 33/33 run. The
+prior completed controlled matrix remains the automated pass evidence. The user
+initially reported no window, then supplied the visible probe screenshot; the
+cause of the initial delay has not been measured.
 
 ### Isolated implementation and ownership
 
@@ -99,9 +339,9 @@ still embeds its installation path; this is not yet a relocatable Wine release.*
 - Assertions remain enabled. Existing KK feature limitations still apply. No
   TFA shaders, LUT assets, museum or missions have run on this bridge yet.
 
-**Next:** obtain the visible-window confirmation, then exercise actual TFA shader
-and material dependencies, especially compute-to-draw synchronization and the LUT
-pass. Preserve the stock TFA profile for baseline comparisons and select the
+**Next:** exercise actual TFA shader and material dependencies, especially
+compute-to-draw synchronization and the LUT pass. Separately, give the capture
+hold sufficient runner timeout and verify clean completion. Preserve the stock TFA profile for baseline comparisons and select the
 experimental runtime explicitly for application experiments. Evidence is under `docs/evidence/2026-10-31/wine-integration/`;
 reproduction and the interface contract are in `bridge/README.md`.
 

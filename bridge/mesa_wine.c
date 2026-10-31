@@ -929,6 +929,10 @@ mesa_wine_swap_buffers(mesa_wine_draw_t draw)
     draw->textures[ST_ATTACHMENT_FRONT_LEFT] = draw->textures[ST_ATTACHMENT_BACK_LEFT];
     draw->textures[ST_ATTACHMENT_BACK_LEFT] = front;
     p_atomic_inc(&draw->base.stamp);
+    /* The drawable stamp is checked only when framebuffer state is validated.
+     * Like Mesa's WGL frontend, explicitly dirty that state after exchanging
+     * resources so cached draws target the new back buffer without a rebind. */
+    st_context_invalidate_state(st, ST_INVALIDATE_FB_STATE);
     return true;
 }
 

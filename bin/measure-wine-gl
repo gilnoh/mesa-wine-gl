@@ -43,7 +43,7 @@ try:
         print(f'{mode}: running; log={out/(mode+".txt")}',flush=True)
         with (out/(mode+'.txt')).open('w') as log:
             try:
-                proc=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=120)
+                proc=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=240 if args.hold else 120)
                 status=proc.returncode
             except subprocess.TimeoutExpired:status='timeout'
         content=(out/(mode+'.txt')).read_text(errors='replace')

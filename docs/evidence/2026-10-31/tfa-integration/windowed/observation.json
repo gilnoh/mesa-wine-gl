@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-31T08:36:21.703968+00:00",
+  "run": "tfa-20261031T083438.062691Z",
+  "user_confirmation": "the window fits, thanks",
+  "process_left_running": true,
+  "display_changes": {
+    "Video Mode": [
+      "1920 x 1080",
+      "1280 x 720"
+    ],
+    "border": [
+      "No",
+      "Yes"
+    ]
+  },
+  "wine_debug": "-all,+loaddll"
+}

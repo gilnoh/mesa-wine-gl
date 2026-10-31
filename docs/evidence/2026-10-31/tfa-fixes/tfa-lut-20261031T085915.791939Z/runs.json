@@ -1,0 +1,381 @@
+{
+  "game_files": {
+    "library/SteamLibrary/steamapps/common/Task Force Admiral/PlanktonFramework/glsl/hdr_finalToneMapping.glsl": "ab1679f33cd30fb89e96c134d2a83ba0100d6fbe2fe67a6557de076d1fd8f117",
+    "library/SteamLibrary/steamapps/common/Task Force Admiral/PlanktonFramework/glsl/hdr_tonemap_util.glsl": "8b03350ad25a47dee0bbf6bb0215c995b19f6b50d21bb744f0f8c20a3441c26e",
+    "library/SteamLibrary/steamapps/common/Task Force Admiral/PlanktonFramework/textures/base_lut.png": "1d22c557c58c92d1d79c4a38b6bb6723f08f20082aabf8d787d9d75b26e65ca5",
+    "library/SteamLibrary/steamapps/common/Task Force Admiral/PlanktonFramework/tonemapping.material": "752a954b9f2a6a1c04dffbe2940f60f6c036529aca850af4d604ea4d81ebe343",
+    "library/SteamLibrary/steamapps/common/Task Force Admiral/PlanktonFramework/a.program": "eab9d90640a3d014312a4caebe3d04b06bae41543775a52cdf81710ba262e753",
+    "library/SteamLibrary/steamapps/appmanifest_1281220.acf": "38914f8f14c9dd436f50f958d76046121937c5373397a1c7276156c17a392199"
+  },
+  "probe_inputs": {
+    "probes/wine-tfa-lut.c": "14036abc4851372810713184bd06b1a67ba098da16712282bd371d952d1e94d1",
+    "probes/wine-gl-window.c": "0f57d3cafd8dd5dcdbe7fb5f91ef41be1e59db03446deffa441f7aa8e349786d",
+    "bin/measure-tfa-lut": "d1147cec964a4e68301bc10ae5089de8d0d775d799b71145153face9225d65e2"
+  },
+  "binary_sha256": "2d1ec820a13adc5d1a8586a560ee636200f7fd510359519031ff265803a05654",
+  "compiler": "x86_64-w64-mingw32-gcc (GCC) 16.1.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "compile_command": [
+    "/opt/homebrew/bin/x86_64-w64-mingw32-gcc",
+    "-O2",
+    "-Wall",
+    "-Werror",
+    "/Users/tailblues/mesa-wine-gl/probes/wine-tfa-lut.c",
+    "-o",
+    "/Users/tailblues/mesa-wine-gl/build/tfa-lut-20261031T085915.791939Z/wine-tfa-lut.exe",
+    "-lopengl32",
+    "-lgdi32",
+    "-luser32",
+    "-lm"
+  ],
+  "package": {
+    "bridge_build": {
+      "binary_sha256": "f89992aa865f3dd2c978eac2f66c817f7c3376a0ed3e7138b35a27027312c9c4",
+      "inputs": {
+        "bridge/mesa_wine.c": "4d328d9170cfedbd997153d3057d7d22eb2c18353d802d7786b3c0730a38c64d",
+        "bridge/mesa_wine_api.h": "19a7a5fd71897682272577410f01a42f8d3c5275884f750ad9dcc93c477ffce8",
+        "sources.lock.json": "78057ed7a192bf4cf6bbdcd3aef052d86f65370acc09015cccf6f32174d31f62",
+        "bin/build-bridge": "d206f7b1a56141a23a1c4f9b226415ddddff53ab158b06c6f6590e7793e866ff",
+        "patches/bridge.series": "568545bcf3afd33b0b7ebe0d35efe503c95681bb9125d4e9b6c81e32e969afa9",
+        "patches/mesa/0005-zink-metal-surface.patch": "b5e134ea0ff9e6bceb0cde1c784d12a12c7d698fb68c5c1f881f1957f57778ee",
+        "patches/mesa/0006-zink-present-fences.patch": "64b46f43c74a8b285f8fe5329f15baade0c3dd3e2e7c8b4cc70c4dea0074bf82"
+      }
+    },
+    "libraries": {
+      "/Users/tailblues/mesa-wine-gl/build/bridge/libmesa_wine.dylib": {
+        "name": "libmesa_wine.dylib",
+        "source_sha256": "f89992aa865f3dd2c978eac2f66c817f7c3376a0ed3e7138b35a27027312c9c4",
+        "bundled_sha256": "ec423bbcfc2faa9b39c77bc36daa7edf1587e1a4b90e447fbe239e9615aa2ea5"
+      },
+      "/usr/local/Cellar/llvm/21.1.8_1/lib/libLLVM.dylib": {
+        "name": "libLLVM.dylib",
+        "source_sha256": "d39d0604f7a31efae4b26e7794a38877c7a89a255b19f2c520a33a5b40b57d11",
+        "bundled_sha256": "1e232bc3fcdd9c7606eeda9fa2d8085c4b3542b567485956d36ae993d996efb3"
+      },
+      "/usr/local/Cellar/z3/4.15.4/lib/libz3.4.15.4.0.dylib": {
+        "name": "libz3.4.15.4.0.dylib",
+        "source_sha256": "f4a15476d4e4901ed379f0f0866882bd9fea59c50b5ca55ffa2bd0d6c9976e88",
+        "bundled_sha256": "50befb64a301f4af984bf52b1e8f3fa77aa14eda302271b80e445f416611715c"
+      },
+      "/usr/local/Cellar/zstd/1.5.7_1/lib/libzstd.1.5.7.dylib": {
+        "name": "libzstd.1.5.7.dylib",
+        "source_sha256": "fb01d38cf980e9423cdf69d04affb2d6b7985e029e4f9d8883833df732dfe3da",
+        "bundled_sha256": "96094795b77626c62fba61456a1c05948e4131c50df248dd3aa6a9ea300d5ce2"
+      },
+      "/usr/local/Cellar/spirv-tools/1.4.341.0/lib/libSPIRV-Tools.dylib": {
+        "name": "libSPIRV-Tools.dylib",
+        "source_sha256": "efc1704b0d16db555421e11d11767c7bca758e75ed8156aa7968dea501a1d498",
+        "bundled_sha256": "0ab20021f9bb997c6395379e849eaf7b5f439517a5ec00371b48b97651424128"
+      },
+      "/usr/local/Cellar/vulkan-loader/1.4.341.0/lib/libvulkan.1.4.341.dylib": {
+        "name": "libvulkan.1.dylib",
+        "source_sha256": "028ae4b064efa4bef93ff421905fa1a30d6d994ec0d0a662459042201b72244f",
+        "bundled_sha256": "57a23544414b424203873028784608be7a7efff575777f58916ee830aca8774b"
+      },
+      "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": {
+        "name": "libvulkan_kosmickrisp.dylib",
+        "source_sha256": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3",
+        "bundled_sha256": "6efb2739083d578e970e8c840e84b438cc36d859358a85c5b34ffc18d6012d70"
+      }
+    },
+    "sources": {
+      "mesa": {
+        "url": "https://gitlab.freedesktop.org/mesa/mesa.git",
+        "commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+        "version": "27.0.0-devel",
+        "ref_observed": "main",
+        "observed_at": "2026-10-30"
+      },
+      "reference_release": {
+        "tag": "mesa-26.2.6",
+        "commit": "8e87a503ebd91408c88596d1b9eeb5f4c0b2088d"
+      },
+      "wine": {
+        "source": "CodeWeavers CrossOver 26.3.0 published source",
+        "vendor_commit": "ea73f4a0be373d8a70bd774738ff7f861bac5623",
+        "source_subdirectory": "sources/wine",
+        "wine_version": "11.0"
+      }
+    },
+    "kk_patches": {
+      "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "21501fdbc445de74a5c89192b608999eede93e93984bc5504120f0eda8ab29d1",
+      "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+      "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+      "patches/mesa/0004-kk-rgb32-texel-experiment.patch": "8f0b60516e99d35f6af7298c5a701c43ed69b70798369aed2b8452338608ff1e"
+    }
+  },
+  "winemac_sha256": "8e278cf90195e752627c2120e010644e06ba231edc3dae15f5f5d07d3c2fff90",
+  "runtime_provenance": "runtime:           winecx-26.3.0-mesa-gl-x86_64\ncrossover_version: 26.3.0\nwine_version:      11.0\nwine_reported:     wine-11.0\nsource_tarball:    crossover-sources-26.3.0.tar.gz\nsha256:            unavailable (tarball not on disk)\ndeployment_target: <host default>\npe_compiler:       i686-w64-mingw32-gcc (SSE forced)\nsource_tree:       /Users/tailblues/mesa-wine-gl/src/winecx-bridge/sources/wine\nsource_commit:     ea73f4a0be373d8a70bd774738ff7f861bac5623\nsource_base:       winecx-26.3.0-2-gea73f4a0\npatches:           wine-0004-kernelbase-append-args-env.patch wine-0007-msync-unregister-on-contention.patch wine-0008-ntdll-mirror-last-error-into-macos-gs.patch 0001-winemac-mesa-backend.patch 0002-winemac-reject-unsupported-contexts.patch\npatch_sha256:      b3db0665092b318aa5c16a0391e9a53a3c98908445b72aa84bf546a73b87cd8a  /Users/tailblues/wine-workbench-macos/patches/wine-0004-kernelbase-append-args-env.patch\npatch_sha256:      8a093efaeb35cd99b560368c26e69c0286cd1a59c2b0da22e11426444cfd295d  /Users/tailblues/wine-workbench-macos/patches/wine-0007-msync-unregister-on-contention.patch\npatch_sha256:      e8cc6773cfca4407d979e638e6dd9026aa2de8761ec95e4f28696d101297df83  /Users/tailblues/wine-workbench-macos/patches/wine-0008-ntdll-mirror-last-error-into-macos-gs.patch\npatch_sha256:      432ecc7c5b1de2d1fccad2822a05321b42905f0a0db6c764e10149a862cecf7c  /Users/tailblues/mesa-wine-gl/patches/wine/0001-winemac-mesa-backend.patch\npatch_sha256:      98be10f4c805eb35679d2c4a56337accafcc83b0a62e4a0eafa296b913ed027d  /Users/tailblues/mesa-wine-gl/patches/wine/0002-winemac-reject-unsupported-contexts.patch\nextra_series:      /Users/tailblues/mesa-wine-gl/patches/wine/series\nconfigure:         --build=x86_64-apple-darwin --enable-archs=i386,x86_64 --prefix=/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64 --disable-tests --with-vulkan --with-mingw --with-freetype --with-gnutls --with-gstreamer --without-ffmpeg --without-x\nbuilt:             2026-10-31T07:02:47Z\nbuilt_by:          bin/build-runtime\n",
+  "reference": {
+    "hdr_inputs": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.0001,
+        0.001,
+        0.002
+      ],
+      [
+        0.003,
+        0.01,
+        0.02
+      ],
+      [
+        0.05,
+        0.1,
+        0.2
+      ],
+      [
+        0.4,
+        0.7,
+        1
+      ],
+      [
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        8,
+        16
+      ],
+      [
+        32,
+        64,
+        128
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0.18,
+        0.18,
+        0.18
+      ],
+      [
+        0.5,
+        0.5,
+        0.5
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        5,
+        5,
+        5
+      ],
+      [
+        2.3,
+        0.07,
+        0.51
+      ]
+    ],
+    "expected_rgba": [
+      0.0,
+      0.0,
+      0.0,
+      1,
+      0.0009884859479136884,
+      0.009885928008139899,
+      0.019773794136141123,
+      1,
+      0.029662940961885827,
+      0.085305852630008,
+      0.13225853663750403,
+      1,
+      0.21875810603081036,
+      0.30536140360267117,
+      0.4170910015410559,
+      1,
+      0.5495377765072466,
+      0.6665262997021679,
+      0.7386851279088611,
+      1,
+      0.7386851279088624,
+      0.871183794439754,
+      0.9376506618480916,
+      1,
+      0.9750447082013374,
+      1.0,
+      1.0,
+      1,
+      1.0,
+      1.0,
+      1.0,
+      1,
+      0.738685127908861,
+      0.0,
+      0.0,
+      1,
+      0.0,
+      0.738685127908861,
+      0.0,
+      1,
+      0.0,
+      0.0,
+      0.738685127908861,
+      1,
+      0.39926453722089755,
+      0.3992645372208967,
+      0.39926453722089666,
+      1,
+      0.5941075724814094,
+      0.5941075724814089,
+      0.5941075724814089,
+      1,
+      0.7386851279088624,
+      0.7386851279088609,
+      0.738685127908861,
+      1,
+      1.0,
+      0.9999999999999999,
+      0.9999999999999999,
+      1,
+      0.8939905473091594,
+      0.2586272722810598,
+      0.5981089844819363,
+      1,
+      1.0,
+      1.0,
+      1.0,
+      1,
+      0.9990115140520863,
+      0.9901140719918601,
+      0.9802262058638589,
+      1,
+      0.9703370590381142,
+      0.9146941473699921,
+      0.8677414633624958,
+      1,
+      0.7812418939691896,
+      0.694638596397329,
+      0.5829089984589442,
+      1,
+      0.45046222349275356,
+      0.33347370029783213,
+      0.26131487209113907,
+      1,
+      0.26131487209113763,
+      0.128816205560246,
+      0.06234933815190837,
+      1,
+      0.024955291798662575,
+      0.0,
+      0.0,
+      1,
+      0.0,
+      0.0,
+      0.0,
+      1,
+      0.26131487209113907,
+      1.0,
+      1.0,
+      1,
+      1.0,
+      0.26131487209113907,
+      1.0,
+      1,
+      1.0,
+      1.0,
+      0.26131487209113907,
+      1,
+      0.6007354627791025,
+      0.6007354627791035,
+      0.6007354627791035,
+      1,
+      0.40589242751859056,
+      0.4058924275185911,
+      0.4058924275185911,
+      1,
+      0.26131487209113763,
+      0.261314872091139,
+      0.26131487209113907,
+      1,
+      0.0,
+      1.1145768404080003e-16,
+      1.1145768404080003e-16,
+      1,
+      0.10600945269084061,
+      0.7413727277189402,
+      0.4018910155180637,
+      1
+    ],
+    "tolerance": 0.002,
+    "curve": [
+      0.15,
+      0.5,
+      0.1,
+      0.2,
+      0.02,
+      0.3
+    ],
+    "exposure": 1,
+    "white_point": 1,
+    "saturation": 1,
+    "bloom_and_shafts_inputs": 0,
+    "variants": [
+      "actual LUT, one level",
+      "actual LUT, 11 generated levels",
+      "diagnostic inverted LUT, 11 generated levels"
+    ]
+  },
+  "runs": [
+    {
+      "mode": "positive",
+      "command": [
+        "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/bin/wine",
+        "/Users/tailblues/mesa-wine-gl/build/tfa-lut-20261031T085915.791939Z/wine-tfa-lut.exe",
+        "Z:\\Users\\tailblues\\mesa-wine-gl\\build\\tfa-lut-20261031T085915.791939Z\\assets"
+      ],
+      "environment": {
+        "WINEPREFIX": "/Users/tailblues/mesa-wine-gl/build/prefix-wgl",
+        "WINEDEBUG": "-all",
+        "WINEDLLOVERRIDES": "mscoree,mshtml=",
+        "WINEARCH": "win64",
+        "MESA_WINE_LIB": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-swap-fix/lib/libmesa_wine.dylib",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-swap-fix/kosmickrisp.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel"
+      },
+      "exit_status": 0,
+      "expected_outcome_observed": true
+    },
+    {
+      "mode": "wrong-lut",
+      "command": [
+        "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/bin/wine",
+        "/Users/tailblues/mesa-wine-gl/build/tfa-lut-20261031T085915.791939Z/wine-tfa-lut.exe",
+        "Z:\\Users\\tailblues\\mesa-wine-gl\\build\\tfa-lut-20261031T085915.791939Z\\assets",
+        "--wrong-lut"
+      ],
+      "environment": {
+        "WINEPREFIX": "/Users/tailblues/mesa-wine-gl/build/prefix-wgl",
+        "WINEDEBUG": "-all",
+        "WINEDLLOVERRIDES": "mscoree,mshtml=",
+        "WINEARCH": "win64",
+        "MESA_WINE_LIB": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-swap-fix/lib/libmesa_wine.dylib",
+        "VK_DRIVER_FILES": "/Users/tailblues/mesa-wine-gl/build/graphics-bundle-swap-fix/kosmickrisp.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel"
+      },
+      "exit_status": 1,
+      "expected_outcome_observed": true
+    }
+  ]
+}

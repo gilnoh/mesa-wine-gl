@@ -131,6 +131,9 @@ int main(int argc,char **argv) {
     check(swaps==60,"60 consecutive GPU presentations");
     printf("CAPTURE_READY top-left=blue top-right=yellow bottom-left=red bottom-right=green\n");
     if(hold){ULONGLONG until=GetTickCount64()+90000;while(!closed && GetTickCount64()<until){messages();Sleep(20);}}
+#ifdef EXTRA_CHECKS
+    EXTRA_CHECKS();
+#endif
     pDeleteVertexArrays(1,&vao);pDeleteProgram(program);wglMakeCurrent(NULL,NULL);wglDeleteContext(a);ReleaseDC(hwnd,dc);DestroyWindow(hwnd);
     printf("SUMMARY checks=%u failures=%u\n",checks,failures);return failures?1:0;
 }

@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Build and measure batched window swaps without per-frame readback."""
+import argparse, hashlib, json, os, subprocess, shutil
+from datetime import datetime, timezone
+from pathlib import Path
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--bundle',type=Path,required=True)
+parser.add_argument('--hold',action='store_true')
+parser.add_argument('--positive-only',action='store_true',help='Development run; not the complete controlled measurement')
+args=parser.parse_args()
+root=Path(__file__).resolve().parent.parent; wb=root.parent/'wine-workbench-macos'
+runtime=wb/'runtimes/winecx-26.3.0-mesa-gl-x86_64'
+program=root/'build/wine-gl-swap.exe'
+cc=shutil.which('x86_64-w64-mingw32-gcc'); assert cc
+inputs=[root/'probes/wine-gl-swap.c',root/'probes/wine-gl-window.c']
+subprocess.run([cc,'-O2','-Wall','-Werror',str(inputs[0]),'-o',str(program),'-lopengl32','-lgdi32','-luser32'],check=True)
+manifest={'binary_sha256':hashlib.sha256(program.read_bytes()).hexdigest(),'inputs':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs},'compiler':subprocess.check_output([cc,'--version'],text=True)}
+bundle=args.bundle.resolve(); prefix=root/'build/prefix-wgl'
+out=root/'build'/('wine-swap-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'));out.mkdir()
+assert hashlib.sha256(program.read_bytes()).hexdigest()==manifest['binary_sha256'],'stale probe binary'
+for name,digest in manifest['inputs'].items():assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest,'stale probe source'
+package=json.loads((bundle/'manifest.json').read_text())
+for lib in package['libraries'].values():
+    assert hashlib.sha256((bundle/'lib'/lib['name']).read_bytes()).hexdigest()==lib['bundled_sha256'],'changed bundled library'
+base=os.environ.copy()
+for key in list(base):
+    if key.startswith(('MESA_','ZINK_','VK_','DYLD_','WINE')):base.pop(key)
+base.update(WINEPREFIX=str(prefix),WINEDEBUG='-all,+wgl',WINEDLLOVERRIDES='mscoree,mshtml=',WINEARCH='win64')
+# Readiness/bootstrap uses the Apple path and no game prefix or shared Steam state.
+with (out/'wineboot.txt').open('w') as log:
+    subprocess.run([str(runtime/'bin/wine'),'wineboot','-u'],env=base,stdout=log,stderr=subprocess.STDOUT,timeout=120,check=True)
+results=[];failed=False
+modes=['positive'] if args.positive_only else ['positive','wrong-expected','missing-bridge','apple-control']
+try:
+    for mode in modes:
+        env=base.copy()
+        env.update(MESA_WINE_LIB=str(bundle/'lib/libmesa_wine.dylib'),VK_DRIVER_FILES=str(bundle/'kosmickrisp.json'),MESA_KK_EXPERIMENTAL='xfb_gs_probe,custom_border,rgb32_texel')
+        if mode=='missing-bridge':env['MESA_WINE_LIB']=str(bundle/'missing-bridge.dylib')
+        if mode=='apple-control':
+            for key in ('MESA_WINE_LIB','VK_DRIVER_FILES','MESA_KK_EXPERIMENTAL'):env.pop(key)
+        command=[str(runtime/'bin/wine'),str(program)]
+        if mode=='wrong-expected':command+=['--wrong-expected']
+        if mode=='positive' and args.hold:command+=['--hold']
+        print(f'{mode}: running; log={out/(mode+".txt")}',flush=True)
+        with (out/(mode+'.txt')).open('w') as log:
+            try:
+                proc=subprocess.run(command,env=env,stdout=log,stderr=subprocess.STDOUT,timeout=240 if args.hold else 120)
+                status=proc.returncode
+            except subprocess.TimeoutExpired:status='timeout'
+        content=(out/(mode+'.txt')).read_text(errors='replace')
+        if mode=='positive':ok=status==0 and 'SUMMARY checks=49 failures=0' in content and 'first GPU frame presented' in content
+        elif mode=='wrong-expected':ok=status==1 and 'SUMMARY checks=49 failures=25' in content and 'first GPU frame presented' in content
+        elif mode=='missing-bridge':ok=status==2 and 'Failed to load Mesa bridge library' in content and 'SUMMARY' not in content and 'first GPU frame presented' not in content
+        else:ok=status==2 and 'FATAL 4.6 core context' in content and 'first GPU frame presented' not in content
+        results.append({'mode':mode,'command':command,'environment':{k:v for k,v in env.items() if k.startswith(('MESA_','ZINK_','VK_','DYLD_','WINE'))},'exit_status':status,'expected_outcome_observed':ok})
+        failed |= not ok
+        print(f'{mode}: exit={status}, expected outcome={ok}',flush=True)
+        if status=='timeout':break
+finally:
+    (out/'runs.json').write_text(json.dumps({'probe':manifest,'package':package,'runtime_provenance':(runtime/'PROVENANCE').read_text(),'winemac_sha256':hashlib.sha256((runtime/'lib/wine/x86_64-unix/winemac.so').read_bytes()).hexdigest(),'runs':results},indent=2)+'\n')
+    # Only the dedicated probe prefix; no argv-wide process killing.
+    subprocess.run([str(runtime/'bin/wineserver'),'-k'],env=base,timeout=15,check=False)
+print(out)
+raise SystemExit(1 if failed else 0)

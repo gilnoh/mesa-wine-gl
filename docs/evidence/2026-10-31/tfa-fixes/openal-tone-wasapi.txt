@@ -1,0 +1,104 @@
+BEGIN float playback
+[ALSOFT] (II) Initializing library v1.24.2-unknown UNKNOWN
+[ALSOFT] (II) Supported backends: sdl3, wasapi, dsound, winmm, null, wave
+[ALSOFT] (II) Loading config C:\users\crossover\AppData\Roaming\alsoft.ini...
+[ALSOFT] (II) Got binary: Z:\Users\tailblues\mesa-wine-gl\build, wine-openal.exe
+[ALSOFT] (II) Loading config Z:\Users\tailblues\mesa-wine-gl\build\alsoft.ini...
+[ALSOFT] (II) Vendor ID: ""
+[ALSOFT] (II) Name: "VirtualApple @ 2.50GHz"
+[ALSOFT] (II) Extensions: +SSE +SSE2 +SSE3 +SSE4.1
+[ALSOFT] (II) Starting watcher thread
+[ALSOFT] (II) Initialized backend "wasapi"
+[ALSOFT] (II) Added "wasapi" for playback
+[ALSOFT] (II) Added "wasapi" for capture
+[ALSOFT] (II) Got device "MacBook Pro Speakers", "{1304788C-5790-458F-BF7C-1AD3A00773AE}", "{0.0.0.00000000}.{1304788C-5790-458F-BF7C-1AD3A00773AE}"
+[ALSOFT] (II) Opening default playback device
+[ALSOFT] (II) Got device "XB273K GP", "{7667DBAE-558F-4C53-8E8E-A77FB665B6E9}", "{0.0.0.00000000}.{7667DBAE-558F-4C53-8E8E-A77FB665B6E9}"
+[ALSOFT] (II) Got device "Microsoft® LifeCam HD-3000", "{59B682B1-7D8F-4F8D-BC9C-C70310D662DC}", "{0.0.1.00000000}.{59B682B1-7D8F-4F8D-BC9C-C70310D662DC}"
+[ALSOFT] (II) Got device "MacBook Pro Microphone", "{B0C11ED7-76A8-4050-A0E7-51442B0BA44B}", "{0.0.1.00000000}.{B0C11ED7-76A8-4050-A0E7-51442B0BA44B}"
+[ALSOFT] (II) Watcher thread started
+[ALSOFT] (II) Created device 0x7ffb60, "OpenAL Soft on MacBook Pro Speakers"
+[ALSOFT] (II) Pre-reset: Stereo, Float32, 48000hz, 960 / 2880 buffer
+[ALSOFT] (II) Device mix format:
+    FormatTag      = 0xfffe
+    Channels       = 2
+    SamplesPerSec  = 44100
+    AvgBytesPerSec = 352800
+    BlockAlign     = 8
+    BitsPerSample  = 32
+    Size           = 22
+    Samples        = 32
+    ChannelMask    = 0x3
+    SubFormat      = {00000003-0000-0010-8000-00aa00389b71}
+[ALSOFT] (II) Requesting playback format:
+    FormatTag      = 0xfffe
+    Channels       = 2
+    SamplesPerSec  = 44100
+    AvgBytesPerSec = 352800
+    BlockAlign     = 8
+    BitsPerSample  = 32
+    Size           = 22
+    Samples        = 32
+    ChannelMask    = 0x3
+    SubFormat      = {00000003-0000-0010-8000-00aa00389b71}
+[ALSOFT] (II) Post-reset: Stereo, Float32, 44100hz, 441 / 2646 buffer
+[ALSOFT] (II) Stereo rendering
+[ALSOFT] (II) Channel config, Main: 3, Real: 2
+[ALSOFT] (II) Allocating 5 channels, 20480 bytes
+[ALSOFT] (II) Enabling single-band first-order ambisonic decoder
+[ALSOFT] (II) Max sources: 256 (255 + 1), effect slots: 64, sends: 4
+[ALSOFT] (II) Dithering disabled
+[ALSOFT] (II) Output limiter disabled
+[ALSOFT] (II) Fixed device latency: 0ns
+[ALSOFT] (II) Post-start: Stereo, Float32, 44100hz, 441 / 2646 buffer
+[ALSOFT] (II) Increasing allocated voices to 256
+[ALSOFT] (II) Created context 0x820da0
+OpenAL 1.1 ALSOFT 1.24.2 / OpenAL Soft
+[ALSOFT] (II) Increasing allocated voice properties to 32
+END float AL_ERROR=0
+[ALSOFT] (II) Freeing context 0x820da0
+[ALSOFT] (II) Freeing device 0x7ffb60
+BEGIN s16 playback
+[ALSOFT] (II) Opening default playback device
+[ALSOFT] (II) Created device 0x7ffb60, "OpenAL Soft on MacBook Pro Speakers"
+[ALSOFT] (II) Pre-reset: Stereo, Float32, 48000hz, 960 / 2880 buffer
+[ALSOFT] (II) Device mix format:
+    FormatTag      = 0xfffe
+    Channels       = 2
+    SamplesPerSec  = 44100
+    AvgBytesPerSec = 352800
+    BlockAlign     = 8
+    BitsPerSample  = 32
+    Size           = 22
+    Samples        = 32
+    ChannelMask    = 0x3
+    SubFormat      = {00000003-0000-0010-8000-00aa00389b71}
+[ALSOFT] (II) Requesting playback format:
+    FormatTag      = 0xfffe
+    Channels       = 2
+    SamplesPerSec  = 44100
+    AvgBytesPerSec = 352800
+    BlockAlign     = 8
+    BitsPerSample  = 32
+    Size           = 22
+    Samples        = 32
+    ChannelMask    = 0x3
+    SubFormat      = {00000003-0000-0010-8000-00aa00389b71}
+[ALSOFT] (II) Post-reset: Stereo, Float32, 44100hz, 441 / 2646 buffer
+[ALSOFT] (II) Stereo rendering
+[ALSOFT] (II) Channel config, Main: 3, Real: 2
+[ALSOFT] (II) Allocating 5 channels, 20480 bytes
+[ALSOFT] (II) Enabling single-band first-order ambisonic decoder
+[ALSOFT] (II) Max sources: 256 (255 + 1), effect slots: 64, sends: 4
+[ALSOFT] (II) Dithering disabled
+[ALSOFT] (II) Output limiter disabled
+[ALSOFT] (II) Fixed device latency: 0ns
+[ALSOFT] (II) Post-start: Stereo, Float32, 44100hz, 441 / 2646 buffer
+[ALSOFT] (II) Increasing allocated voices to 256
+[ALSOFT] (II) Created context 0x820cd0
+OpenAL 1.1 ALSOFT 1.24.2 / OpenAL Soft
+[ALSOFT] (II) Increasing allocated voice properties to 32
+END s16 AL_ERROR=0
+[ALSOFT] (II) Freeing context 0x820cd0
+[ALSOFT] (II) Freeing device 0x7ffb60
+SUMMARY failures=0

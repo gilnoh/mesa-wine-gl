@@ -1,0 +1,7 @@
+BEGIN float loopback
+OpenAL 1.1 ALSOFT 1.24.2 / OpenAL Soft
+END float AL_ERROR=0
+BEGIN s16 loopback
+OpenAL 1.1 ALSOFT 1.24.2 / OpenAL Soft
+END s16 AL_ERROR=0
+SUMMARY failures=0

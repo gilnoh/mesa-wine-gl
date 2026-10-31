@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Trace one TFA baseline launch through the existing workbench runtime.
+"""Trace one TFA launch through a selected workbench runtime.
 Requires Steam already online in steam-winecx. Does not stop or restart Steam.
 """
 import argparse
@@ -16,10 +16,23 @@ parser.add_argument("--forward-compatible", action="store_true",
                     help="Enable WineCX's existing CW Hack 24834 for this process")
 parser.add_argument("--timeout", type=int, default=40,
                     help="Seconds to observe; a process still running is left running")
+parser.add_argument("--graphics-bundle", type=Path,
+                    help="Use the experimental Mesa Wine runtime with this graphics bundle")
+parser.add_argument("--wait", action="store_true",
+                    help="Keep the launcher alive after the observation snapshot until TFA exits")
+parser.add_argument("--wine-debug", default="+timestamp,+wgl,+loaddll",
+                    help="Wine debug channels; use -all,+loaddll for interactive runs")
+parser.add_argument("--capture-audio", action="store_true",
+                    help="Inject our diagnostic IAT hooks; save bounded local PCM, never game assets")
+parser.add_argument("--openal-driver", choices=("wasapi", "sdl3"),
+                    help="Select the game OpenAL output backend for a controlled comparison")
 args = parser.parse_args()
+if args.graphics_bundle and args.forward_compatible:
+    parser.error("--forward-compatible is an Apple-baseline experiment, not a Mesa setting")
 root = Path(__file__).resolve().parent.parent
 wb = root.parent / "wine-workbench-macos"
-rt = wb / "runtimes/winecx-26.3.0-sse-x86_64"
+rt = wb / ("runtimes/winecx-26.3.0-mesa-gl-x86_64" if args.graphics_bundle
+           else "runtimes/winecx-26.3.0-sse-x86_64")
 prefix = wb / "prefixes/steam-winecx"
 game = wb / "library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master"
 processes = subprocess.check_output(["ps", "-axo", "pid=,comm="], text=True)
@@ -36,21 +49,60 @@ out.mkdir(parents=True)
 env = os.environ.copy()
 clear = ("DYLD_LIBRARY_PATH", "DYLD_FALLBACK_LIBRARY_PATH", "DYLD_INSERT_LIBRARIES",
          "MESA_WINE_LIB", "MESA_GL_VERSION_OVERRIDE", "MESA_GLSL_VERSION_OVERRIDE",
-         "VK_ICD_FILENAMES", "VK_DRIVER_FILES", "WINEDLLOVERRIDES", "CX_FWD_COMPAT_GL_CTX")
+         "VK_ICD_FILENAMES", "VK_DRIVER_FILES", "WINEDLLOVERRIDES", "CX_FWD_COMPAT_GL_CTX",
+         "ALSOFT_DRIVERS", "ALSOFT_LOGLEVEL")
+clear = tuple(sorted(set(clear) | {key for key in env
+    if key.startswith(("MESA_", "ZINK_", "VK_", "DYLD_", "WINE"))}))
 for key in clear:
     env.pop(key, None)
 selected = dict(WINEPREFIX=str(prefix), WINEMSYNC="1",
-                WINEDEBUG="+timestamp,+wgl,+loaddll", SteamAppId="1281220", SteamGameId="1281220")
+                WINEDEBUG=args.wine_debug, SteamAppId="1281220", SteamGameId="1281220")
 if args.forward_compatible:
     selected["CX_FWD_COMPAT_GL_CTX"] = "1"
+if args.openal_driver:
+    selected["ALSOFT_DRIVERS"] = args.openal_driver
+    selected["ALSOFT_LOGLEVEL"] = "3"
+package = None
+if args.graphics_bundle:
+    bundle = args.graphics_bundle.resolve()
+    package = json.loads((bundle / "manifest.json").read_text())
+    for lib in package["libraries"].values():
+        assert hashlib.sha256((bundle / "lib" / lib["name"]).read_bytes()).hexdigest() == lib["bundled_sha256"], "changed graphics library"
+    selected.update(MESA_WINE_LIB=str(bundle / "lib/libmesa_wine.dylib"),
+                    VK_DRIVER_FILES=str(bundle / "kosmickrisp.json"),
+                    MESA_KK_EXPERIMENTAL="xfb_gs_probe,custom_border,rgb32_texel")
+# Match gamerun's bundled media dependencies for either runtime.
+gst = rt / "lib/bundled"
+selected.update(GST_PLUGIN_SYSTEM_PATH=str(gst / "gstreamer-1.0"),
+                GST_PLUGIN_PATH="", GST_PLUGIN_SCANNER=str(gst / "gst-plugin-scanner"),
+                GST_REGISTRY=str(prefix / "gstreamer-1.0-registry.x86_64.bin"))
+audio_capture = None
+if args.capture_audio:
+    cc = shutil.which("x86_64-w64-mingw32-gcc")
+    assert cc, "MinGW required for the audio diagnostic"
+    inputs = [root / "probes/tfa-audio-capture.c", root / "probes/tfa-inject.c"]
+    binaries = [out / "tfa-audio-capture.dll", out / "tfa-inject.exe"]
+    for source, binary in zip(inputs, binaries):
+        flags = ["-shared"] if binary.suffix == ".dll" else []
+        subprocess.run([cc, "-O2", "-Wall", "-Werror", *flags, str(source), "-o", str(binary)], check=True)
+    capture_dir = out / "audio"
+    capture_dir.mkdir()
+    selected["TFA_AUDIO_CAPTURE_DIR"] = "Z:" + str(capture_dir).replace("/", "\\")
+    audio_capture = {"source_sha256": {str(f.relative_to(root)): hashlib.sha256(f.read_bytes()).hexdigest() for f in inputs},
+                     "binary_sha256": {f.name: hashlib.sha256(f.read_bytes()).hexdigest() for f in binaries}}
 env.update(selected)
 shutil.copyfile(rt / "PROVENANCE", out / "runtime-provenance.txt")
 for name in ("init.log", "Ogre.log"):
     if (game / name).is_file():
         shutil.copyfile(game / name, out / (name + ".before.txt"))
 command = [str(rt / "bin/wine"), "TFA.exe"]
+if args.capture_audio:
+    command = [str(rt / "bin/wine"), str(binaries[1]), "Z:" + str(binaries[0]).replace("/", "\\")]
 metadata = dict(started_utc=stamp, command=command, cwd=str(game),
-                environment=selected, cleared_environment=list(clear),
+                launcher_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                keep_launcher_alive=args.wait, audio_capture=audio_capture,
+                environment=selected, cleared_environment=list(clear), graphics_package=package,
+                winemac_sha256=hashlib.sha256((rt / "lib/wine/x86_64-unix/winemac.so").read_bytes()).hexdigest(),
                 exe_sha256=hashlib.sha256((game / "TFA.exe").read_bytes()).hexdigest())
 with (out / "wine-trace.txt").open("w") as log:
     process = subprocess.Popen(command, cwd=game, env=env, stdout=log, stderr=subprocess.STDOUT)
@@ -66,3 +118,13 @@ for name in ("init.log", "Ogre.log"):
         shutil.copyfile(game / name, out / (name + ".after.txt"))
 (out / "run.json").write_text(json.dumps(metadata, indent=2) + "\n")
 print(json.dumps(metadata, indent=2))
+
+if args.wait and metadata["exit_status"] is None:
+    print("Observation snapshot saved; keeping launcher alive until TFA exits.", flush=True)
+    metadata["exit_status"] = process.wait()
+    metadata["finished_utc"] = datetime.now(timezone.utc).isoformat()
+    for name in ("init.log", "Ogre.log"):
+        if (game / name).is_file():
+            shutil.copyfile(game / name, out / (name + ".final.txt"))
+    (out / "run.json").write_text(json.dumps(metadata, indent=2) + "\n")
+    print(f"TFA exited: {metadata['exit_status']}", flush=True)

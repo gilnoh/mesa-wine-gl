@@ -1,0 +1,21 @@
+runtime:           winecx-26.3.0-mesa-gl-x86_64
+crossover_version: 26.3.0
+wine_version:      11.0
+wine_reported:     wine-11.0
+source_tarball:    crossover-sources-26.3.0.tar.gz
+sha256:            unavailable (tarball not on disk)
+deployment_target: <host default>
+pe_compiler:       i686-w64-mingw32-gcc (SSE forced)
+source_tree:       /Users/tailblues/mesa-wine-gl/src/winecx-bridge/sources/wine
+source_commit:     ea73f4a0be373d8a70bd774738ff7f861bac5623
+source_base:       winecx-26.3.0-2-gea73f4a0
+patches:           wine-0004-kernelbase-append-args-env.patch wine-0007-msync-unregister-on-contention.patch wine-0008-ntdll-mirror-last-error-into-macos-gs.patch 0001-winemac-mesa-backend.patch 0002-winemac-reject-unsupported-contexts.patch
+patch_sha256:      b3db0665092b318aa5c16a0391e9a53a3c98908445b72aa84bf546a73b87cd8a  /Users/tailblues/wine-workbench-macos/patches/wine-0004-kernelbase-append-args-env.patch
+patch_sha256:      8a093efaeb35cd99b560368c26e69c0286cd1a59c2b0da22e11426444cfd295d  /Users/tailblues/wine-workbench-macos/patches/wine-0007-msync-unregister-on-contention.patch
+patch_sha256:      e8cc6773cfca4407d979e638e6dd9026aa2de8761ec95e4f28696d101297df83  /Users/tailblues/wine-workbench-macos/patches/wine-0008-ntdll-mirror-last-error-into-macos-gs.patch
+patch_sha256:      432ecc7c5b1de2d1fccad2822a05321b42905f0a0db6c764e10149a862cecf7c  /Users/tailblues/mesa-wine-gl/patches/wine/0001-winemac-mesa-backend.patch
+patch_sha256:      98be10f4c805eb35679d2c4a56337accafcc83b0a62e4a0eafa296b913ed027d  /Users/tailblues/mesa-wine-gl/patches/wine/0002-winemac-reject-unsupported-contexts.patch
+extra_series:      /Users/tailblues/mesa-wine-gl/patches/wine/series
+configure:         --build=x86_64-apple-darwin --enable-archs=i386,x86_64 --prefix=/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64 --disable-tests --with-vulkan --with-mingw --with-freetype --with-gnutls --with-gstreamer --without-ffmpeg --without-x
+built:             2026-10-31T07:02:47Z
+built_by:          bin/build-runtime

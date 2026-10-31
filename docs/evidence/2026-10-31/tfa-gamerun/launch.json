@@ -1,0 +1,20 @@
+{
+  "command": [
+    "bin/gamerun",
+    "tfa"
+  ],
+  "cwd": "/Users/tailblues/wine-workbench-macos",
+  "pid": 58658,
+  "snapshot_while_running": true,
+  "user_report": "Menu and clear music work as before.",
+  "controls": {
+    "missing_bundle": "exit 1, cannot validate bundle",
+    "duplicate_game": "exit 1, TFA already running"
+  },
+  "sources": {
+    "bin/common.sh": "d3c2d4c74797478bb56bc2ff79d0d8ee0221f319ba17807b107b01942143fe60",
+    "bin/gamerun": "81969e7030a148944fd52b05cec7a3b2c04642beea35f620e375f3252ddcd857",
+    "profiles/tfa.env": "5971319d74c086f93c965f715d9e9e5e07d468e6c28f2c85707989cdd6075d1f",
+    "profiles/tfa-baseline.env": "3f79e566467b79660f87d86dc6a82654bbf6da2679ece07cd81cea7f70ebb074"
+  }
+}

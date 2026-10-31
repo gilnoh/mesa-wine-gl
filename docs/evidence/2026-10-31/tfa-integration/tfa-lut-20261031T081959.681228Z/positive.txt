@@ -1,0 +1,155 @@
+mesa_wine: Zink screen created: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+mesa_wine: swapchain created 640x480 (3 images)
+mesa_wine: presentation attached (640x480)
+mesa_wine: GL context created (version 1.0, profile compat, format 1)
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+mesa_wine: swapchain created 640x480 (3 images)
+mesa_wine: presentation attached (640x480)
+VERSION 4.6 (Core Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+RENDERER zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL 4.60
+PASS Zink and KosmicKrisp renderer identity
+PASS core profile
+PASS window 640x480 quadrant 0 rgba=255,0,0,255
+PASS window 640x480 quadrant 1 rgba=0,255,0,255
+PASS window 640x480 quadrant 2 rgba=0,0,255,255
+PASS window 640x480 quadrant 3 rgba=255,255,0,255
+PASS default framebuffer GL error
+mesa_wine: render fence completed before presentation
+mesa_wine: first GPU frame presented
+PASS initial SwapBuffers
+PASS front buffer after swap
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+PASS shared GL fence
+PASS shared texture object
+PASS shared texture contents
+PASS shared context GL error
+PASS window 480x320 quadrant 0 rgba=255,0,0,255
+PASS window 480x320 quadrant 1 rgba=0,255,0,255
+PASS window 480x320 quadrant 2 rgba=0,0,255,255
+PASS window 480x320 quadrant 3 rgba=255,255,0,255
+PASS default framebuffer GL error
+mesa_wine: swapchain created 480x320 (3 images)
+PASS resized SwapBuffers
+PASS front buffer after swap
+PASS cached-state frame 0 rgba=255,255,0,255
+PASS cached-state SwapBuffers
+PASS cached-state frame 1 rgba=0,0,255,255
+PASS cached-state SwapBuffers
+PASS cached-state frame 2 rgba=255,255,0,255
+PASS cached-state SwapBuffers
+PASS cached-state frame 3 rgba=0,0,255,255
+PASS cached-state SwapBuffers
+PASS cached-state frame 4 rgba=255,255,0,255
+PASS cached-state SwapBuffers
+PASS cached-state frame 5 rgba=0,0,255,255
+PASS cached-state SwapBuffers
+PASS 60 consecutive GPU presentations
+CAPTURE_READY top-left=blue top-right=yellow bottom-left=red bottom-right=green
+PASS TFA installed final shader and attached utility compile/link unchanged
+PASS TFA LUT variant 0 exact base-level upload/readback
+PASS TFA LUT variant 0 update 0 sample 0 max_error=8.179232e-08 rgba=0,0,8.1792e-08,1
+PASS TFA LUT variant 0 update 0 sample 1 max_error=0.0001630923 rgba=0.00098039,0.010049,0.019774,1
+PASS TFA LUT variant 0 update 0 sample 2 max_error=1.173466e-05 rgba=0.029657,0.085294,0.13226,1
+PASS TFA LUT variant 0 update 0 sample 3 max_error=0.0001144409 rgba=0.21887,0.30539,0.41709,1
+PASS TFA LUT variant 0 update 0 sample 4 max_error=0.0001403689 rgba=0.54951,0.66667,0.73869,1
+PASS TFA LUT variant 0 update 0 sample 5 max_error=0.0001397133 rgba=0.73873,0.87132,0.93765,1
+PASS TFA LUT variant 0 update 0 sample 6 max_error=4.470348e-05 rgba=0.975,1,1,1
+PASS TFA LUT variant 0 update 0 sample 7 max_error=0 rgba=1,1,1,1
+PASS TFA LUT variant 0 update 0 sample 8 max_error=4.035234e-05 rgba=0.73873,0,8.1792e-08,1
+PASS TFA LUT variant 0 update 0 sample 9 max_error=4.035234e-05 rgba=0,0.73873,8.1792e-08,1
+PASS TFA LUT variant 0 update 0 sample 10 max_error=0 rgba=0,0,0.73869,1
+PASS TFA LUT variant 0 update 0 sample 11 max_error=1.490116e-07 rgba=0.39926,0.39926,0.39926,1
+PASS TFA LUT variant 0 update 0 sample 12 max_error=1.007318e-05 rgba=0.59412,0.59412,0.59411,1
+PASS TFA LUT variant 0 update 0 sample 13 max_error=4.035234e-05 rgba=0.73873,0.73873,0.73869,1
+PASS TFA LUT variant 0 update 0 sample 14 max_error=5.960464e-08 rgba=1,1,1,1
+PASS TFA LUT variant 0 update 0 sample 15 max_error=0.0001270771 rgba=0.89412,0.25858,0.59811,1
+PASS TFA compute-to-tone-map GL error
+PASS TFA LUT variant 0 update 1 sample 0 max_error=0 rgba=1,1,1,1
+PASS TFA LUT variant 0 update 1 sample 1 max_error=4.035234e-05 rgba=0.73873,0,8.1792e-08,1
+PASS TFA LUT variant 0 update 1 sample 2 max_error=4.035234e-05 rgba=0,0.73873,8.1792e-08,1
+PASS TFA LUT variant 0 update 1 sample 3 max_error=0 rgba=0,0,0.73869,1
+PASS TFA LUT variant 0 update 1 sample 4 max_error=1.490116e-07 rgba=0.39926,0.39926,0.39926,1
+PASS TFA LUT variant 0 update 1 sample 5 max_error=1.007318e-05 rgba=0.59412,0.59412,0.59411,1
+PASS TFA LUT variant 0 update 1 sample 6 max_error=4.035234e-05 rgba=0.73873,0.73873,0.73869,1
+PASS TFA LUT variant 0 update 1 sample 7 max_error=5.960464e-08 rgba=1,1,1,1
+PASS TFA LUT variant 0 update 1 sample 8 max_error=0.0001270771 rgba=0.89412,0.25858,0.59811,1
+PASS TFA LUT variant 0 update 1 sample 9 max_error=8.179232e-08 rgba=0,0,8.1792e-08,1
+PASS TFA LUT variant 0 update 1 sample 10 max_error=0.0001630923 rgba=0.00098039,0.010049,0.019774,1
+PASS TFA LUT variant 0 update 1 sample 11 max_error=1.173466e-05 rgba=0.029657,0.085294,0.13226,1
+PASS TFA LUT variant 0 update 1 sample 12 max_error=0.0001144409 rgba=0.21887,0.30539,0.41709,1
+PASS TFA LUT variant 0 update 1 sample 13 max_error=0.0001403689 rgba=0.54951,0.66667,0.73869,1
+PASS TFA LUT variant 0 update 1 sample 14 max_error=0.0001397133 rgba=0.73873,0.87132,0.93765,1
+PASS TFA LUT variant 0 update 1 sample 15 max_error=4.470348e-05 rgba=0.975,1,1,1
+PASS TFA compute-to-tone-map GL error
+PASS TFA LUT variant 1 exact base-level upload/readback
+PASS TFA LUT variant 1 update 0 sample 0 max_error=8.179232e-08 rgba=0,0,8.1792e-08,1
+PASS TFA LUT variant 1 update 0 sample 1 max_error=0.0001630923 rgba=0.00098039,0.010049,0.019774,1
+PASS TFA LUT variant 1 update 0 sample 2 max_error=1.173466e-05 rgba=0.029657,0.085294,0.13226,1
+PASS TFA LUT variant 1 update 0 sample 3 max_error=0.0001144409 rgba=0.21887,0.30539,0.41709,1
+PASS TFA LUT variant 1 update 0 sample 4 max_error=0.0001403689 rgba=0.54951,0.66667,0.73869,1
+PASS TFA LUT variant 1 update 0 sample 5 max_error=0.0001397133 rgba=0.73873,0.87132,0.93765,1
+PASS TFA LUT variant 1 update 0 sample 6 max_error=4.470348e-05 rgba=0.975,1,1,1
+PASS TFA LUT variant 1 update 0 sample 7 max_error=0 rgba=1,1,1,1
+PASS TFA LUT variant 1 update 0 sample 8 max_error=4.035234e-05 rgba=0.73873,0,8.1792e-08,1
+PASS TFA LUT variant 1 update 0 sample 9 max_error=4.035234e-05 rgba=0,0.73873,8.1792e-08,1
+PASS TFA LUT variant 1 update 0 sample 10 max_error=0 rgba=0,0,0.73869,1
+PASS TFA LUT variant 1 update 0 sample 11 max_error=1.490116e-07 rgba=0.39926,0.39926,0.39926,1
+PASS TFA LUT variant 1 update 0 sample 12 max_error=1.007318e-05 rgba=0.59412,0.59412,0.59411,1
+PASS TFA LUT variant 1 update 0 sample 13 max_error=4.035234e-05 rgba=0.73873,0.73873,0.73869,1
+PASS TFA LUT variant 1 update 0 sample 14 max_error=5.960464e-08 rgba=1,1,1,1
+PASS TFA LUT variant 1 update 0 sample 15 max_error=0.0001270771 rgba=0.89412,0.25858,0.59811,1
+PASS TFA compute-to-tone-map GL error
+PASS TFA LUT variant 1 update 1 sample 0 max_error=0 rgba=1,1,1,1
+PASS TFA LUT variant 1 update 1 sample 1 max_error=4.035234e-05 rgba=0.73873,0,8.1792e-08,1
+PASS TFA LUT variant 1 update 1 sample 2 max_error=4.035234e-05 rgba=0,0.73873,8.1792e-08,1
+PASS TFA LUT variant 1 update 1 sample 3 max_error=0 rgba=0,0,0.73869,1
+PASS TFA LUT variant 1 update 1 sample 4 max_error=1.490116e-07 rgba=0.39926,0.39926,0.39926,1
+PASS TFA LUT variant 1 update 1 sample 5 max_error=1.007318e-05 rgba=0.59412,0.59412,0.59411,1
+PASS TFA LUT variant 1 update 1 sample 6 max_error=4.035234e-05 rgba=0.73873,0.73873,0.73869,1
+PASS TFA LUT variant 1 update 1 sample 7 max_error=5.960464e-08 rgba=1,1,1,1
+PASS TFA LUT variant 1 update 1 sample 8 max_error=0.0001270771 rgba=0.89412,0.25858,0.59811,1
+PASS TFA LUT variant 1 update 1 sample 9 max_error=8.179232e-08 rgba=0,0,8.1792e-08,1
+PASS TFA LUT variant 1 update 1 sample 10 max_error=0.0001630923 rgba=0.00098039,0.010049,0.019774,1
+PASS TFA LUT variant 1 update 1 sample 11 max_error=1.173466e-05 rgba=0.029657,0.085294,0.13226,1
+PASS TFA LUT variant 1 update 1 sample 12 max_error=0.0001144409 rgba=0.21887,0.30539,0.41709,1
+PASS TFA LUT variant 1 update 1 sample 13 max_error=0.0001403689 rgba=0.54951,0.66667,0.73869,1
+PASS TFA LUT variant 1 update 1 sample 14 max_error=0.0001397133 rgba=0.73873,0.87132,0.93765,1
+PASS TFA LUT variant 1 update 1 sample 15 max_error=4.470348e-05 rgba=0.975,1,1,1
+PASS TFA compute-to-tone-map GL error
+PASS TFA LUT variant 2 exact base-level upload/readback
+PASS TFA LUT variant 2 update 0 sample 0 max_error=1.192093e-07 rgba=1,1,1,1
+PASS TFA LUT variant 2 update 0 sample 1 max_error=8.195639e-05 rgba=0.99902,0.9902,0.98023,1
+PASS TFA LUT variant 2 update 0 sample 2 max_error=1.174212e-05 rgba=0.97034,0.91471,0.86774,1
+PASS TFA LUT variant 2 update 0 sample 3 max_error=0.0001144409 rgba=0.78113,0.69461,0.58291,1
+PASS TFA LUT variant 2 update 0 sample 4 max_error=0.0001047254 rgba=0.45049,0.33358,0.26131,1
+PASS TFA LUT variant 2 update 0 sample 5 max_error=0.0001053661 rgba=0.26127,0.12892,0.062349,1
+PASS TFA LUT variant 2 update 0 sample 6 max_error=4.470907e-05 rgba=0.025,0,0,1
+PASS TFA LUT variant 2 update 0 sample 7 max_error=0 rgba=0,0,0,1
+PASS TFA LUT variant 2 update 0 sample 8 max_error=4.035234e-05 rgba=0.26127,1,1,1
+PASS TFA LUT variant 2 update 0 sample 9 max_error=4.035234e-05 rgba=1,0.26127,1,1
+PASS TFA LUT variant 2 update 0 sample 10 max_error=5.960464e-08 rgba=1,1,0.26131,1
+PASS TFA LUT variant 2 update 0 sample 11 max_error=1.788139e-07 rgba=0.60074,0.60074,0.60074,1
+PASS TFA LUT variant 2 update 0 sample 12 max_error=1.007318e-05 rgba=0.40588,0.40588,0.40589,1
+PASS TFA LUT variant 2 update 0 sample 13 max_error=4.035234e-05 rgba=0.26127,0.26127,0.26131,1
+PASS TFA LUT variant 2 update 0 sample 14 max_error=5.983839e-08 rgba=0,0,5.9838e-08,1
+PASS TFA LUT variant 2 update 0 sample 15 max_error=0.0001179948 rgba=0.10613,0.74142,0.40189,1
+PASS TFA compute-to-tone-map GL error
+PASS TFA LUT variant 2 update 1 sample 0 max_error=0 rgba=0,0,0,1
+PASS TFA LUT variant 2 update 1 sample 1 max_error=4.035234e-05 rgba=0.26127,1,1,1
+PASS TFA LUT variant 2 update 1 sample 2 max_error=4.035234e-05 rgba=1,0.26127,1,1
+PASS TFA LUT variant 2 update 1 sample 3 max_error=5.960464e-08 rgba=1,1,0.26131,1
+PASS TFA LUT variant 2 update 1 sample 4 max_error=1.788139e-07 rgba=0.60074,0.60074,0.60074,1
+PASS TFA LUT variant 2 update 1 sample 5 max_error=1.007318e-05 rgba=0.40588,0.40588,0.40589,1
+PASS TFA LUT variant 2 update 1 sample 6 max_error=4.035234e-05 rgba=0.26127,0.26127,0.26131,1
+PASS TFA LUT variant 2 update 1 sample 7 max_error=5.983839e-08 rgba=0,0,5.9838e-08,1
+PASS TFA LUT variant 2 update 1 sample 8 max_error=0.0001179948 rgba=0.10613,0.74142,0.40189,1
+PASS TFA LUT variant 2 update 1 sample 9 max_error=1.192093e-07 rgba=1,1,1,1
+PASS TFA LUT variant 2 update 1 sample 10 max_error=8.195639e-05 rgba=0.99902,0.9902,0.98023,1
+PASS TFA LUT variant 2 update 1 sample 11 max_error=1.174212e-05 rgba=0.97034,0.91471,0.86774,1
+PASS TFA LUT variant 2 update 1 sample 12 max_error=0.0001144409 rgba=0.78113,0.69461,0.58291,1
+PASS TFA LUT variant 2 update 1 sample 13 max_error=0.0001047254 rgba=0.45049,0.33358,0.26131,1
+PASS TFA LUT variant 2 update 1 sample 14 max_error=0.0001053661 rgba=0.26127,0.12892,0.062349,1
+PASS TFA LUT variant 2 update 1 sample 15 max_error=4.470907e-05 rgba=0.025,0,0,1
+PASS TFA compute-to-tone-map GL error
+SUMMARY checks=139 failures=0

@@ -1,0 +1,9 @@
+Starting initialization
+Setting DPI mode
+Reading command line
+Crash reporting system setup
+Setting project path
+Initializing config manager
+Initializing Plankton
+Adding files to crash reporter
+Opening Project

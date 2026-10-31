@@ -129,3 +129,23 @@ For the isolated Wine integration, bridge ABI, build commands, and graphics bund
 see [bridge/README.md](bridge/README.md).
 
 Read [docs/NOTEBOOK.md](docs/NOTEBOOK.md) for measured state and open questions.
+
+- `bin/measure-tfa-lut --bundle PATH`: build a Windows probe and execute the installed
+  TFA final tone-mapping shader, attached utility and LUT with CPU pixel references
+  and a wrong-reference control. Requires Pillow and MinGW; game assets remain in
+  ignored build output. Uses the dedicated probe prefix, without Steam.
+- `bin/trace-tfa --graphics-bundle PATH --wait`: select the experimental runtime
+  for a direct TFA launch through the already-running workbench Steam session.
+  `--wait` keeps the launcher alive after the initial observation snapshot until
+  the game exits, which avoids orphaning it in managed tool sessions. Without
+  `--graphics-bundle`, the existing baseline runtime is selected.
+
+- `bin/measure-wine-swap --bundle PATH`: exercise batched front/back swaps without
+  per-frame readback, plus wrong-reference and backend controls.
+- `bin/trace-tfa --graphics-bundle PATH --openal-driver wasapi --wait`: select
+  direct OpenAL WASAPI output for the launched process. `--openal-driver sdl3`
+  selects the comparison backend. This does not replace game DLLs or alter the
+  baseline workbench profile. Use `--wine-debug=-all,+loaddll` for interactive runs.
+- `--capture-audio` on `trace-tfa` injects optional diagnostic import hooks into
+  that process and records bounded PCM under ignored build output. Keep captured
+  game audio local; it is not redistributable evidence.
