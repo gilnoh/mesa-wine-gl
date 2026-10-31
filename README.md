@@ -149,3 +149,15 @@ Read [docs/NOTEBOOK.md](docs/NOTEBOOK.md) for measured state and open questions.
 - `--capture-audio` on `trace-tfa` injects optional diagnostic import hooks into
   that process and records bounded PCM under ignored build output. Keep captured
   game audio local; it is not redistributable evidence.
+
+TFA tools use the sibling workbench's `bin/find-steam-game` to locate the game
+in the selected Steam prefix's default C: library or registered additional libraries.
+An S: library is optional. Install TFA through Steam before running these tools.
+For the LUT probe, use an isolated Python environment to avoid mixing arm64 and
+x86_64 packages from a shared user-site directory:
+
+```sh
+/usr/local/bin/python3 -m venv toolchains/python-probes
+toolchains/python-probes/bin/python -m pip install --only-binary=:all: -r config/probe-python-requirements.txt
+toolchains/python-probes/bin/python bin/measure-tfa-lut --bundle build/graphics-bundle-swap-fix
+```

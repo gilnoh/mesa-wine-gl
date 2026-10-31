@@ -10,7 +10,8 @@ p=argparse.ArgumentParser(description=__doc__)
 p.add_argument('--bundle',type=Path,required=True)
 a=p.parse_args()
 r=Path(__file__).resolve().parent.parent; wb=r.parent/'wine-workbench-macos'
-game=wb/'library/SteamLibrary/steamapps/common/Task Force Admiral'
+installation=json.loads(subprocess.check_output([str(wb/'bin/find-steam-game'), str(wb/'prefixes/steam-winecx'), '1281220', '--exe', 'bin/master/TFA.exe', '--json'],text=True))
+game=Path(installation['game_directory'])
 framework=game/'PlanktonFramework'; bundle=a.bundle.resolve()
 runtime=wb/'runtimes/winecx-26.3.0-mesa-gl-x86_64'; prefix=r/'build/prefix-wgl'
 out=r/'build'/('tfa-lut-'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S.%fZ'));out.mkdir()
@@ -48,7 +49,7 @@ for invert in (False,True):
 (assets/'expected.bin').write_bytes(struct.pack('<128f',*expected))
 files={'final.glsl':framework/'glsl/hdr_finalToneMapping.glsl','utility.glsl':framework/'glsl/hdr_tonemap_util.glsl'}
 for dest,source in files.items():shutil.copyfile(source,assets/dest)
-tracked=[*files.values(),framework/'textures/base_lut.png',framework/'tonemapping.material',framework/'a.program',wb/'library/SteamLibrary/steamapps/appmanifest_1281220.acf']
+tracked=[*files.values(),framework/'textures/base_lut.png',framework/'tonemapping.material',framework/'a.program',Path(installation['manifest'])]
 sources=[r/'probes/wine-tfa-lut.c',r/'probes/wine-gl-window.c',Path(__file__).resolve()]
 cc=shutil.which('x86_64-w64-mingw32-gcc'); assert cc,'MinGW required'
 exe=out/'wine-tfa-lut.exe'
@@ -56,7 +57,7 @@ command=[cc,'-O2','-Wall','-Werror',str(sources[0]),'-o',str(exe),'-lopengl32','
 subprocess.run(command,check=True)
 package=json.loads((bundle/'manifest.json').read_text())
 for lib in package['libraries'].values():assert sha(bundle/'lib'/lib['name'])==lib['bundled_sha256']
-manifest={'game_files':{str(f.relative_to(wb)):sha(f) for f in tracked},'probe_inputs':{str(f.relative_to(r)):sha(f) for f in sources},'binary_sha256':sha(exe),'compiler':subprocess.check_output([cc,'--version'],text=True),'compile_command':command,'package':package,'winemac_sha256':sha(runtime/'lib/wine/x86_64-unix/winemac.so'),'runtime_provenance':(runtime/'PROVENANCE').read_text(),'reference':{'hdr_inputs':inputs,'expected_rgba':expected,'tolerance':.002,'curve':[.15,.5,.1,.2,.02,.3],'exposure':1,'white_point':1,'saturation':1,'bloom_and_shafts_inputs':0,'variants':['actual LUT, one level','actual LUT, 11 generated levels','diagnostic inverted LUT, 11 generated levels']},'runs':[]}
+manifest={'installation':installation,'game_files':{str(f):sha(f) for f in tracked},'probe_inputs':{str(f.relative_to(r)):sha(f) for f in sources},'binary_sha256':sha(exe),'compiler':subprocess.check_output([cc,'--version'],text=True),'compile_command':command,'package':package,'winemac_sha256':sha(runtime/'lib/wine/x86_64-unix/winemac.so'),'runtime_provenance':(runtime/'PROVENANCE').read_text(),'reference':{'hdr_inputs':inputs,'expected_rgba':expected,'tolerance':.002,'curve':[.15,.5,.1,.2,.02,.3],'exposure':1,'white_point':1,'saturation':1,'bloom_and_shafts_inputs':0,'variants':['actual LUT, one level','actual LUT, 11 generated levels','diagnostic inverted LUT, 11 generated levels']},'runs':[]}
 base=os.environ.copy()
 for key in list(base):
     if key.startswith(('MESA_','ZINK_','VK_','DYLD_','WINE')):base.pop(key)

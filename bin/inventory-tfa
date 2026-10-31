@@ -5,10 +5,14 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 
 root = Path(__file__).resolve().parent.parent
 workbench = root.parent / "wine-workbench-macos"
-manifest = workbench / "library/SteamLibrary/steamapps/appmanifest_1281220.acf"
+installation = json.loads(subprocess.check_output([
+    str(workbench / "bin/find-steam-game"), str(workbench / "prefixes/steam-winecx"),
+    "1281220", "--exe", "bin/master/TFA.exe", "--json"], text=True))
+manifest = Path(installation["manifest"])
 text = manifest.read_text()
 fields = {key: re.search(r'"' + key + r'"\s+"([^"\r\n]+)"', text).group(1)
           for key in ("appid", "name", "installdir", "buildid")}

@@ -1,0 +1,26 @@
+{
+  "repositories": [
+    {
+      "repository": "https://github.com/gilnoh/wine-workbench-macos.git",
+      "commit": "898d3f127afccec6935f0765e22cf3ae633cbfcd",
+      "initial_clone_transport": "/Users/tailblues/wine-workbench-macos",
+      "clone_mode": "--no-local; no alternates or copied build outputs"
+    },
+    {
+      "repository": "https://github.com/gilnoh/mesa-wine-gl.git",
+      "commit": "2d414d76084bcb6292926d9a46f5eba3e75e16b3",
+      "initial_clone_transport": "/Users/tailblues/mesa-wine-gl",
+      "clone_mode": "--no-local; no alternates or copied build outputs"
+    }
+  ],
+  "validation_scope": "Fresh source checkouts on existing build host; independent-host and remote-clone checks pending.",
+  "reproduction_workbench_commit": "82d6a9731f6b629e6b94498c780c53d73f7e3f33",
+  "build_driver_sha256": "97e889913599a354ebfeeee64af0e11d1517945ecde409828bd5609cfb785f14",
+  "upstream_inputs": {
+    "mesa": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+    "gstreamer": "070125524a8422e29d3b69a372ed4f62fd343ffa",
+    "wine_archive_url": "https://media.codeweavers.com/pub/crossover/source/crossover-sources-26.3.0.tar.gz",
+    "wine_archive_sha256": "ac99c8ca4b3848f3e81784135f023df266b61c2345726ea55a50b3e030dd6872",
+    "wine_subtree_git_tree": "c2843c34d906a3dbc4799053b3e02adfec4d67a8"
+  }
+}

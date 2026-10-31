@@ -34,7 +34,10 @@ wb = root.parent / "wine-workbench-macos"
 rt = wb / ("runtimes/winecx-26.3.0-mesa-gl-x86_64" if args.graphics_bundle
            else "runtimes/winecx-26.3.0-sse-x86_64")
 prefix = wb / "prefixes/steam-winecx"
-game = wb / "library/SteamLibrary/steamapps/common/Task Force Admiral/bin/master"
+installation = json.loads(subprocess.check_output([
+    str(wb / "bin/find-steam-game"), str(prefix), "1281220",
+    "--exe", "bin/master/TFA.exe", "--json"], text=True))
+game = Path(installation["game_directory"]) / "bin/master"
 processes = subprocess.check_output(["ps", "-axo", "pid=,comm="], text=True)
 if any(line.rstrip().lower().endswith("tfa.exe") for line in processes.splitlines()):
     raise SystemExit("TFA already running; refusing a second instance")
@@ -98,7 +101,7 @@ for name in ("init.log", "Ogre.log"):
 command = [str(rt / "bin/wine"), "TFA.exe"]
 if args.capture_audio:
     command = [str(rt / "bin/wine"), str(binaries[1]), "Z:" + str(binaries[0]).replace("/", "\\")]
-metadata = dict(started_utc=stamp, command=command, cwd=str(game),
+metadata = dict(started_utc=stamp, command=command, cwd=str(game), installation=installation,
                 launcher_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 keep_launcher_alive=args.wait, audio_capture=audio_capture,
                 environment=selected, cleared_environment=list(clear), graphics_package=package,

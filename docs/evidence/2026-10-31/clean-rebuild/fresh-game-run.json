@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/Users/tailblues/tfa-release-repro/wine-workbench-macos/bin/gamerun",
+    "tfa"
+  ],
+  "cwd": "/Users/tailblues/tfa-release-repro/wine-workbench-macos",
+  "started_utc": "20261031T122111Z",
+  "log": "/Users/tailblues/tfa-release-repro/logs/tfa-fresh-play-20261031T122111Z.log",
+  "launcher_inputs": {
+    "bin/common.sh": "d3c2d4c74797478bb56bc2ff79d0d8ee0221f319ba17807b107b01942143fe60",
+    "bin/gamerun": "81969e7030a148944fd52b05cec7a3b2c04642beea35f620e375f3252ddcd857",
+    "bin/find-steam-game": "77c935c9343cb45d8c6d2a86d79ee64272247bd705596610a4476faf5fff5ba9",
+    "profiles/tfa.env": "043e23577fd0086e602cb0b0c63f0bcf89ccca46521c5fee3e496bd254248b1b"
+  },
+  "pid": 82723,
+  "exit_status": 0
+}

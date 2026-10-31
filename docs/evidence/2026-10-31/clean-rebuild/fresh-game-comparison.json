@@ -1,0 +1,32 @@
+{
+  "bin/master/TFA.exe": {
+    "original_sha256": "2ac4c7f21711d46f223e7ea9f930d33b9b9e782b33cb6b655b6dcc92670f4456",
+    "fresh_sha256": "2ac4c7f21711d46f223e7ea9f930d33b9b9e782b33cb6b655b6dcc92670f4456",
+    "equal": true
+  },
+  "bin/master/OpenAL32.dll": {
+    "original_sha256": "808ba8e86843b156c5bcbf0f5cc6bb95d2a9572a29fc2401976322789a410b14",
+    "fresh_sha256": "808ba8e86843b156c5bcbf0f5cc6bb95d2a9572a29fc2401976322789a410b14",
+    "equal": true
+  },
+  "bin/master/SDL3.dll": {
+    "original_sha256": "2dfe1c60557c3e054ddda61bf7f29fdfd462c10faddf04dc6864961f43960df6",
+    "fresh_sha256": "2dfe1c60557c3e054ddda61bf7f29fdfd462c10faddf04dc6864961f43960df6",
+    "equal": true
+  },
+  "PlanktonFramework/glsl/hdr_finalToneMapping.glsl": {
+    "original_sha256": "ab1679f33cd30fb89e96c134d2a83ba0100d6fbe2fe67a6557de076d1fd8f117",
+    "fresh_sha256": "ab1679f33cd30fb89e96c134d2a83ba0100d6fbe2fe67a6557de076d1fd8f117",
+    "equal": true
+  },
+  "PlanktonFramework/glsl/hdr_tonemap_util.glsl": {
+    "original_sha256": "8b03350ad25a47dee0bbf6bb0215c995b19f6b50d21bb744f0f8c20a3441c26e",
+    "fresh_sha256": "8b03350ad25a47dee0bbf6bb0215c995b19f6b50d21bb744f0f8c20a3441c26e",
+    "equal": true
+  },
+  "PlanktonFramework/textures/base_lut.png": {
+    "original_sha256": "1d22c557c58c92d1d79c4a38b6bb6723f08f20082aabf8d787d9d75b26e65ca5",
+    "fresh_sha256": "1d22c557c58c92d1d79c4a38b6bb6723f08f20082aabf8d787d9d75b26e65ca5",
+    "equal": true
+  }
+}
