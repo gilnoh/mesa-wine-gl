@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Build the versioned Wine bridge from a pinned, exactly patched Mesa checkout."""
+import hashlib, json, os, shlex, subprocess, tempfile
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent
+source=root/'src/mesa-bridge'; build=root/'build/mesa-bridge-x86_64'
+output=root/'build/bridge/libmesa_wine.dylib'
+output.parent.mkdir(exist_ok=True)
+env=os.environ.copy()
+for key in ('CPATH','C_INCLUDE_PATH','CPLUS_INCLUDE_PATH','OBJC_INCLUDE_PATH','LIBRARY_PATH','CFLAGS','CXXFLAGS','OBJCFLAGS','CPPFLAGS','LDFLAGS'):
+    env.pop(key,None)
+env['PATH']=f'{root}/toolchains/python-x86_64/bin:/usr/local/opt/llvm/bin:/usr/local/opt/bison/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/bin'
+env['SDKROOT']=subprocess.check_output(['xcrun','--sdk','macosx','--show-sdk-path'],text=True).strip()
+env['MACOSX_DEPLOYMENT_TARGET']='26.0'
+env['PKG_CONFIG_LIBDIR']='/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig'
+env['PKG_CONFIG_PATH']='/usr/local/opt/llvm/lib/pkgconfig:/usr/local/opt/spirv-llvm-translator/lib/pkgconfig:/usr/local/opt/spirv-tools/lib/pkgconfig:/usr/local/opt/libclc/share/pkgconfig'
+pin=json.loads((root/'sources.lock.json').read_text())['mesa']['commit']
+patches=[]
+for line in (root/'patches/bridge.series').read_text().splitlines():
+    if line.strip() and not line.lstrip().startswith('#'):
+        kind,name=line.split(); assert kind=='experimental'
+        patches.append(root/'patches'/name)
+if not source.exists():
+    subprocess.run(['git','-C',str(root/'src/mesa'),'worktree','add','--detach',str(source),pin],check=True)
+    for patch in patches: subprocess.run(['git','-C',str(source),'apply',str(patch)],check=True)
+assert subprocess.check_output(['git','-C',str(source),'rev-parse','HEAD'],text=True).strip()==pin
+with tempfile.TemporaryDirectory() as temp:
+    checkenv=env|{'GIT_INDEX_FILE':str(Path(temp)/'index')}
+    def git(*args): return subprocess.check_output(['git','-C',str(source),*args],env=checkenv,text=True)
+    git('read-tree',pin)
+    for patch in patches: git('apply','--cached',str(patch))
+    git('diff','--exit-code')
+    assert not git('ls-files','--others','--exclude-standard')
+args=[str(root/'toolchains/python-x86_64/bin/meson'),'setup',str(build),str(source),'--native-file',str(root/'config/mesa-x86_64.ini'),
+      '--buildtype','debugoptimized','-Db_ndebug=false','-Dplatforms=macos','-Dgallium-drivers=zink','-Dvulkan-drivers=',
+      '-Dopengl=true','-Dglx=disabled','-Degl=disabled','-Dgbm=disabled','-Dllvm=enabled','-Dzstd=enabled','-Dtools=']
+if (build/'build.ninja').exists(): args+=['--reconfigure']
+libraries='src/mesa/libmesa.a\nsrc/gallium/drivers/zink/libzink.a\nsrc/gallium/auxiliary/libgallium.a\nsrc/gallium/auxiliary/libgalliumvl_stub.a\nsrc/compiler/glsl/libglsl.a\nsrc/compiler/glsl/glcpp/libglcpp.a\nsrc/compiler/nir/libnir.a\nsrc/compiler/libcompiler.a\nsrc/compiler/spirv/libvtn.a\nsrc/mesa/glapi/shared-glapi/libglapi.a\nsrc/mesa/glapi/glapi/libglapi_bridge.a\nsrc/mesa/libmesa_sse41.a\nsrc/util/libmesa_util.a\nsrc/util/libxmlconfig.a\nsrc/util/blake3/libblake3.a\nsrc/util/libmesa_util_simd.a\nsrc/util/libmesa_util_clflush.a\nsrc/util/libmesa_util_clflushopt.a\nsrc/c11/impl/libmesa_util_c11.a\nsrc/vulkan/util/libvulkan_util.a'.splitlines()
+with (root/'build/bridge-build.log').open('w') as log:
+    subprocess.run(['/usr/bin/arch','-x86_64',*args],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    subprocess.run(['ninja','-C',str(build),'-j',env.get('JOBS','4'),*libraries],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    entry=next(x for x in json.loads((build/'compile_commands.json').read_text()) if x['file'].endswith('/st_manager.c'))
+    flags=shlex.split(entry['command']); flags=flags[:flags.index('-MD')]
+    flags+=['-I'+str(build/'src/gallium/drivers/zink'),'-I'+str(source/'src/gallium/drivers/zink')]
+    zink_entry=next(x for x in json.loads((build/'compile_commands.json').read_text()) if x['file'].endswith('/zink_context.c'))
+    flags += [flag for flag in shlex.split(zink_entry['command']) if flag.startswith('-I') and flag not in flags]
+    obj=output.parent/'mesa_wine.o'
+    subprocess.run([*flags,'-o',str(obj),'-c',str(root/'bridge/mesa_wine.c')],cwd=entry['directory'],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+    cmd=['/usr/local/opt/llvm/bin/clang++','--no-default-config','-arch','x86_64','-dynamiclib','-Wl,-install_name,@rpath/libmesa_wine.dylib','-o',str(output),str(obj)]
+    cmd += [str(build/p) for p in libraries]
+    cmd += ['-L/usr/local/opt/llvm/lib','-lLLVM','-L/usr/local/opt/zstd/lib','-lzstd','-L/usr/local/opt/spirv-tools/lib','-lSPIRV-Tools',
+            '-L/usr/local/opt/vulkan-loader/lib','-lvulkan','-Wl,-rpath,/usr/local/opt/vulkan-loader/lib','-lexpat','-lz',
+            '-framework','CoreFoundation','-framework','IOKit','-framework','Metal','-framework','QuartzCore']
+    subprocess.run(cmd,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+inputs=[root/'bridge/mesa_wine.c',root/'bridge/mesa_wine_api.h',root/'sources.lock.json',root/'bin/build-bridge',root/'patches/bridge.series',*patches]
+manifest={'binary_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'inputs':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}}
+(output.parent/'build.json').write_text(json.dumps(manifest,indent=2)+'\n')
+print(output)

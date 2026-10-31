@@ -1,0 +1,4 @@
+# Unified-diff context whitespace is part of the patch format.
+*.patch -whitespace
+# Preserve raw Windows stdout line endings in measurement logs.
+docs/evidence/**/*.txt whitespace=cr-at-eol

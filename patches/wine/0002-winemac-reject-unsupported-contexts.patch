@@ -1,0 +1,124 @@
+--- a/dlls/winemac.drv/opengl_mesa.c
++++ b/dlls/winemac.drv/opengl_mesa.c
+@@ -79,7 +79,6 @@
+ static const struct opengl_funcs *funcs;
+ static const struct opengl_driver_funcs macdrv_driver_funcs;
+ static const struct opengl_drawable_funcs macdrv_surface_funcs;
+-static const struct opengl_drawable_funcs macdrv_pbuffer_funcs;
+ 
+ 
+ /* ================================================================
+@@ -107,12 +106,7 @@
+ 
+ 
+ /* ================================================================
+- *  Pixel formats — hardcoded for now
+- *
+- *  We provide a minimal set of pixel formats that cover common usage.
+- *  Format 1: RGBA8 double-buffered with depth24/stencil8 (onscreen)
+- *  Format 2: RGBA8 single-buffered with depth24/stencil8 (onscreen)
+- *  Format 3: RGBA8 double-buffered with depth24/stencil8 (pbuffer)
++ *  Pixel formats enumerated by the versioned bridge
+  * ================================================================ */
+ 
+ static int total_pixel_formats = 0;
+@@ -351,7 +345,7 @@
+     struct mesa_context *share_context = shared;
+     struct mesa_context *context;
+     const int *iptr;
+-    int major = 1, minor = 0, profile = MESA_WINE_PROFILE_COMPAT, flags = 0;
++    int major = 1, minor = 0, profile = -1, flags = 0;
+ 
+     TRACE("format %d, share_context %p, attrib_list %p\n", format, share_context, attrib_list);
+ 
+@@ -369,8 +363,10 @@
+                 minor = value;
+                 break;
+             case WGL_CONTEXT_LAYER_PLANE_ARB:
++                if (value) goto unsupported;
+                 break;
+             case WGL_CONTEXT_FLAGS_ARB:
++                if (value & ~(WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB | WGL_CONTEXT_DEBUG_BIT_ARB)) goto unsupported;
+                 if (value & WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB)
+                     flags |= MESA_WINE_FLAG_FORWARD_COMPATIBLE;
+                 if (value & WGL_CONTEXT_DEBUG_BIT_ARB)
+@@ -379,15 +375,18 @@
+             case WGL_CONTEXT_PROFILE_MASK_ARB:
+                 if (value == WGL_CONTEXT_CORE_PROFILE_BIT_ARB)
+                     profile = MESA_WINE_PROFILE_CORE;
+-                else
++                else if (value == WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB)
+                     profile = MESA_WINE_PROFILE_COMPAT;
++                else goto unsupported;
+                 break;
+             default:
+-                WARN("Unknown attribute %#x.\n", attr);
+-                break;
++                WARN("Unsupported context attribute %#x.\n", attr);
++                goto unsupported;
+         }
+     }
+ 
++    if (profile == -1) profile = (major > 3 || (major == 3 && minor >= 2))
++                                ? MESA_WINE_PROFILE_CORE : MESA_WINE_PROFILE_COMPAT;
+     if (!(context = calloc(1, sizeof(*context)))) return FALSE;
+ 
+     context->format = format;
+@@ -408,6 +407,10 @@
+ 
+     *private = context;
+     return TRUE;
++
++unsupported:
++    RtlSetLastWin32Error(ERROR_INVALID_PARAMETER);
++    return FALSE;
+ }
+ 
+ static BOOL macdrv_context_destroy(void *private)
+@@ -482,16 +485,6 @@
+                                   GLsizei *width, GLsizei *height, struct opengl_drawable **drawable)
+ {
+     return FALSE; /* Pbuffers are outside the initial window milestone. */
+-}
+-
+-static void macdrv_pbuffer_destroy(struct opengl_drawable *base)
+-{
+-    struct gl_drawable *gl = impl_from_opengl_drawable(base);
+-
+-    TRACE("drawable %s\n", debugstr_opengl_drawable(base));
+-
+-    if (gl->mesa_draw)
+-        mesa.destroy_drawable(gl->mesa_draw);
+ }
+ 
+ static BOOL macdrv_pbuffer_updated(HDC hdc, struct opengl_drawable *drawable, GLenum cube_face, GLint mipmap_level)
+@@ -532,12 +525,6 @@
+     .set_context = macdrv_surface_set_context,
+ };
+ 
+-static const struct opengl_drawable_funcs macdrv_pbuffer_funcs =
+-{
+-    .destroy = macdrv_pbuffer_destroy,
+-};
+-
+-
+ /* ================================================================
+  *  Initialization
+  * ================================================================ */
+@@ -545,6 +532,7 @@
+ static BOOL load_mesa_bridge(void)
+ {
+     const char *lib_path = getenv("MESA_WINE_LIB");
++    unsigned (*get_abi)(void);
+     if (!lib_path || !*lib_path) return FALSE;
+ 
+     mesa.handle = dlopen(lib_path, RTLD_NOW | RTLD_LOCAL);
+@@ -554,7 +542,7 @@
+         return FALSE;
+     }
+ 
+-    unsigned (*get_abi)(void) = dlsym(mesa.handle, "mesa_wine_get_abi_version");
++    get_abi = dlsym(mesa.handle, "mesa_wine_get_abi_version");
+     if (!get_abi || get_abi() != MESA_WINE_ABI_VERSION) {
+         ERR("Mesa bridge ABI mismatch\n"); goto fail;
+     }

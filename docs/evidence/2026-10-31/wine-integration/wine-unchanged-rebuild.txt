@@ -1,0 +1,32 @@
+==> source tree is sources/wine/ inside /Users/tailblues/mesa-wine-gl/src/winecx-bridge
+==> bundling host libraries
+==>   seeding configure with absolute sonames from the bundle
+==> applying patches from series
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+[attr]generated gitlab-generated linguist-generated=true not allowed: sources/wine/.gitattributes:1
+==>   ok    wine-0004-kernelbase-append-args-env.patch (complete series already applied)
+==>   ok    wine-0007-msync-unregister-on-contention.patch (complete series already applied)
+==>   ok    wine-0008-ntdll-mirror-last-error-into-macos-gs.patch (complete series already applied)
+==>   skip  wine-0005-winemac-surface-flush-trace.patch (class debug)
+==>   skip  wine-0006-msync-node-pool-stats.patch (class debug)
+==>   ok    0001-winemac-mesa-backend.patch (complete series already applied)
+==>   ok    0002-winemac-reject-unsupported-contexts.patch (complete series already applied)
+==> patches: 5 applied, 2 skipped
+==>   tree differs from winecx-26.3.0-2-gea73f4a0 only by the series, and every patch really applied
+==> PE compiler: i686-w64-mingw32-gcc (SSE forced)
+==> SDK: /Applications/Xcode-26.6.0.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk
+==> building winecx-26.3.0-mesa-gl-x86_64 (jobs=6) -- this takes a while
+==> verifying
+==>   sonames are absolute paths into the bundle
+==>   every Unix-side module links only the system and lib/bundled
+==>   i386 PE float math: 138 SSE / 24 x87 instructions in dsound.dll
+==>   version:   wine-11.0
+==>   32-bit builtins: 1067
+==>   deps:      vulkan freetype gnutls all found
+==>   PROVENANCE written and asserted
+==> runtime ready: /Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64

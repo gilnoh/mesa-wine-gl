@@ -1,0 +1,7 @@
+{
+  "binary_sha256": "2d26075401777dd81fbb84d8ed80850464d52e73b7dc2d16b789ed54a28a0987",
+  "inputs": {
+    "probes/wine-gl-window.c": "12a88088318b3403deff4ca6b576908e48e496c782ca61b7bbf823c29e556da2"
+  },
+  "compiler": "x86_64-w64-mingw32-gcc (GCC) 16.1.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+}

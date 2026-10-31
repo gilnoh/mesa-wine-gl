@@ -1,0 +1,1 @@
+wine: created the configuration directory '/Users/tailblues/mesa-wine-gl/build/prefix-wgl'

@@ -9,5 +9,11 @@
   "reference_release": {
     "tag": "mesa-26.2.6",
     "commit": "8e87a503ebd91408c88596d1b9eeb5f4c0b2088d"
+  },
+  "wine": {
+    "source": "CodeWeavers CrossOver 26.3.0 published source",
+    "vendor_commit": "ea73f4a0be373d8a70bd774738ff7f861bac5623",
+    "source_subdirectory": "sources/wine",
+    "wine_version": "11.0"
   }
 }

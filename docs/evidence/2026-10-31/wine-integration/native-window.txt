@@ -1,0 +1,11 @@
+mesa_wine: Zink screen created: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+mesa_wine: swapchain created 320x240 (3 images)
+mesa_wine: presentation attached (320x240)
+mesa_wine: first GPU frame presented
+NATIVE_PRESENT 0
+NATIVE_PRESENT 1
+NATIVE_PRESENT 2
+NATIVE_PRESENT 3
+CAPTURE_READY
+NATIVE_WINDOW_PASS

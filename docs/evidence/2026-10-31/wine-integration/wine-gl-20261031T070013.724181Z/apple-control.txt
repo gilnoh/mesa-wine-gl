@@ -1,0 +1,1184 @@
+0180:warn:wgl:egl_init EGL support not compiled in!
+0180:trace:wgl:macdrv_OpenGLInit ()
+0180:trace:wgl:init_gl_info GL version   : 2.1 Metal - 91.7
+0180:trace:wgl:init_gl_info GL renderer  : Apple M1 Max
+0180:trace:wgl:init_gl_info Core context GL version: 4.1 Metal - 91.7
+0180:trace:wgl:macdrv_init_pixel_formats ()
+0180:trace:wgl:macdrv_init_pixel_formats renderer_properties 0:
+0180:trace:wgl:dump_renderer Renderer ID: 0x00027f00
+0180:trace:wgl:dump_renderer Buffer modes:
+0180:trace:wgl:dump_renderer     Monoscopic:    YES
+0180:trace:wgl:dump_renderer     Stereoscopic:  NO
+0180:trace:wgl:dump_renderer     Single buffer: YES
+0180:trace:wgl:dump_renderer     Double buffer: YES
+0180:trace:wgl:dump_renderer Color buffer modes:
+0180:trace:wgl:dump_renderer     Color size 32, Alpha size 8
+0180:trace:wgl:dump_renderer     Color size 32, Alpha size 2
+0180:trace:wgl:dump_renderer     Color size 64, Alpha size 16
+0180:trace:wgl:dump_renderer     Color size 64, Alpha size 16, Float
+0180:trace:wgl:dump_renderer     Color size 128, Alpha size 32, Float
+0180:trace:wgl:dump_renderer Accumulation buffer sizes: { 128, }
+0180:trace:wgl:dump_renderer Depth buffer sizes: { 0, 32, }
+0180:trace:wgl:dump_renderer Stencil buffer sizes: { 0, 8, }
+0180:trace:wgl:dump_renderer Max. Auxiliary Buffers: 2
+0180:trace:wgl:dump_renderer Max. Sample Buffers: 1
+0180:trace:wgl:dump_renderer Max. Samples: 4
+0180:trace:wgl:dump_renderer Offscreen: NO
+0180:trace:wgl:dump_renderer Accelerated: YES
+0180:trace:wgl:dump_renderer Backing store: YES
+0180:trace:wgl:dump_renderer Window: YES
+0180:trace:wgl:dump_renderer Online: YES
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 00000000000000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 00000001400000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 00000002400000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 00000000000000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 00000001400000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 00000002400000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b0000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 00000000000010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 00000001400010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 00000002400010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 00000000000010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 00000001400010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 00000002400010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b0010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 00000000000410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 00000001400410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 00000002400410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 00000000000410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 00000001400410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 00000002400410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b0410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 0000000000000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 0000000140000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 0000000240000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 0000000000001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 0000000140001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 0000000240001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 0000000000041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 0000000140041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 0000000240041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 000000000000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 000000014000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 000000024000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 0/0 000000000000000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/2 000000014000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/0/0 samp 1/4 000000024000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 0/0 000000000b00000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/2 000000014b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/0/0 samp 1/4 000000024b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 000000000000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 000000014000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 000000024000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 0/0 000000000000100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/2 000000014000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/0/0 samp 1/4 000000024000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 0/0 000000000b00100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/2 000000014b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/0/0 samp 1/4 000000024b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 000000000004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 000000014004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 000000024004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 0/0 000000000004100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/2 000000014004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/0/0 samp 1/4 000000024004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 0/0 000000000b04100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/2 000000014b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/0/0 samp 1/4 000000024b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 00000000000000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 00000001400000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 00000002400000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 00000000000000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 00000001400000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 00000002400000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b0000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 00000000000010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 00000001400010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 00000002400010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 00000000000010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 00000001400010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 00000002400010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b0010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 00000000000410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 00000001400410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 00000002400410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 00000000000410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 00000001400410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 00000002400410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b0410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 0000000000000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 0000000140000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 0000000240000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 0000000000001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 0000000140001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 0000000240001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 0000000000041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 0000000140041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 0000000240041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 000000000000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 000000014000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 000000024000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 0/0 000000000000002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/2 000000014000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/0/0 samp 1/4 000000024000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 0/0 000000000b00002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/2 000000014b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/0/0 samp 1/4 000000024b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 000000000000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 000000014000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 000000024000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 0/0 000000000000102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/2 000000014000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/0/0 samp 1/4 000000024000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 0/0 000000000b00102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/2 000000014b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/0/0 samp 1/4 000000024b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 000000000004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 000000014004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 000000024004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 0/0 000000000004102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/2 000000014004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/0/0 samp 1/4 000000024004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 0/0 000000000b04102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/2 000000014b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/0/0 samp 1/4 000000024b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041004d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041004f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041004f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 00000000100000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 00000010100000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 00000001500000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 00000011500000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 00000002500000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 00000012500000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 00000000100000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 00000010100000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 00000001500000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 00000011500000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 00000002500000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 00000012500000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b0000065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b0000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b0000067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b0000067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 00000000100010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 00000010100010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 00000001500010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 00000011500010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 00000002500010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 00000012500010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 00000000100010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 00000010100010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 00000001500010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 00000011500010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 00000002500010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 00000012500010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b0010065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b0010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b0010067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b0010067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 00000000100410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 00000010100410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 00000001500410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 00000011500410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 00000002500410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 00000012500410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 00000000100410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 00000010100410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 00000001500410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 00000011500410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 00000002500410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 00000012500410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b0410065
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b0410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b0410067
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b0410067 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041008d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041008f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041008f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 0000000010000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 0000001010000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 0000000150000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 0000001150000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 0000000250000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 0000001250000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b000009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b000009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 0000000010001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 0000001010001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 0000000150001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 0000001150001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 0000000250001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 0000001250001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b001009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b001009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 0000000010041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 0000001010041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 0000000150041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 0000001150041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 0000000250041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 0000001250041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041009d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b041009f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b041009f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 000000001000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 000000101000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 000000015000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 000000115000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 000000025000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 000000125000000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 0/0 000000001000000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 0/0 000000101000000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/2 000000015000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/2 000000115000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/0/1/0 samp 1/4 000000025000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/0/1/1/0 samp 1/4 000000125000000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b00000ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 0/0 000000001b00000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 0/0 000000101b00000af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/2 000000015b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/2 000000115b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/0/1/0 samp 1/4 000000025b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/0/1/1/0 samp 1/4 000000125b00000af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 000000001000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 000000101000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 000000015000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 000000115000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 000000025000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 000000125000100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 0/0 000000001000100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 0/0 000000101000100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/2 000000015000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/2 000000115000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/0/1/0 samp 1/4 000000025000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/0/1/1/0 samp 1/4 000000125000100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b00100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 0/0 000000001b00100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 0/0 000000101b00100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/2 000000015b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/2 000000115b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/0/1/0 samp 1/4 000000025b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/0/1/1/0 samp 1/4 000000125b00100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 000000001004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 000000101004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 000000015004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 000000115004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 000000025004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 000000125004100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 0/0 000000001004100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 0/0 000000101004100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/2 000000015004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/2 000000115004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/0/1/0 samp 1/4 000000025004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/0/1/1/0 samp 1/4 000000125004100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b04100ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 0/0 000000001b04100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 0/0 000000101b04100af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/2 000000015b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/2 000000115b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/0/1/0 samp 1/4 000000025b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/0/1/1/0 samp 1/4 000000125b04100af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041024d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041024f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/8 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041024f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 00000000100000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 00000010100000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 00000001500000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 00000011500000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 00000002500000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 00000012500000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 00000000100000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 00000010100000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 00000001500000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 00000011500000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 00000002500000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 00000012500000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b0000265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b0000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b0000267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b0000267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 00000000100010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 00000010100010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 00000001500010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 00000011500010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 00000002500010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 00000012500010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 00000000100010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 00000010100010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 00000001500010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 00000011500010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 00000002500010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 00000012500010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b0010265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b0010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b0010267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b0010267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 00000000100410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 00000010100410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 00000001500410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 00000011500410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 00000002500410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 00000012500410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 00000000100410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 00000010100410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 00000001500410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 00000011500410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 00000002500410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 00000012500410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b0410265
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b0410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b0410267
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 32/2 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b0410267 failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041028d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041028f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041028f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 0000000010000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 0000001010000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 0000000150000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 0000001150000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 0000000250000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 0000001250000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b000029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b000029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 0000000010001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 0000001010001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 0000000150001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 0000001150001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 0000000250001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 0000001250001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b001029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b001029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 0000000010041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 0000001010041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 0000000150041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 0000001150041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 0000000250041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 0000001250041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041029d
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b041029f
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 64f/16 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b041029f failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 000000001000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 000000101000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 000000015000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 000000115000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 000000025000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 000000125000002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 0/0 000000001000002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 0/0 000000101000002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/2 000000015000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/2 000000115000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/0/1/0 samp 1/4 000000025000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/0/2/1/1/0 samp 1/4 000000125000002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b00002ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 0/0 000000001b00002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 0/0 000000101b00002af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/2 000000015b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/2 000000115b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/0/1/0 samp 1/4 000000025b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 0/0/128/2/1/1/0 samp 1/4 000000125b00002af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 000000001000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 000000101000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 000000015000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 000000115000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 000000025000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 000000125000102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 0/0 000000001000102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 0/0 000000101000102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/2 000000015000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/2 000000115000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/0/1/0 samp 1/4 000000025000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/0/2/1/1/0 samp 1/4 000000125000102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b00102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 0/0 000000001b00102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 0/0 000000101b00102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/2 000000015b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/2 000000115b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/0/1/0 samp 1/4 000000025b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/0/128/2/1/1/0 samp 1/4 000000125b00102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 000000001004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 000000101004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 000000015004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 000000115004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 000000025004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 000000125004102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 0/0 000000001004102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 0/0 000000101004102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/2 000000015004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/2 000000115004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/0/1/0 samp 1/4 000000025004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/0/2/1/1/0 samp 1/4 000000125004102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/0/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b04102ad
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 0/0 000000001b04102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 0/0 000000101b04102af
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/2 000000015b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/2 000000115b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/0/1/0 samp 1/4 000000025b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats w/p/a 1/1/1 col 128f/32 dp/stn/ac/ax/b/db/str 32/8/128/2/1/1/0 samp 1/4 000000125b04102af failed request err 10002 invalid pixel format
+0180:trace:wgl:enum_renderer_pixel_formats Number of pixel format attribute combinations: 1080
+0180:trace:wgl:enum_renderer_pixel_formats  Number which failed to choose a pixel format: 360
+0180:trace:wgl:enum_renderer_pixel_formats    Number which chose redundant pixel formats: 0
+0180:trace:wgl:enum_renderer_pixel_formats Number of new pixel formats for this renderer: 720
+0180:trace:wgl:macdrv_init_pixel_formats renderer_properties 1:
+0180:trace:wgl:dump_renderer Renderer ID: 0x00020400
+0180:trace:wgl:dump_renderer Buffer modes:
+0180:trace:wgl:dump_renderer     Monoscopic:    YES
+0180:trace:wgl:dump_renderer     Stereoscopic:  NO
+0180:trace:wgl:dump_renderer     Single buffer: YES
+0180:trace:wgl:dump_renderer     Double buffer: YES
+0180:trace:wgl:dump_renderer Color buffer modes:
+0180:trace:wgl:dump_renderer     Color size 32, Alpha size 8
+0180:trace:wgl:dump_renderer     Color size 128, Alpha size 32, Float
+0180:trace:wgl:dump_renderer Accumulation buffer sizes: { 128, }
+0180:trace:wgl:dump_renderer Depth buffer sizes: { 0, 32, }
+0180:trace:wgl:dump_renderer Stencil buffer sizes: { 0, 8, }
+0180:trace:wgl:dump_renderer Max. Auxiliary Buffers: 4
+0180:trace:wgl:dump_renderer Max. Sample Buffers: 1
+0180:trace:wgl:dump_renderer Max. Samples: 16
+0180:trace:wgl:dump_renderer Offscreen: NO
+0180:trace:wgl:dump_renderer Accelerated: NO
+0180:trace:wgl:dump_renderer Backing store: YES
+0180:trace:wgl:dump_renderer Window: YES
+0180:trace:wgl:dump_renderer Online: YES
+0180:trace:wgl:enum_renderer_pixel_formats ignoring software renderer because AllowSoftwareRendering is off
+0180:trace:wgl:macdrv_init_pixel_formats Total number of unique pixel formats: 720
+0180:warn:wgl:display_funcs_init glCheckNamedFramebufferStatus not found.
+0180:warn:wgl:display_funcs_init glCreateFramebuffers not found.
+0180:warn:wgl:display_funcs_init glCreateRenderbuffers not found.
+0180:warn:wgl:display_funcs_init glGetNamedFramebufferAttachmentParameteriv not found.
+0180:warn:wgl:display_funcs_init glNamedFramebufferDrawBuffer not found.
+0180:warn:wgl:display_funcs_init glNamedFramebufferReadBuffer not found.
+0180:warn:wgl:display_funcs_init glNamedFramebufferRenderbuffer not found.
+0180:warn:wgl:display_funcs_init glNamedRenderbufferStorageMultisample not found.
+0180:trace:wgl:register_extension 'WGL_ARB_pixel_format_float'
+0180:trace:wgl:register_extension 'WGL_ATI_pixel_format_float'
+0180:trace:wgl:register_extension 'WGL_ARB_multisample'
+0180:trace:wgl:register_extension 'WGL_ARB_framebuffer_sRGB'
+0180:trace:wgl:register_extension 'WGL_NV_render_texture_rectangle'
+0180:trace:wgl:register_extension 'WGL_EXT_framebuffer_sRGB'
+0180:trace:wgl:register_extension 'WGL_EXT_pixel_format_packed_float'
+0180:trace:wgl:register_extension 'WGL_WINE_query_renderer'
+0180:trace:wgl:win32u_wglSetPixelFormat 0xc010054/0x40078 format 17
+0180:trace:wgl:macdrv_surface_create hwnd 0x40078, format 17, drawable 0x1000ffc70
+0180:trace:wgl:opengl_drawable_create created 0x40078/0x60000395c960/0x6000028fabe0 (format 17)
+0180:trace:wgl:get_window_unused_drawable hwnd 0x40078, drawable 0x40078/0x60000395c960/0x6000028fabe0 (format 17)
+0180:trace:wgl:opengl_drawable_add_ref 0x40078/0x60000395c960/0x6000028fabe0 (format 17) increasing refcount to 2
+0180:trace:wgl:opengl_drawable_add_ref 0x40078/0x60000395c960/0x6000028fabe0 (format 17) increasing refcount to 3
+0180:trace:wgl:opengl_drawable_release 0x40078/0x60000395c960/0x6000028fabe0 (format 17) decreasing refcount to 2
+0180:trace:wgl:win32u_wgl_context_reset context 0x7fd4edd318a0, hdc 0xc010054, share 0x0, attribs 0x0
+0180:trace:wgl:macdrv_context_create format 17, share_context 0x0, attrib_list 0x0
+0180:trace:wgl:get_pixel_format Returning format 17
+0180:trace:wgl:create_context created context 0x600003ee83c0/0x6000014661f0/0x7fd4ef8ca000
+0180:trace:wgl:win32u_wgl_context_reset reset context 0x7fd4edd318a0, format 17 for driver context 0x600003ee83c0
+0180:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fd4edd318a0
+0180:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0180:trace:wgl:get_window_unused_drawable hwnd 0x40078, drawable 0x40078/0x60000395c960/0x6000028fabe0 (format 17)
+0180:trace:wgl:opengl_drawable_add_ref 0x40078/0x60000395c960/0x6000028fabe0 (format 17) increasing refcount to 3
+0180:trace:wgl:context_sync_drawables context 0x7fd4edd318a0, new_draw 0x40078/0x60000395c960/0x6000028fabe0 (format 17), new_read 0x40078/0x60000395c960/0x6000028fabe0 (format 17)
+0180:trace:wgl:macdrv_make_current draw 0x40078/0x60000395c960/0x6000028fabe0 (format 17), read 0x40078/0x60000395c960/0x6000028fabe0 (format 17), context 0x600003ee83c0
+0180:trace:wgl:macdrv_make_current making context current with draw_view 0x7fd4ecf2fa10 draw_pbuffer 0x0 read_view 0x0 read_pbuffer 0x0 format 17
+0180:trace:wgl:macdrv_surface_flush 0x40078/0x60000395c960/0x6000028fabe0 (format 17) flags 0x4
+0180:trace:wgl:macdrv_surface_flush 0x40078/0x60000395c960/0x6000028fabe0 (format 17) flags 0x8
+0180:trace:wgl:opengl_drawable_add_ref 0x40078/0x60000395c960/0x6000028fabe0 (format 17) increasing refcount to 4
+0180:trace:wgl:opengl_drawable_release 0x40078/0x60000395c960/0x6000028fabe0 (format 17) decreasing refcount to 3
+0180:trace:wgl:win32u_wgl_context_reset context 0x7fd4ed9329e0, hdc 0xc010054, share 0x0, attribs 0x31fd90
+0180:trace:wgl:macdrv_context_create format 17, share_context 0x0, attrib_list 0x31fd90
+0180:trace:wgl:macdrv_context_create                            Attrib 0x2091: 4 / 0x0004
+0180:trace:wgl:macdrv_context_create                            Attrib 0x2092: 6 / 0x0006
+0180:trace:wgl:macdrv_context_create                            Attrib 0x9126: 1 / 0x0001
+0180:warn:wgl:macdrv_context_create Profile version 4.6 not supported
+0180:warn:wgl:win32u_wgl_context_reset Failed to create driver context for context 0x7fd4ed9329e0
+FATAL 4.6 core context (Win32=8341 GL=0)

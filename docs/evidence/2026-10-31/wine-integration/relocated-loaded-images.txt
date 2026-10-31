@@ -1,0 +1,7 @@
+       0x10bdee000 -        0x10be90157 +libzstd.1.5.7.dylib (0) <F90288F6-3749-38E6-AC22-2535E2242553> /tmp/*/libzstd.1.5.7.dylib
+       0x10bf95000 -        0x10bffd94f +libvulkan.1.dylib (0) <11DACFEF-3832-38C0-893E-22322649FAB0> /tmp/*/libvulkan.1.dylib
+       0x10c154000 -        0x10c26ec33 +libSPIRV-Tools.dylib (0) <AAD3BFA6-530E-3643-A242-6704089E4772> /tmp/*/libSPIRV-Tools.dylib
+       0x10d4f9000 -        0x10e811abb +libmesa_wine.dylib (0) <C09163CE-3128-3254-BE03-9B38FE59AA72> /tmp/*/libmesa_wine.dylib
+       0x1101a9000 -        0x110d38ff3 +libz3.4.15.4.0.dylib (0) <D48ACAD1-F3E5-32CF-99A6-DE674ABE160F> /tmp/*/libz3.4.15.4.0.dylib
+       0x1124fc000 -        0x113238983 +libvulkan_kosmickrisp.dylib (0) <E73DC7DD-0528-3E7F-AE8E-53E18EBADF81> /tmp/*/libvulkan_kosmickrisp.dylib
+       0x119ddd000 -        0x121d58ff7 +libLLVM.dylib (0) <DEF881B0-D704-3D49-8F1E-29A2B7D514AA> /tmp/*/libLLVM.dylib

@@ -125,4 +125,7 @@ only the exact declared patch series at the pinned revision. These are developme
 builds using recorded local dependencies; packaging a self-contained Wine runtime is
 part of the integration work.
 
+For the isolated Wine integration, bridge ABI, build commands, and graphics bundle,
+see [bridge/README.md](bridge/README.md).
+
 Read [docs/NOTEBOOK.md](docs/NOTEBOOK.md) for measured state and open questions.

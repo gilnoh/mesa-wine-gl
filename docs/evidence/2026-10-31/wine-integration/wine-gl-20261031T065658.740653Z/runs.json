@@ -1,0 +1,108 @@
+{
+  "probe": {
+    "binary_sha256": "cb0b6e9165e2e6e8dbc315bb083ddc73dae4c455f09c4da0c8fd48318f38db35",
+    "inputs": {
+      "probes/wine-gl-window.c": "c551e41019362efba930107956550aec1d0d3edcb8ae77e3fb6ae9dcefaf660b"
+    },
+    "compiler": "x86_64-w64-mingw32-gcc (GCC) 16.1.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "package": {
+    "bridge_build": {
+      "binary_sha256": "0209feb8a35090d2a08b5a2b88ad9d6759afb23047e9ff2d218a40809fbb8c1d",
+      "inputs": {
+        "bridge/mesa_wine.c": "003e484267a6a70680fe3651c121edfeec17dec4d0e11e22ed367c8f3e11b8e2",
+        "bridge/mesa_wine_api.h": "19a7a5fd71897682272577410f01a42f8d3c5275884f750ad9dcc93c477ffce8",
+        "sources.lock.json": "78057ed7a192bf4cf6bbdcd3aef052d86f65370acc09015cccf6f32174d31f62",
+        "bin/build-bridge": "d206f7b1a56141a23a1c4f9b226415ddddff53ab158b06c6f6590e7793e866ff",
+        "patches/bridge.series": "568545bcf3afd33b0b7ebe0d35efe503c95681bb9125d4e9b6c81e32e969afa9",
+        "patches/mesa/0005-zink-metal-surface.patch": "b5e134ea0ff9e6bceb0cde1c784d12a12c7d698fb68c5c1f881f1957f57778ee",
+        "patches/mesa/0006-zink-present-fences.patch": "64b46f43c74a8b285f8fe5329f15baade0c3dd3e2e7c8b4cc70c4dea0074bf82"
+      }
+    },
+    "libraries": {
+      "/Users/tailblues/mesa-wine-gl/build/bridge/libmesa_wine.dylib": {
+        "name": "libmesa_wine.dylib",
+        "source_sha256": "0209feb8a35090d2a08b5a2b88ad9d6759afb23047e9ff2d218a40809fbb8c1d",
+        "bundled_sha256": "aa38b3bdbdae7bc1a1d3789e8da1b61a7db3005e665375b84a09e1c17dee4211"
+      },
+      "/usr/local/Cellar/llvm/21.1.8_1/lib/libLLVM.dylib": {
+        "name": "libLLVM.dylib",
+        "source_sha256": "d39d0604f7a31efae4b26e7794a38877c7a89a255b19f2c520a33a5b40b57d11",
+        "bundled_sha256": "1e232bc3fcdd9c7606eeda9fa2d8085c4b3542b567485956d36ae993d996efb3"
+      },
+      "/usr/local/Cellar/z3/4.15.4/lib/libz3.4.15.4.0.dylib": {
+        "name": "libz3.4.15.4.0.dylib",
+        "source_sha256": "f4a15476d4e4901ed379f0f0866882bd9fea59c50b5ca55ffa2bd0d6c9976e88",
+        "bundled_sha256": "50befb64a301f4af984bf52b1e8f3fa77aa14eda302271b80e445f416611715c"
+      },
+      "/usr/local/Cellar/zstd/1.5.7_1/lib/libzstd.1.5.7.dylib": {
+        "name": "libzstd.1.5.7.dylib",
+        "source_sha256": "fb01d38cf980e9423cdf69d04affb2d6b7985e029e4f9d8883833df732dfe3da",
+        "bundled_sha256": "96094795b77626c62fba61456a1c05948e4131c50df248dd3aa6a9ea300d5ce2"
+      },
+      "/usr/local/Cellar/spirv-tools/1.4.341.0/lib/libSPIRV-Tools.dylib": {
+        "name": "libSPIRV-Tools.dylib",
+        "source_sha256": "efc1704b0d16db555421e11d11767c7bca758e75ed8156aa7968dea501a1d498",
+        "bundled_sha256": "0ab20021f9bb997c6395379e849eaf7b5f439517a5ec00371b48b97651424128"
+      },
+      "/usr/local/Cellar/vulkan-loader/1.4.341.0/lib/libvulkan.1.4.341.dylib": {
+        "name": "libvulkan.1.dylib",
+        "source_sha256": "028ae4b064efa4bef93ff421905fa1a30d6d994ec0d0a662459042201b72244f",
+        "bundled_sha256": "57a23544414b424203873028784608be7a7efff575777f58916ee830aca8774b"
+      },
+      "/Users/tailblues/mesa-wine-gl/build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib": {
+        "name": "libvulkan_kosmickrisp.dylib",
+        "source_sha256": "cb3097fcb8306c183230ecc6c382aa9e8b0e8b19b5776d21ddee9b8c293f8eb3",
+        "bundled_sha256": "6efb2739083d578e970e8c840e84b438cc36d859358a85c5b34ffc18d6012d70"
+      }
+    },
+    "sources": {
+      "mesa": {
+        "url": "https://gitlab.freedesktop.org/mesa/mesa.git",
+        "commit": "18b8ad0b923a1af555deff8899a8d7976c2fe184",
+        "version": "27.0.0-devel",
+        "ref_observed": "main",
+        "observed_at": "2026-10-30"
+      },
+      "reference_release": {
+        "tag": "mesa-26.2.6",
+        "commit": "8e87a503ebd91408c88596d1b9eeb5f4c0b2088d"
+      },
+      "wine": {
+        "source": "CodeWeavers CrossOver 26.3.0 published source",
+        "vendor_commit": "ea73f4a0be373d8a70bd774738ff7f861bac5623",
+        "source_subdirectory": "sources/wine",
+        "wine_version": "11.0"
+      }
+    },
+    "kk_patches": {
+      "patches/mesa/0002-kk-vertex-xfb-experiment.patch": "21501fdbc445de74a5c89192b608999eede93e93984bc5504120f0eda8ab29d1",
+      "patches/mesa/0001-kk-gs-xfb-experiment.patch": "c298476cd7c39efb98624a6e05ba25840356b9f8eed6997633735bc79690e23f",
+      "patches/mesa/0003-kk-xfb-query-experiment.patch": "7866e5067a821419d79cb47cc540fd80807f523f63103d90de56b46c1b9c1229",
+      "patches/mesa/0004-kk-rgb32-texel-experiment.patch": "8f0b60516e99d35f6af7298c5a701c43ed69b70798369aed2b8452338608ff1e"
+    }
+  },
+  "runtime_provenance": "runtime:           winecx-26.3.0-mesa-gl-x86_64\ncrossover_version: 26.3.0\nwine_version:      11.0\nwine_reported:     wine-11.0\nsource_tarball:    crossover-sources-26.3.0.tar.gz\nsha256:            unavailable (tarball not on disk)\ndeployment_target: <host default>\npe_compiler:       i686-w64-mingw32-gcc (SSE forced)\nsource_tree:       /Users/tailblues/mesa-wine-gl/src/winecx-bridge/sources/wine\nsource_commit:     ea73f4a0be373d8a70bd774738ff7f861bac5623\nsource_base:       winecx-26.3.0-2-gea73f4a0\npatches:           wine-0004-kernelbase-append-args-env.patch wine-0007-msync-unregister-on-contention.patch wine-0008-ntdll-mirror-last-error-into-macos-gs.patch 0001-winemac-mesa-backend.patch 0002-winemac-reject-unsupported-contexts.patch\npatch_sha256:      b3db0665092b318aa5c16a0391e9a53a3c98908445b72aa84bf546a73b87cd8a  /Users/tailblues/wine-workbench-macos/patches/wine-0004-kernelbase-append-args-env.patch\npatch_sha256:      8a093efaeb35cd99b560368c26e69c0286cd1a59c2b0da22e11426444cfd295d  /Users/tailblues/wine-workbench-macos/patches/wine-0007-msync-unregister-on-contention.patch\npatch_sha256:      e8cc6773cfca4407d979e638e6dd9026aa2de8761ec95e4f28696d101297df83  /Users/tailblues/wine-workbench-macos/patches/wine-0008-ntdll-mirror-last-error-into-macos-gs.patch\npatch_sha256:      432ecc7c5b1de2d1fccad2822a05321b42905f0a0db6c764e10149a862cecf7c  /Users/tailblues/mesa-wine-gl/patches/wine/0001-winemac-mesa-backend.patch\npatch_sha256:      98be10f4c805eb35679d2c4a56337accafcc83b0a62e4a0eafa296b913ed027d  /Users/tailblues/mesa-wine-gl/patches/wine/0002-winemac-reject-unsupported-contexts.patch\nextra_series:      /Users/tailblues/mesa-wine-gl/patches/wine/series\nconfigure:         --build=x86_64-apple-darwin --enable-archs=i386,x86_64 --prefix=/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64 --disable-tests --with-vulkan --with-mingw --with-freetype --with-gnutls --with-gstreamer --without-ffmpeg --without-x\nbuilt:             2026-10-31T06:54:22Z\nbuilt_by:          bin/build-runtime\n",
+  "winemac_sha256": "8e278cf90195e752627c2120e010644e06ba231edc3dae15f5f5d07d3c2fff90",
+  "runs": [
+    {
+      "mode": "positive",
+      "command": [
+        "/Users/tailblues/wine-workbench-macos/runtimes/winecx-26.3.0-mesa-gl-x86_64/bin/wine",
+        "/Users/tailblues/mesa-wine-gl/build/wine-gl-window.exe",
+        "--hold"
+      ],
+      "environment": {
+        "WINEPREFIX": "/Users/tailblues/mesa-wine-gl/build/prefix-wgl",
+        "WINEDEBUG": "-all,+wgl",
+        "WINEDLLOVERRIDES": "mscoree,mshtml=",
+        "WINEARCH": "win64",
+        "MESA_WINE_LIB": "/private/tmp/mesa-wine-gl-relocated-20261031/lib/libmesa_wine.dylib",
+        "VK_DRIVER_FILES": "/private/tmp/mesa-wine-gl-relocated-20261031/kosmickrisp.json",
+        "MESA_KK_EXPERIMENTAL": "xfb_gs_probe,custom_border,rgb32_texel"
+      },
+      "exit_status": "timeout",
+      "expected_outcome_observed": false
+    }
+  ]
+}

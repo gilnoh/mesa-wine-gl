@@ -1,0 +1,1582 @@
+0148:warn:wgl:egl_init EGL support not compiled in!
+0148:trace:wgl:macdrv_OpenGLInit ()
+0148:trace:wgl:macdrv_MesaOpenGLInit ()
+mesa_wine: Zink screen created: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+0148:trace:wgl:macdrv_MesaOpenGLInit Mesa bridge initialized; context capabilities are queried from Mesa
+0148:trace:wgl:macdrv_init_pixel_formats ()
+0148:trace:wgl:macdrv_init_pixel_formats Mesa enumerated 1 pixel formats (1 onscreen)
+0148:trace:wgl:macdrv_describe_pixel_format fmt 1
+0148:trace:wgl:win32u_wglSetPixelFormat 0xc010054/0x10078 format 1
+0148:trace:wgl:macdrv_surface_create hwnd 0x10078, format 1, drawable 0x1000ffc70
+0148:trace:wgl:opengl_drawable_create created 0x10078/0x600002179590/0x600003330dc0 (format 1)
+mesa_wine: swapchain created 640x480 (3 images)
+mesa_wine: presentation attached (640x480)
+0148:trace:wgl:macdrv_surface_create Presentation attached for hwnd 0x10078
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 2
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 2
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf60719550, hdc 0xc010054, share 0x0, attribs 0x0
+0148:trace:wgl:macdrv_context_create format 1, share_context 0x0, attrib_list 0x0
+mesa_wine: GL context created (version 1.0, profile compat, format 1)
+0148:trace:wgl:macdrv_context_create Created Mesa context 0x60000003ca50 (GL 1.0 compat)
+0148:trace:wgl:win32u_wgl_context_reset reset context 0x7fbf60719550, format 1 for driver context 0x60000003d2c0
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fbf60719550
+0148:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 3
+0148:trace:wgl:context_sync_drawables context 0x7fbf60719550, new_draw 0x10078/0x600002179590/0x600003330dc0 (format 1), new_read 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:macdrv_make_current draw 0x10078/0x600002179590/0x600003330dc0 (format 1), read 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x60000003d2c0
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x60000003d2c0
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002179590/0x600003330dc0 (format 1) flags 0x4
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002179590/0x600003330dc0 (format 1) flags 0x8
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglGetProcAddress "glGetStringi" -> 0x2196faeb0
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf60e652d0, hdc 0xc010054, share 0x0, attribs 0x31fd50
+0148:trace:wgl:macdrv_context_create format 1, share_context 0x0, attrib_list 0x31fd50
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+0148:trace:wgl:macdrv_context_create Created Mesa context 0x600000058c80 (GL 4.6 core)
+0148:trace:wgl:win32u_wgl_context_reset reset context 0x7fbf60e652d0, format 1 for driver context 0x600000058c70
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fbf60e652d0
+0148:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0148:trace:wgl:macdrv_surface_create hwnd 0x10078, format 1, drawable 0x1000ffbe0
+0148:trace:wgl:opengl_drawable_create created 0x10078/0x600002171220/0x600003331860 (format 1)
+mesa_wine: swapchain created 640x480 (3 images)
+mesa_wine: presentation attached (640x480)
+0148:trace:wgl:macdrv_surface_create Presentation attached for hwnd 0x10078
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 2
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x0
+0148:trace:wgl:macdrv_make_current draw 0x10078/0x600002171220/0x600003331860 (format 1), read 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 2
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002171220/0x600003331860 (format 1) flags 0x8
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 1
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf60719550, hdc 0x0, share 0x0, attribs 0x0
+0148:trace:wgl:macdrv_context_destroy context 0x60000003d2c0
+VERSION 4.6 (Core Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+RENDERER zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+GLSL 4.60
+PASS Zink and KosmicKrisp renderer identity
+0148:trace:wgl:win32u_wglGetProcAddress "glCreateShader" -> 0x2196fa080
+0148:trace:wgl:win32u_wglGetProcAddress "glShaderSource" -> 0x2196fa3c0
+0148:trace:wgl:win32u_wglGetProcAddress "glCompileShader" -> 0x2196fa040
+0148:trace:wgl:win32u_wglGetProcAddress "glGetShaderiv" -> 0x2196fa260
+0148:trace:wgl:win32u_wglGetProcAddress "glGetShaderInfoLog" -> 0x2196fa220
+0148:trace:wgl:win32u_wglGetProcAddress "glCreateProgram" -> 0x2196fa060
+0148:trace:wgl:win32u_wglGetProcAddress "glAttachShader" -> 0x2196f9fe0
+0148:trace:wgl:win32u_wglGetProcAddress "glLinkProgram" -> 0x2196fa3a0
+0148:trace:wgl:win32u_wglGetProcAddress "glGetProgramiv" -> 0x2196fa200
+0148:trace:wgl:win32u_wglGetProcAddress "glGetProgramInfoLog" -> 0x2196fa1e0
+0148:trace:wgl:win32u_wglGetProcAddress "glUseProgram" -> 0x2196fa730
+0148:trace:wgl:win32u_wglGetProcAddress "glGenVertexArrays" -> 0x2196fbc30
+0148:trace:wgl:win32u_wglGetProcAddress "glBindVertexArray" -> 0x2196fbbf0
+0148:trace:wgl:win32u_wglGetProcAddress "glGetUniformLocation" -> 0x2196fa280
+0148:trace:wgl:win32u_wglGetProcAddress "glUniform1f" -> 0x2196fa440
+0148:trace:wgl:win32u_wglGetProcAddress "glUniform2f" -> 0x2196fa4d0
+0148:trace:wgl:win32u_wglGetProcAddress "glFenceSync" -> 0x2196fbdb0
+0148:trace:wgl:win32u_wglGetProcAddress "glClientWaitSync" -> 0x2196fbd70
+0148:trace:wgl:win32u_wglGetProcAddress "glDeleteSync" -> 0x2196fbd90
+0148:trace:wgl:win32u_wglGetProcAddress "glDeleteProgram" -> 0x2196fa0a0
+0148:trace:wgl:win32u_wglGetProcAddress "glDeleteShader" -> 0x2196fa0c0
+0148:trace:wgl:win32u_wglGetProcAddress "glDeleteVertexArrays" -> 0x2196fbc10
+PASS core profile
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002171220/0x600003331860 (format 1) flags 0x2
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 640x480 quadrant 0 rgba=255,0,0,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 640x480 quadrant 1 rgba=0,255,0,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 640x480 quadrant 2 rgba=0,0,255,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 640x480 quadrant 3 rgba=255,255,0,255
+PASS default framebuffer GL error
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+mesa_wine: render fence completed before presentation
+mesa_wine: first GPU frame presented
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS initial SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS front buffer after swap
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x2196f7d70, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf7116a700, hdc 0xc010054, share 0x7fbf60e652d0, attribs 0x31fd50
+0148:trace:wgl:macdrv_context_create format 1, share_context 0x600000058c70, attrib_list 0x31fd50
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+0148:trace:wgl:macdrv_context_create Created Mesa context 0x6000000141b0 (GL 4.6 core)
+0148:trace:wgl:win32u_wgl_context_reset reset context 0x7fbf7116a700, format 1 for driver context 0x600000014180
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fbf7116a700
+0148:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 2
+0148:trace:wgl:context_sync_drawables context 0x7fbf7116a700, new_draw 0x10078/0x600002179590/0x600003330dc0 (format 1), new_read 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x0
+0148:trace:wgl:macdrv_make_current draw 0x10078/0x600002179590/0x600003330dc0 (format 1), read 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x600000014180
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 2
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x600000014180
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002179590/0x600003330dc0 (format 1) flags 0x8
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 1
+PASS shared GL fence
+PASS shared texture object
+PASS shared texture contents
+PASS shared context GL error
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fbf60e652d0
+0148:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 2
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002179590/0x600003330dc0 (format 1), context 0x0
+0148:trace:wgl:macdrv_make_current draw 0x10078/0x600002171220/0x600003331860 (format 1), read 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002179590/0x600003330dc0 (format 1) increasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 2
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002171220/0x600003331860 (format 1) flags 0x8
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 1
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf7116a700, hdc 0x0, share 0x0, attribs 0x0
+0148:trace:wgl:macdrv_context_destroy context 0x600000014180
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0x0, read_hdc 0x0, context 0x0
+0148:trace:wgl:context_unset_current context 0x7fbf60e652d0
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x0
+0148:trace:wgl:macdrv_make_current draw (null), read (null), context 0x0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002179590/0x600003330dc0 (format 1) decreasing refcount to 0
+0148:trace:wgl:macdrv_surface_destroy drawable 0x10078/0x600002179590/0x600003330dc0 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 2
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0xc010054, read_hdc 0xc010054, context 0x7fbf60e652d0
+0148:trace:wgl:get_dc_opengl_drawable hdc 0xc010054, drawable (null)
+0148:trace:wgl:get_window_unused_drawable hwnd 0x10078, drawable 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 3
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:macdrv_make_current draw 0x10078/0x600002171220/0x600003331860 (format 1), read 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x600000058c70
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002171220/0x600003331860 (format 1) flags 0x4
+0148:trace:wgl:macdrv_surface_flush 0x10078/0x600002171220/0x600003331860 (format 1) flags 0x8
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 480x320 quadrant 0 rgba=255,0,0,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 480x320 quadrant 1 rgba=0,255,0,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 480x320 quadrant 2 rgba=0,0,255,255
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS window 480x320 quadrant 3 rgba=255,255,0,255
+PASS default framebuffer GL error
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+mesa_wine: swapchain created 480x320 (3 images)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS resized SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS front buffer after swap
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 0 rgba=255,255,0,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 1 rgba=0,0,255,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 2 rgba=255,255,0,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 3 rgba=0,0,255,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 4 rgba=255,255,0,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state frame 5 rgba=0,0,255,255
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS cached-state SwapBuffers
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wgl_context_flush context 0x7fbf60e652d0, hwnd 0x10078, interval 1, flush 0x0, flags 0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:win32u_wglSwapBuffers context 0x7fbf60e652d0, hwnd 0x10078, hdc 0xc010054, interval 1
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 5
+0148:trace:wgl:context_sync_drawables context 0x7fbf60e652d0, new_draw 0x10078/0x600002171220/0x600003331860 (format 1), new_read 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 6
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 5
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:macdrv_surface_swap 0x10078/0x600002171220/0x600003331860 (format 1)
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+PASS 60 consecutive GPU presentations
+CAPTURE_READY top-left=blue top-right=yellow bottom-left=red bottom-right=green
+0148:trace:wgl:win32u_wglMakeContextCurrentARB draw_hdc 0x0, read_hdc 0x0, context 0x0
+0148:trace:wgl:context_unset_current context 0x7fbf60e652d0
+0148:trace:wgl:macdrv_surface_set_context 0x10078/0x600002171220/0x600003331860 (format 1), context 0x0
+0148:trace:wgl:macdrv_make_current draw (null), read (null), context 0x0
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_add_ref 0x10078/0x600002171220/0x600003331860 (format 1) increasing refcount to 4
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 3
+0148:trace:wgl:opengl_drawable_release 0x10078/0x600002171220/0x600003331860 (format 1) decreasing refcount to 2
+0148:trace:wgl:win32u_wgl_context_reset context 0x7fbf60e652d0, hdc 0x0, share 0x0, attribs 0x0
+0148:trace:wgl:macdrv_context_destroy context 0x600000058c70
+0148:trace:wgl:opengl_drawable_release 0x0/0x600002171220/0x600003331860 (format 1) decreasing refcount to 1
+0148:trace:wgl:opengl_drawable_release 0x0/0x600002171220/0x600003331860 (format 1) decreasing refcount to 0
+0148:trace:wgl:macdrv_surface_destroy drawable 0x0/0x600002171220/0x600003331860 (format 1)
+SUMMARY checks=33 failures=0

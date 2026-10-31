@@ -1,0 +1,64 @@
+#!/usr/bin/env python3
+"""Bundle the experimental bridge, KK ICD and transitive non-system dylibs.
+The bundle is relocatable; the surrounding development Wine runtime is not yet.
+"""
+import hashlib, json, os, shutil, subprocess, sys
+from pathlib import Path
+root=Path(__file__).resolve().parent.parent
+out=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else root/'build/graphics-bundle'
+if out.exists(): raise SystemExit(f'Refusing to overwrite existing bundle: {out}')
+manifest=json.loads((root/'build/bridge/build.json').read_text())
+for name,digest in manifest['inputs'].items():
+    assert hashlib.sha256((root/name).read_bytes()).hexdigest()==digest, f'Stale bridge input: {name}'
+bridge=root/'build/bridge/libmesa_wine.dylib'
+assert hashlib.sha256(bridge.read_bytes()).hexdigest()==manifest['binary_sha256']
+subprocess.run([str(root/'bin/build-kk-experiment'),'--verify-only'],check=True)
+buildenv=os.environ.copy()
+for key in ('CPATH','C_INCLUDE_PATH','CPLUS_INCLUDE_PATH','OBJC_INCLUDE_PATH','LIBRARY_PATH','CFLAGS','CXXFLAGS','OBJCFLAGS','CPPFLAGS','LDFLAGS'):
+    buildenv.pop(key,None)
+subprocess.run(['ninja','-C',str(root/'build/kk-xfb-x86_64'),'-j','4'],env=buildenv,check=True)
+out.mkdir(parents=True); libs=out/'lib';libs.mkdir()
+records={}; names={}
+def command(*args): return subprocess.check_output(args,text=True)
+def deps(path): return [line.strip().split(' (compatibility version')[0] for line in command('otool','-L',str(path)).splitlines()[2:]]
+def system(path): return path.startswith(('/usr/lib/','/System/'))
+def resolve(dep,parent):
+    if dep.startswith('@loader_path/'): return (parent.parent/dep[len('@loader_path/'):]).resolve()
+    if dep.startswith('@rpath/'):
+        lines=command('otool','-l',str(parent)).splitlines()
+        paths=[]
+        for i,line in enumerate(lines):
+            if line.strip()=='cmd LC_RPATH': paths.append(lines[i+2].strip().split('path ',1)[1].split(' (offset',1)[0])
+        for base in paths:
+            base=base.replace('@loader_path',str(parent.parent))
+            candidate=Path(base)/dep[len('@rpath/'):]
+            if candidate.exists(): return candidate.resolve()
+        raise RuntimeError(f'Unresolved {dep} in {parent}')
+    return Path(dep).resolve()
+def add(path):
+    path=path.resolve()
+    if str(path) in records: return records[str(path)]['name']
+    name='libvulkan.1.dylib' if path.name.startswith('libvulkan.') else path.name
+    if name in names and names[name]!=path: raise RuntimeError(f'Conflicting library names: {path} and {names[name]}')
+    names[name]=path
+    record={'name':name,'source_sha256':hashlib.sha256(path.read_bytes()).hexdigest()};records[str(path)]=record
+    target=libs/name;shutil.copy2(path,target);target.chmod(0o755)
+    changes=[]
+    for dep in deps(path):
+        if not system(dep): changes+=['-change',dep,'@loader_path/'+add(resolve(dep,path))]
+    # Zink also dlopens @rpath/libvulkan.1.dylib. Preserve that name and ensure
+    # the runtime search path resolves inside the bundle, never through Homebrew.
+    lines=command('otool','-l',str(target)).splitlines()
+    rpaths=[lines[i+2].strip().split('path ',1)[1].split(' (offset',1)[0]
+            for i,line in enumerate(lines) if line.strip()=='cmd LC_RPATH']
+    for old in set(rpaths): changes+=['-delete_rpath',old]
+    subprocess.run(['install_name_tool','-id','@rpath/'+name,*changes,'-add_rpath','@loader_path',str(target)],check=True)
+    subprocess.run(['codesign','--force','--sign','-',str(target)],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+    assert all(system(d) or d.startswith('@loader_path/') for d in deps(target)),str(target)
+    record['bundled_sha256']=hashlib.sha256(target.read_bytes()).hexdigest()
+    return name
+bridge_name=add(bridge)
+icd=add(root/'build/kk-xfb-x86_64/src/kosmickrisp/vulkan/libvulkan_kosmickrisp.dylib')
+(out/'kosmickrisp.json').write_text(json.dumps({'file_format_version':'1.0.0','ICD':{'library_path':'./lib/'+icd,'api_version':'1.4.0','is_portability_driver':False}},indent=2)+'\n')
+(out/'manifest.json').write_text(json.dumps({'bridge_build':manifest,'libraries':records,'sources':json.loads((root/'sources.lock.json').read_text()),'kk_patches':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in (root/'patches/mesa').glob('000[1-4]*')}},indent=2)+'\n')
+print(out)

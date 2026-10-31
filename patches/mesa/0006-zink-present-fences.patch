@@ -1,0 +1,23 @@
+--- a/src/gallium/drivers/zink/zink_instance.py
++++ b/src/gallium/drivers/zink/zink_instance.py
+@@ -56,6 +56,8 @@
+     EXTENSIONS += [
+         Extension("VK_KHR_portability_enumeration"),
+         Extension("VK_EXT_metal_surface", conditions=["have_KHR_surface"]),
++        Extension("VK_KHR_get_surface_capabilities2", conditions=["have_KHR_surface"]),
++        Extension("VK_KHR_surface_maintenance1", conditions=["have_KHR_surface", "have_KHR_get_surface_capabilities2"]),
+     ]
+ 
+ # constructor: Layer(name, conditions=[])
+--- a/src/gallium/drivers/zink/zink_device_info.py
++++ b/src/gallium/drivers/zink/zink_device_info.py
+@@ -303,6 +303,9 @@
+               features=True,
+               conditions=["$feats.scalarBlockLayout"]),
+     Extension("VK_KHR_swapchain"),
++    Extension("VK_KHR_swapchain_maintenance1", alias="present_maintenance",
++              features=True,
++              conditions=["$feats.swapchainMaintenance1", "screen->instance_info->have_KHR_surface_maintenance1"]),
+     Extension("VK_EXT_rasterization_order_attachment_access",
+               alias="rast_order_access",
+               features=True,

@@ -1,0 +1,3 @@
+# Opt-in Wine bridge; consumed by workbench --extra-series.
+workaround 0001-winemac-mesa-backend.patch
+workaround 0002-winemac-reject-unsupported-contexts.patch

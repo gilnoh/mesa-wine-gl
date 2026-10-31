@@ -1,0 +1,5 @@
+mesa_wine: Zink screen created: zink Vulkan 1.4(Apple M1 Max (MESA_KOSMICKRISP))
+mesa_wine: GL context created (version 4.6, profile core, format 1)
+VERSION 4.6 (Core Profile) Mesa 27.0.0-devel (git-18b8ad0b92)
+PIXEL [255, 0, 0, 255]
+BUNDLE_LOAD_PASS

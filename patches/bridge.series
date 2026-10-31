@@ -1,0 +1,3 @@
+# Mesa frontend integration, separate from the KK experiment.
+experimental mesa/0005-zink-metal-surface.patch
+experimental mesa/0006-zink-present-fences.patch

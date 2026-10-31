@@ -1,0 +1,841 @@
+--- a/dlls/winemac.drv/opengl.c
++++ b/dlls/winemac.drv/opengl.c
+@@ -2697,6 +2697,8 @@
+ /**********************************************************************
+  *              macdrv_OpenGLInit
+  */
++extern UINT macdrv_MesaOpenGLInit(UINT, const struct opengl_funcs *, const struct opengl_driver_funcs **);
++
+ UINT macdrv_OpenGLInit(UINT version, const struct opengl_funcs *opengl_funcs, const struct opengl_driver_funcs **driver_funcs)
+ {
+     TRACE("()\n");
+@@ -2706,6 +2708,7 @@
+         ERR("version mismatch, opengl32 wants %u but macdrv has %u\n", version, WINE_OPENGL_DRIVER_VERSION);
+         return STATUS_INVALID_PARAMETER;
+     }
++    if (getenv("MESA_WINE_LIB")) return macdrv_MesaOpenGLInit(version, opengl_funcs, driver_funcs);
+     funcs = opengl_funcs;
+ 
+     opengl_handle = dlopen("/System/Library/Frameworks/OpenGL.framework/OpenGL", RTLD_LAZY|RTLD_LOCAL|RTLD_NOLOAD);
+--- a/dlls/winemac.drv/Makefile.in
++++ b/dlls/winemac.drv/Makefile.in
+@@ -37,6 +37,7 @@
+ 	macdrv_main.c \
+ 	mouse.c \
+ 	opengl.c \
++	opengl_mesa.c \
+ 	surface.c \
+ 	systray.c \
+ 	vulkan.c \
+--- /dev/null
++++ b/dlls/winemac.drv/opengl_mesa.c
+@@ -0,0 +1,628 @@
++/*
++ * Mac driver OpenGL support — Mesa/Zink backend
++ *
++ * Opt-in experimental Mesa backend. Only non-MSAA double-buffered windows
++ * are supported by the initial bridge; capabilities come from Mesa.
++ *
++ * Copyright 2012 Alexandre Julliard
++ * Copyright 2012, 2013 Ken Thomases for CodeWeavers Inc.
++ * Copyright 2026 mesa_gl_to_metal project (Mesa integration)
++ *
++ * This library is free software; you can redistribute it and/or
++ * modify it under the terms of the GNU Lesser General Public
++ * License as published by the Free Software Foundation; either
++ * version 2.1 of the License, or (at your option) any later version.
++ */
++
++#if 0
++#pragma makedep unix
++#endif
++
++#include "config.h"
++
++#include "macdrv.h"
++
++#include "winuser.h"
++#include "winternl.h"
++#include "winnt.h"
++#include "wine/debug.h"
++#include "wine/opengl_driver.h"
++
++#include <dlfcn.h>
++#include <stdbool.h>
++
++WINE_DEFAULT_DEBUG_CHANNEL(wgl);
++
++/* ================================================================
++ *  Mesa Wine bridge — loaded via dlopen
++ * ================================================================ */
++
++#include "mesa_wine_api.h"
++
++/* Function pointer types for the bridge API */
++typedef mesa_wine_screen_t (*pfn_mesa_wine_init)(void);
++typedef void               (*pfn_mesa_wine_fini)(mesa_wine_screen_t);
++typedef int                (*pfn_mesa_wine_get_pixel_format_count)(mesa_wine_screen_t, int *);
++typedef bool               (*pfn_mesa_wine_get_pixel_format_info)(mesa_wine_screen_t, int, struct mesa_wine_pixel_format_info *);
++typedef mesa_wine_ctx_t    (*pfn_mesa_wine_create_context)(mesa_wine_screen_t, int, int, int, int, unsigned, mesa_wine_ctx_t);
++typedef void               (*pfn_mesa_wine_destroy_context)(mesa_wine_ctx_t);
++typedef mesa_wine_draw_t   (*pfn_mesa_wine_create_drawable)(mesa_wine_screen_t, int, int, int);
++typedef void               (*pfn_mesa_wine_destroy_drawable)(mesa_wine_draw_t);
++typedef void               (*pfn_mesa_wine_resize_drawable)(mesa_wine_draw_t, int, int);
++typedef bool               (*pfn_mesa_wine_make_current)(mesa_wine_ctx_t, mesa_wine_draw_t, mesa_wine_draw_t);
++typedef void              *(*pfn_mesa_wine_get_proc_address)(const char *);
++typedef void               (*pfn_mesa_wine_flush)(void);
++typedef bool               (*pfn_mesa_wine_swap_buffers)(mesa_wine_draw_t);
++typedef bool               (*pfn_mesa_wine_attach_presentation)(mesa_wine_screen_t, mesa_wine_draw_t, void *);
++typedef void               (*pfn_mesa_wine_detach_presentation)(mesa_wine_draw_t);
++
++static struct {
++    void *handle;
++    pfn_mesa_wine_init                  init;
++    pfn_mesa_wine_fini                  fini;
++    pfn_mesa_wine_get_pixel_format_count get_pixel_format_count;
++    pfn_mesa_wine_get_pixel_format_info  get_pixel_format_info;
++    pfn_mesa_wine_create_context        create_context;
++    pfn_mesa_wine_destroy_context       destroy_context;
++    pfn_mesa_wine_create_drawable       create_drawable;
++    pfn_mesa_wine_destroy_drawable      destroy_drawable;
++    pfn_mesa_wine_resize_drawable       resize_drawable;
++    pfn_mesa_wine_make_current          make_current;
++    pfn_mesa_wine_get_proc_address      get_proc_address;
++    pfn_mesa_wine_flush                 flush;
++    pfn_mesa_wine_swap_buffers          swap_buffers;
++    pfn_mesa_wine_attach_presentation   attach_presentation;
++    pfn_mesa_wine_detach_presentation   detach_presentation;
++} mesa;
++
++static mesa_wine_screen_t mesa_screen;
++static const struct opengl_funcs *funcs;
++static const struct opengl_driver_funcs macdrv_driver_funcs;
++static const struct opengl_drawable_funcs macdrv_surface_funcs;
++static const struct opengl_drawable_funcs macdrv_pbuffer_funcs;
++
++
++/* ================================================================
++ *  Internal context structure
++ * ================================================================ */
++
++struct mesa_context
++{
++    int                  format;
++    mesa_wine_ctx_t      mesa_ctx;
++};
++
++struct gl_drawable
++{
++    struct opengl_drawable base;
++    mesa_wine_draw_t       mesa_draw;
++    macdrv_metal_device    metal_device;
++    macdrv_metal_view      metal_view;
++};
++
++static struct gl_drawable *impl_from_opengl_drawable(struct opengl_drawable *base)
++{
++    return CONTAINING_RECORD(base, struct gl_drawable, base);
++}
++
++
++/* ================================================================
++ *  Pixel formats — hardcoded for now
++ *
++ *  We provide a minimal set of pixel formats that cover common usage.
++ *  Format 1: RGBA8 double-buffered with depth24/stencil8 (onscreen)
++ *  Format 2: RGBA8 single-buffered with depth24/stencil8 (onscreen)
++ *  Format 3: RGBA8 double-buffered with depth24/stencil8 (pbuffer)
++ * ================================================================ */
++
++static int total_pixel_formats = 0;
++static int onscreen_pixel_formats = 0;
++
++static UINT macdrv_init_pixel_formats(UINT *onscreen_count)
++{
++    TRACE("()\n");
++
++    total_pixel_formats = mesa.get_pixel_format_count(mesa_screen, &onscreen_pixel_formats);
++    *onscreen_count = onscreen_pixel_formats;
++
++    TRACE("Mesa enumerated %d pixel formats (%d onscreen)\n",
++          total_pixel_formats, onscreen_pixel_formats);
++
++    return total_pixel_formats;
++}
++
++static BOOL macdrv_describe_pixel_format(int fmt, struct wgl_pixel_format *descr)
++{
++    struct mesa_wine_pixel_format_info info;
++
++    TRACE("fmt %d\n", fmt);
++
++    if (!mesa.get_pixel_format_info(mesa_screen, fmt, &info))
++        return FALSE;
++
++    memset(descr, 0, sizeof(*descr));
++
++    descr->pfd.nSize = sizeof(descr->pfd);
++    descr->pfd.nVersion = 1;
++    descr->pfd.dwFlags = PFD_SUPPORT_OPENGL;
++    descr->pfd.iPixelType = PFD_TYPE_RGBA;
++    descr->pfd.iLayerType = PFD_MAIN_PLANE;
++
++    if (info.pbuffer)
++        descr->pfd.dwFlags |= PFD_DRAW_TO_BITMAP;
++    else
++        descr->pfd.dwFlags |= PFD_DRAW_TO_WINDOW;
++
++    if (info.doublebuffer)
++    {
++        descr->pfd.dwFlags |= PFD_DOUBLEBUFFER;
++        descr->swap_method = WGL_SWAP_UNDEFINED_ARB;
++    }
++
++    /* Color */
++    descr->pfd.cColorBits = info.color_bits;
++    descr->pfd.cRedBits = info.red_bits;     descr->pfd.cRedShift = info.red_shift;
++    descr->pfd.cGreenBits = info.green_bits;  descr->pfd.cGreenShift = info.green_shift;
++    descr->pfd.cBlueBits = info.blue_bits;    descr->pfd.cBlueShift = info.blue_shift;
++    descr->pfd.cAlphaBits = info.alpha_bits;  descr->pfd.cAlphaShift = info.alpha_shift;
++
++    /* Depth/stencil */
++    descr->pfd.cDepthBits = info.depth_bits;
++    descr->pfd.cStencilBits = info.stencil_bits;
++
++    /* WGL attributes — pixel_type must be set for client-side caching */
++    descr->pixel_type = info.float_components ? WGL_TYPE_RGBA_FLOAT_ARB : WGL_TYPE_RGBA_ARB;
++    descr->framebuffer_srgb_capable = info.srgb ? GL_TRUE : GL_FALSE;
++
++    /* MSAA */
++    if (info.samples > 0)
++    {
++        descr->sample_buffers = 1;
++        descr->samples = info.samples;
++    }
++
++    /* Pbuffer caps */
++    if (info.pbuffer)
++    {
++        descr->draw_to_pbuffer = GL_TRUE;
++        descr->max_pbuffer_width = 4096;
++        descr->max_pbuffer_height = 4096;
++        descr->max_pbuffer_pixels = 4096 * 4096;
++        descr->bind_to_texture_rgb = GL_TRUE;
++        descr->bind_to_texture_rgba = GL_TRUE;
++        descr->bind_to_texture_rectangle_rgb = GL_TRUE;
++        descr->bind_to_texture_rectangle_rgba = GL_TRUE;
++    }
++
++    return TRUE;
++}
++
++
++/* ================================================================
++ *  Surface (drawable) management
++ * ================================================================ */
++
++static BOOL macdrv_surface_create(HWND hwnd, int format, struct opengl_drawable **drawable)
++{
++    struct macdrv_client_surface *client;
++    struct macdrv_win_data *data;
++    struct gl_drawable *gl;
++
++    TRACE("hwnd %p, format %d, drawable %p\n", hwnd, format, drawable);
++
++    if (!(data = get_win_data(hwnd)))
++    {
++        FIXME("DC for window %p of other process: not implemented\n", hwnd);
++        return FALSE;
++    }
++
++    data->pixel_format = format;
++    {
++        int w = data->rects.client.right - data->rects.client.left;
++        int h = data->rects.client.bottom - data->rects.client.top;
++        if (w <= 0) w = 1;
++        if (h <= 0) h = 1;
++        release_win_data(data);
++
++        if (!(client = macdrv_client_surface_create(hwnd))) return FALSE;
++
++        /* Set up Metal presentation before releasing client reference.
++         * We need client->cocoa_view to create the Metal view. */
++        gl = opengl_drawable_create(sizeof(*gl), &macdrv_surface_funcs, format, &client->client);
++        if (!gl)
++        {
++            client_surface_release(&client->client);
++            return FALSE;
++        }
++
++        gl->metal_device = macdrv_create_metal_device();
++        if (gl->metal_device)
++        {
++            gl->metal_view = macdrv_view_create_metal_view(client->cocoa_view, gl->metal_device);
++            if (!gl->metal_view)
++                WARN("Failed to create Metal view for presentation\n");
++        }
++        else
++            WARN("Failed to create Metal device for presentation\n");
++
++        client_surface_release(&client->client);
++        if (!gl->metal_view) { opengl_drawable_release(&gl->base); return FALSE; }
++
++        /* Create Mesa drawable sized to the window's client area */
++        gl->mesa_draw = mesa.create_drawable(mesa_screen, format, w, h);
++        if (!gl->mesa_draw)
++        {
++            WARN("Failed to create Mesa drawable\n");
++            opengl_drawable_release(&gl->base);
++            return FALSE;
++        }
++
++        /* Attach Vulkan swapchain to the drawable for on-screen display */
++        if (gl->metal_view)
++        {
++            void *metal_layer = (void *)macdrv_view_get_metal_layer(gl->metal_view);
++            if (!mesa.attach_presentation(mesa_screen, gl->mesa_draw, metal_layer))
++            {
++                ERR("Failed to attach presentation\n");
++                opengl_drawable_release(&gl->base);
++                return FALSE;
++            }
++            else
++                TRACE("Presentation attached for hwnd %p\n", hwnd);
++        }
++    }
++
++    *drawable = &gl->base;
++    return TRUE;
++}
++
++static void macdrv_surface_destroy(struct opengl_drawable *base)
++{
++    struct gl_drawable *gl = impl_from_opengl_drawable(base);
++
++    TRACE("drawable %s\n", debugstr_opengl_drawable(base));
++
++    if (gl->mesa_draw)
++    {
++        mesa.detach_presentation(gl->mesa_draw);
++        mesa.destroy_drawable(gl->mesa_draw);
++    }
++
++    if (gl->metal_view)
++        macdrv_view_release_metal_view(gl->metal_view);
++    if (gl->metal_device) macdrv_release_metal_device(gl->metal_device);
++}
++
++static void macdrv_surface_check_resize(struct opengl_drawable *base);
++
++static void macdrv_surface_flush(struct opengl_drawable *base, UINT flags)
++{
++    TRACE("%s flags %#x\n", debugstr_opengl_drawable(base), flags);
++
++    if (flags & GL_FLUSH_UPDATED) macdrv_surface_check_resize(base);
++    if (flags & GL_FLUSH_PRESENT) mesa.flush();
++}
++
++static void macdrv_surface_check_resize(struct opengl_drawable *base)
++{
++    struct gl_drawable *gl = impl_from_opengl_drawable(base);
++    struct macdrv_win_data *data;
++
++    if (!base->client)
++        return;
++
++    if (!(data = get_win_data(base->client->hwnd)))
++        return;
++
++    {
++        int w = data->rects.client.right - data->rects.client.left;
++        int h = data->rects.client.bottom - data->rects.client.top;
++        release_win_data(data);
++        if (w <= 0) w = 1;
++        if (h <= 0) h = 1;
++
++        mesa.resize_drawable(gl->mesa_draw, w, h);
++    }
++}
++
++static BOOL macdrv_surface_swap(struct opengl_drawable *base)
++{
++    struct gl_drawable *gl = impl_from_opengl_drawable(base);
++
++    TRACE("%s\n", debugstr_opengl_drawable(base));
++
++    return mesa.swap_buffers(gl->mesa_draw);
++}
++
++static void macdrv_surface_set_context(struct opengl_drawable *base, void *private)
++{
++    TRACE("%s, context %p\n", debugstr_opengl_drawable(base), private);
++
++    macdrv_surface_check_resize(base);
++}
++
++
++/* ================================================================
++ *  Context management
++ * ================================================================ */
++
++static BOOL macdrv_context_create(int format, void *shared, const int *attrib_list, void **private)
++{
++    struct mesa_context *share_context = shared;
++    struct mesa_context *context;
++    const int *iptr;
++    int major = 1, minor = 0, profile = MESA_WINE_PROFILE_COMPAT, flags = 0;
++
++    TRACE("format %d, share_context %p, attrib_list %p\n", format, share_context, attrib_list);
++
++    for (iptr = attrib_list; iptr && *iptr; iptr += 2)
++    {
++        int attr = iptr[0];
++        int value = iptr[1];
++
++        switch (attr)
++        {
++            case WGL_CONTEXT_MAJOR_VERSION_ARB:
++                major = value;
++                break;
++            case WGL_CONTEXT_MINOR_VERSION_ARB:
++                minor = value;
++                break;
++            case WGL_CONTEXT_LAYER_PLANE_ARB:
++                break;
++            case WGL_CONTEXT_FLAGS_ARB:
++                if (value & WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB)
++                    flags |= MESA_WINE_FLAG_FORWARD_COMPATIBLE;
++                if (value & WGL_CONTEXT_DEBUG_BIT_ARB)
++                    flags |= MESA_WINE_FLAG_DEBUG;
++                break;
++            case WGL_CONTEXT_PROFILE_MASK_ARB:
++                if (value == WGL_CONTEXT_CORE_PROFILE_BIT_ARB)
++                    profile = MESA_WINE_PROFILE_CORE;
++                else
++                    profile = MESA_WINE_PROFILE_COMPAT;
++                break;
++            default:
++                WARN("Unknown attribute %#x.\n", attr);
++                break;
++        }
++    }
++
++    if (!(context = calloc(1, sizeof(*context)))) return FALSE;
++
++    context->format = format;
++    context->mesa_ctx = mesa.create_context(
++        mesa_screen, format, major, minor, profile, flags,
++        share_context ? share_context->mesa_ctx : NULL);
++
++    if (!context->mesa_ctx)
++    {
++        ERR("Mesa context creation failed (GL %d.%d)\n", major, minor);
++        free(context);
++        RtlSetLastWin32Error(ERROR_INVALID_OPERATION);
++        return FALSE;
++    }
++
++    TRACE("Created Mesa context %p (GL %d.%d %s)\n", context->mesa_ctx,
++          major, minor, profile == MESA_WINE_PROFILE_CORE ? "core" : "compat");
++
++    *private = context;
++    return TRUE;
++}
++
++static BOOL macdrv_context_destroy(void *private)
++{
++    struct mesa_context *context = private;
++
++    TRACE("context %p\n", context);
++
++    if (context->mesa_ctx)
++        mesa.destroy_context(context->mesa_ctx);
++
++    free(context);
++    return TRUE;
++}
++
++static BOOL macdrv_make_current(struct opengl_drawable *draw_base, struct opengl_drawable *read_base, void *private)
++{
++    struct mesa_context *context = private;
++
++    TRACE("draw %s, read %s, context %p\n",
++          debugstr_opengl_drawable(draw_base), debugstr_opengl_drawable(read_base), private);
++
++    if (!private)
++    {
++        mesa.make_current(NULL, NULL, NULL);
++        NtCurrentTeb()->glReserved2 = NULL;
++        return TRUE;
++    }
++
++    {
++        struct gl_drawable *draw = impl_from_opengl_drawable(draw_base);
++        struct gl_drawable *read = impl_from_opengl_drawable(read_base);
++
++        if (!mesa.make_current(context->mesa_ctx, draw->mesa_draw, read->mesa_draw))
++        {
++            ERR("mesa_wine_make_current failed\n");
++            return FALSE;
++        }
++    }
++
++    NtCurrentTeb()->glReserved2 = context;
++    return TRUE;
++}
++
++
++/* ================================================================
++ *  GL function dispatch
++ * ================================================================ */
++
++static void *macdrv_get_proc_address(const char *name)
++{
++    return mesa.get_proc_address(name);
++}
++
++
++/* ================================================================
++ *  WGL extensions
++ * ================================================================ */
++
++static const char *macdrv_init_wgl_extensions(struct opengl_funcs *opengl_funcs)
++{
++    return ""; /* No unimplemented MSAA, sRGB, or floating pixel formats. */
++}
++
++
++/* ================================================================
++ *  Pbuffer stubs
++ * ================================================================ */
++
++static BOOL macdrv_pbuffer_create(HDC hdc, int format, BOOL largest, GLenum texture_format,
++                                  GLenum texture_target, GLint max_level,
++                                  GLsizei *width, GLsizei *height, struct opengl_drawable **drawable)
++{
++    return FALSE; /* Pbuffers are outside the initial window milestone. */
++}
++
++static void macdrv_pbuffer_destroy(struct opengl_drawable *base)
++{
++    struct gl_drawable *gl = impl_from_opengl_drawable(base);
++
++    TRACE("drawable %s\n", debugstr_opengl_drawable(base));
++
++    if (gl->mesa_draw)
++        mesa.destroy_drawable(gl->mesa_draw);
++}
++
++static BOOL macdrv_pbuffer_updated(HDC hdc, struct opengl_drawable *drawable, GLenum cube_face, GLint mipmap_level)
++{
++    return FALSE;
++}
++
++static UINT macdrv_pbuffer_bind(HDC hdc, struct opengl_drawable *base, GLenum source)
++{
++    return GL_FALSE;
++}
++
++
++/* ================================================================
++ *  Driver funcs structs
++ * ================================================================ */
++
++static const struct opengl_driver_funcs macdrv_driver_funcs =
++{
++    .p_get_proc_address = macdrv_get_proc_address,
++    .p_init_pixel_formats = macdrv_init_pixel_formats,
++    .p_describe_pixel_format = macdrv_describe_pixel_format,
++    .p_init_wgl_extensions = macdrv_init_wgl_extensions,
++    .p_surface_create = macdrv_surface_create,
++    .p_context_create = macdrv_context_create,
++    .p_context_destroy = macdrv_context_destroy,
++    .p_make_current = macdrv_make_current,
++    .p_pbuffer_create = macdrv_pbuffer_create,
++    .p_pbuffer_updated = macdrv_pbuffer_updated,
++    .p_pbuffer_bind = macdrv_pbuffer_bind,
++};
++
++static const struct opengl_drawable_funcs macdrv_surface_funcs =
++{
++    .destroy = macdrv_surface_destroy,
++    .flush = macdrv_surface_flush,
++    .swap = macdrv_surface_swap,
++    .set_context = macdrv_surface_set_context,
++};
++
++static const struct opengl_drawable_funcs macdrv_pbuffer_funcs =
++{
++    .destroy = macdrv_pbuffer_destroy,
++};
++
++
++/* ================================================================
++ *  Initialization
++ * ================================================================ */
++
++static BOOL load_mesa_bridge(void)
++{
++    const char *lib_path = getenv("MESA_WINE_LIB");
++    if (!lib_path || !*lib_path) return FALSE;
++
++    mesa.handle = dlopen(lib_path, RTLD_NOW | RTLD_LOCAL);
++    if (!mesa.handle)
++    {
++        ERR("Failed to load Mesa bridge library '%s': %s\n", lib_path, dlerror());
++        return FALSE;
++    }
++
++    unsigned (*get_abi)(void) = dlsym(mesa.handle, "mesa_wine_get_abi_version");
++    if (!get_abi || get_abi() != MESA_WINE_ABI_VERSION) {
++        ERR("Mesa bridge ABI mismatch\n"); goto fail;
++    }
++
++#define LOAD_FUNC(name) \
++    mesa.name = dlsym(mesa.handle, "mesa_wine_" #name); \
++    if (!mesa.name) { ERR("Missing symbol mesa_wine_" #name " in %s\n", lib_path); goto fail; }
++
++    LOAD_FUNC(init);
++    LOAD_FUNC(fini);
++    LOAD_FUNC(get_pixel_format_count);
++    LOAD_FUNC(get_pixel_format_info);
++    LOAD_FUNC(create_context);
++    LOAD_FUNC(destroy_context);
++    LOAD_FUNC(create_drawable);
++    LOAD_FUNC(destroy_drawable);
++    LOAD_FUNC(resize_drawable);
++    LOAD_FUNC(make_current);
++    LOAD_FUNC(get_proc_address);
++    LOAD_FUNC(flush);
++    LOAD_FUNC(swap_buffers);
++    LOAD_FUNC(attach_presentation);
++    LOAD_FUNC(detach_presentation);
++
++#undef LOAD_FUNC
++
++    return TRUE;
++
++fail:
++    dlclose(mesa.handle);
++    mesa.handle = NULL;
++    return FALSE;
++}
++
++
++/**********************************************************************
++ *              macdrv_OpenGLInit
++ */
++UINT macdrv_MesaOpenGLInit(UINT version, const struct opengl_funcs *opengl_funcs, const struct opengl_driver_funcs **driver_funcs)
++{
++    TRACE("()\n");
++
++    if (version != WINE_OPENGL_DRIVER_VERSION)
++    {
++        ERR("version mismatch, opengl32 wants %u but macdrv has %u\n", version, WINE_OPENGL_DRIVER_VERSION);
++        return STATUS_INVALID_PARAMETER;
++    }
++    funcs = opengl_funcs;
++
++    /* Load the Mesa bridge library */
++    if (!load_mesa_bridge())
++    {
++        ERR("Failed to load Mesa bridge library. OpenGL support is disabled.\n");
++        return STATUS_NOT_SUPPORTED;
++    }
++
++    /* Initialize Mesa (Zink screen creation) */
++    mesa_screen = mesa.init();
++    if (!mesa_screen)
++    {
++        ERR("Mesa initialization failed (Zink screen creation). OpenGL support is disabled.\n");
++        dlclose(mesa.handle);
++        mesa.handle = NULL;
++        return STATUS_NOT_SUPPORTED;
++    }
++
++    TRACE("Mesa bridge initialized; context capabilities are queried from Mesa\n");
++
++    *driver_funcs = &macdrv_driver_funcs;
++    return STATUS_SUCCESS;
++}
+--- /dev/null
++++ b/dlls/winemac.drv/mesa_wine_api.h
+@@ -0,0 +1,178 @@
++/*
++ * Mesa Wine Bridge API
++ *
++ * Simple C API between Wine's winemac.drv and Mesa's Gallium state tracker.
++ * This hides all Mesa internal types behind opaque pointers.
++ *
++ * Copyright 2026 mesa_gl_to_metal project
++ * SPDX-License-Identifier: MIT
++ */
++
++#ifndef MESA_WINE_API_H
++#define MESA_WINE_API_H
++
++#include <stdbool.h>
++#include <stdint.h>
++
++#define MESA_WINE_ABI_VERSION 1
++unsigned mesa_wine_get_abi_version(void);
++
++/* Opaque handles */
++typedef struct mesa_wine_screen *mesa_wine_screen_t;
++typedef struct mesa_wine_ctx *mesa_wine_ctx_t;
++typedef struct mesa_wine_draw *mesa_wine_draw_t;
++
++/* Profile constants (matching WGL) */
++#define MESA_WINE_PROFILE_COMPAT  0
++#define MESA_WINE_PROFILE_CORE    1
++
++/* Context flags */
++#define MESA_WINE_FLAG_FORWARD_COMPATIBLE  (1 << 0)
++#define MESA_WINE_FLAG_DEBUG               (1 << 1)
++
++/*
++ * Pixel format descriptor — returned by mesa_wine_get_pixel_format_info().
++ * Provides all information needed to fill Wine's wgl_pixel_format struct.
++ */
++struct mesa_wine_pixel_format_info {
++    int color_bits;       /* total color bits (e.g. 32) */
++    int red_bits;         /* per-channel bits */
++    int green_bits;
++    int blue_bits;
++    int alpha_bits;
++    int red_shift;        /* bit shifts */
++    int green_shift;
++    int blue_shift;
++    int alpha_shift;
++    int depth_bits;       /* depth buffer bits (0, 16, 24, 32) */
++    int stencil_bits;     /* stencil buffer bits (0, 8) */
++    int samples;          /* MSAA sample count (0 = no MSAA) */
++    bool doublebuffer;    /* double-buffered */
++    bool srgb;            /* sRGB-capable framebuffer */
++    bool pbuffer;         /* usable as pbuffer */
++    bool float_components; /* float color components (RGBA16F) */
++};
++
++/*
++ * Initialize Mesa: create Zink pipe_screen, set up frontend screen.
++ * Must be called once before any other function.
++ * Returns screen handle, or NULL on failure.
++ */
++mesa_wine_screen_t mesa_wine_init(void);
++
++/*
++ * Shut down Mesa and free the screen.
++ */
++void mesa_wine_fini(mesa_wine_screen_t screen);
++
++/*
++ * Query the number of supported pixel formats.
++ * Sets *onscreen_count to the number of onscreen-capable formats.
++ * Returns total count (onscreen + pbuffer-only).
++ * Onscreen formats are listed first (indices 1..onscreen_count),
++ * then pbuffer-only formats (onscreen_count+1..total).
++ */
++int mesa_wine_get_pixel_format_count(mesa_wine_screen_t screen,
++                                     int *onscreen_count);
++
++/*
++ * Get info about a pixel format (1-based index).
++ * Returns true on success, false if index is out of range.
++ */
++bool mesa_wine_get_pixel_format_info(mesa_wine_screen_t screen,
++                                     int index,
++                                     struct mesa_wine_pixel_format_info *info);
++
++/*
++ * Create a GL context.
++ *   screen: from mesa_wine_init()
++ *   format: 1-based pixel format index (visual must match drawable)
++ *   major, minor: requested GL version (e.g. 4, 6)
++ *   profile: MESA_WINE_PROFILE_COMPAT or MESA_WINE_PROFILE_CORE
++ *   flags: bitmask of MESA_WINE_FLAG_*
++ *   share: shared context, or NULL
++ * Returns context handle, or NULL on failure.
++ */
++mesa_wine_ctx_t mesa_wine_create_context(mesa_wine_screen_t screen,
++                                         int format,
++                                         int major, int minor,
++                                         int profile, unsigned flags,
++                                         mesa_wine_ctx_t share);
++
++/*
++ * Destroy a GL context.
++ */
++void mesa_wine_destroy_context(mesa_wine_ctx_t ctx);
++
++/*
++ * Create an offscreen drawable for rendering.
++ *   screen: from mesa_wine_init()
++ *   format: 1-based pixel format index (from mesa_wine_get_pixel_format_count)
++ *   width, height: initial dimensions (> 0)
++ * Returns drawable handle, or NULL on failure.
++ */
++mesa_wine_draw_t mesa_wine_create_drawable(mesa_wine_screen_t screen,
++                                           int format,
++                                           int width, int height);
++
++/*
++ * Destroy a drawable.
++ */
++void mesa_wine_destroy_drawable(mesa_wine_draw_t draw);
++
++/*
++ * Resize a drawable's render targets. Existing contents are lost.
++ */
++void mesa_wine_resize_drawable(mesa_wine_draw_t draw, int width, int height);
++
++/*
++ * Make a context current with draw/read surfaces.
++ * Pass NULL for ctx to unbind the current context.
++ * draw and read may be the same.
++ * Returns true on success.
++ */
++bool mesa_wine_make_current(mesa_wine_ctx_t ctx,
++                            mesa_wine_draw_t draw,
++                            mesa_wine_draw_t read);
++
++/*
++ * Look up a GL function by name.
++ * Returns function pointer, or NULL if not found.
++ */
++void *mesa_wine_get_proc_address(const char *name);
++
++/*
++ * Query the GL version string of the current context.
++ * Returns NULL if no context is current.
++ */
++const char *mesa_wine_get_gl_version(void);
++
++/*
++ * Flush the current context.
++ */
++void mesa_wine_flush(void);
++
++/*
++ * Present the drawable back buffer; its contents are undefined after swapping.
++ * If presentation is attached, blits to swapchain and presents.
++ */
++bool mesa_wine_swap_buffers(mesa_wine_draw_t draw);
++
++/*
++ * Attach a Vulkan swapchain to a drawable for on-screen display.
++ *   screen: from mesa_wine_init()
++ *   draw: target drawable
++ *   metal_layer: a CAMetalLayer* (passed as void* to avoid ObjC dependency)
++ * Returns true on success.
++ */
++bool mesa_wine_attach_presentation(mesa_wine_screen_t screen,
++                                    mesa_wine_draw_t draw,
++                                    void *metal_layer);
++
++/*
++ * Detach the presentation swapchain from a drawable.
++ * Safe to call if no presentation is attached.
++ */
++void mesa_wine_detach_presentation(mesa_wine_draw_t draw);
++
++#endif /* MESA_WINE_API_H */

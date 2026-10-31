@@ -5,6 +5,106 @@ and hypotheses. Historical reference results are not measurements of this projec
 
 
 
+## 2026-10-31 — First Wine bridge integration measurements
+
+**Measured:** an x86-64 Windows probe runs through WineCX -> Mesa/Zink ->
+KosmicKrisp -> Metal with GL 4.6 core / GLSL 4.60, without version/extension
+overrides. The complete controlled run passes all 33 positive checks. This is
+Windows API/rendering and presentation-submission evidence. **Visible window
+orientation/colour confirmation remains pending**: the desktop tool did not
+return a capture and could not attach to the Wine-hosted application. The user
+has been asked to confirm blue/yellow above red/green. Do not call this a visually
+verified game or general GL compatibility result.
+
+### Isolated implementation and ownership
+
+- `bridge/` contains the versioned C API and Mesa frontend. Selected drawable and
+  context code was adapted from the archive, with forced versions removed and
+  current Mesa API changes applied. No archive build artifact is used.
+- `patches/wine/series` adds a separate opt-in macOS GL backend and strict context
+  attribute handling to the pinned WineCX 26.3.0 source. `MESA_WINE_LIB` selects
+  it; failed loading does not silently select Apple GL. Existing Wine Metal view
+  helpers are reused. The Apple backend remains the default.
+- `patches/bridge.series` enables Metal surfaces and supported swapchain-maintenance
+  presentation fences in Zink. KK remains the previously measured four-patch
+  experiment. New Wine/Mesa checkouts are `src/winecx-bridge` and `src/mesa-bridge`.
+- The workbench builder accepts an explicit additional patch series, verifies
+  actual source contents against the reconstructed complete series, and records
+  patch hashes. Runtime: `winecx-26.3.0-mesa-gl-x86_64`. Its dependency and both-PE-
+  architecture checks pass. The original runtime, TFA profile and game remain
+  the baseline.
+
+### What the probes establish
+
+`wine-gl-20261031T071023.401277Z` is the final controlled run:
+
+- Positive: exit 0, **33 checks, 0 failures**. This includes actual 4.6 core
+  creation through WGL, Zink/KK identity, GLSL shader drawing, all four quadrant
+  readbacks at 640x480 and 480x320, front-buffer contents after swaps, a shared
+  texture and GL fence across two contexts, and 60 consecutive successful
+  presentations. Six additional alternating-colour frames are checked without
+  resetting the viewport or rebinding the framebuffer, program, VAO or context.
+  Resize is tested with an explicit context rebind.
+- Wrong expected output: exit 1, **33 checks, exactly 17 failures**. Pixel alpha
+  and one expected shared-texture byte are deliberately changed; execution must
+  reach the full summary. An early crash cannot satisfy this control.
+- Missing bridge: exit 2 at setup, with the expected library-load diagnostic.
+- Apple backend on the same experimental Wine runtime: exit 2 at the requested
+  4.6 context. It does not satisfy the Mesa renderer or presentation checks.
+
+A native bridge window preflight completed four GPU presentations and clean
+teardown independently of Wine. Presentation uses GPU image blits; it does not
+copy frames through CPU readback. Readbacks in the probes are correctness checks.
+The initial presentation code is deliberately serialized with Mesa completion and
+explicit presentation fences. No frame-time or throughput claim follows.
+
+`bin/package-graphics` produced a roughly 212 MiB development graphics bundle.
+Its non-system dylib dependencies and Vulkan loader are bundled, rewritten to
+relative paths and ad-hoc signed; its ICD uses a relative library path. A copy
+under `/private/tmp/mesa-wine-gl-relocated-20261031` created a native 4.6 context
+and returned the expected red pixel with library-path overrides removed. The
+loaded-image list confirms the graphics dylibs came from the relocated directory.
+The final Windows matrix used a fresh relocated copy of the render-fence-fixed
+bundle at `/private/tmp/mesa-wine-gl-relocated-fenced-20261031`. **The surrounding Wine runtime
+still embeds its installation path; this is not yet a relocatable Wine release.**
+
+### Bring-up observations and limits
+
+- Compilation exposed the archived frontend's removed `get_param` callback and
+  missing current Zink include paths. The new frontend uses `broken_invalidate`
+  and derives includes from the current Mesa/Zink compile commands.
+- Present semaphore reuse was changed to use the driver's advertised presentation
+  fences, rather than assuming a submission fence covers presentation completion.
+- An extended capture attempt reached all rendering checks but exceeded the
+  runner's timeout while holding the window. The hold was changed from a fixed
+  count of sleeps to a wall-clock deadline. This timed-out run is retained as
+  `wine-gl-20261031T065658.740653Z`, not counted as a pass. The earlier completed
+  positive run is `wine-gl-20261031T065453.106922Z`. The corrected wall-clock
+  hold subsequently completed with exit 0 in `wine-gl-20261031T070510.674288Z`.
+- Source review found that `ST_FLUSH_WAIT` does nothing when `st_context_flush`
+  receives a NULL fence output. The initial bridge had that combination. This
+  was not a measured rendering failure: the expanded alternating-frame probe
+  already passed 33/33 against the earlier bundle (`wine-gl-20261031T070819.534121Z`).
+  The final bridge instead requests a render fence, calls `fence_finish`, checks
+  its result, releases the fence, and only then accesses the Zink image. The
+  final Windows logs record successful completion before first presentation.
+- An unchanged full Wine rebuild recognizes both overlapping graphics patches
+  as already applied, passes exact source verification and runtime checks, and
+  produces a Wine driver byte-identical to the tested one.
+- The frontend exposes only a BGRA8 double-buffered depth24/stencil8 window
+  format. MSAA/sRGB/float window formats, pbuffers, front-buffer presentation,
+  configurable swap intervals, broader resize behaviour and multi-window/thread
+  lifetime behaviour remain outside this measurement. Wine advertises some WGL
+  extensions globally even when this frontend offers no corresponding formats.
+- Assertions remain enabled. Existing KK feature limitations still apply. No
+  TFA shaders, LUT assets, museum or missions have run on this bridge yet.
+
+**Next:** obtain the visible-window confirmation, then exercise actual TFA shader
+and material dependencies, especially compute-to-draw synchronization and the LUT
+pass. Preserve the stock TFA profile for baseline comparisons and select the
+experimental runtime explicitly for application experiments. Evidence is under `docs/evidence/2026-10-31/wine-integration/`;
+reproduction and the interface contract are in `bridge/README.md`.
+
 ## 2026-10-31 — RGB32 texel buffers and combined-stack recheck
 
 **Measured:** the RGB32 uniform-texel-buffer experiment passes 48/48 Vulkan
