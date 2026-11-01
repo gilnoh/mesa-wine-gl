@@ -2,6 +2,8 @@
 
 **Build the complete GL gaming environment:** [two-repository guide](https://github.com/gilnoh/wine-workbench-macos/blob/master/docs/BUILD-GL-WINE.md). Includes prerequisites, clean build, Steam/TFA setup and an AI-agent handoff.
 
+The packaged runtime is named **GL-support-wine**: experimental OpenGL 4.6 support for Wine on Apple Silicon. [Runtime instructions](https://github.com/gilnoh/wine-workbench-macos/blob/master/docs/GL-SUPPORT-WINE.md). Task Force Admiral is a tested game, not the product being distributed.
+
 Modern OpenGL support for Wine on Apple Silicon macOS, using existing graphics
 libraries. The initial architecture is Wine OpenGL → Mesa/Zink → KosmicKrisp →
 Metal. Task Force Admiral is the first end-to-end workload.
