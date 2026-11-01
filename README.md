@@ -1,5 +1,7 @@
 # mesa-wine-gl
 
+**Build the complete GL gaming environment:** [two-repository guide](https://github.com/gilnoh/wine-workbench-macos/blob/master/docs/BUILD-GL-WINE.md). Includes prerequisites, clean build, Steam/TFA setup and an AI-agent handoff.
+
 Modern OpenGL support for Wine on Apple Silicon macOS, using existing graphics
 libraries. The initial architecture is Wine OpenGL → Mesa/Zink → KosmicKrisp →
 Metal. Task Force Admiral is the first end-to-end workload.
@@ -22,12 +24,12 @@ This repository owns new graphics-library checkouts (`src/`), patches, bridge
 implementation, build recipes, and measurements. `src/`, `toolchains/`, and
 `build/` are local outputs and are ignored by Git. Pins live in `sources.lock.json`.
 
-The sibling [wine-workbench-macos](../wine-workbench-macos/README.md) supplies
+The sibling [wine-workbench-macos](https://github.com/gilnoh/wine-workbench-macos) supplies
 WineCX runtime builds, game prefixes, the shared Steam library, and launch tooling.
 Use a separately named runtime for bridge experiments. Never run two Steam clients
 against the shared game library.
 
-[mesa_gl_to_metal](../progs/mesa_gl_to_metal/PROJECT.md) is historical reference.
+The archived `mesa_gl_to_metal` project is historical reference.
 Its old test results, patches, and hypotheses are not current guarantees. New
 experiments start from clean sources; old changes require individual justification.
 
